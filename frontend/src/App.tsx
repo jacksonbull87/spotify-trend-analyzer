@@ -4,7 +4,7 @@ import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer,
   BarChart, Bar, Cell
 } from 'recharts';
-import { TrendingUp, Calendar, Music, BarChart3, RefreshCw, Loader2, Info } from 'lucide-react';
+import { TrendingUp, Calendar, Music, BarChart3, RefreshCw, Loader2 } from 'lucide-react';
 
 const COLORS = ['#1DB954', '#8E44AD', '#3498DB', '#E67E22', '#E74C3C', '#F1C40F'];
 const API_BASE_URL = import.meta.env.VITE_API_URL || '';
@@ -32,8 +32,7 @@ const App = () => {
       
       try {
         const resW = await axios.get(`${API_BASE_URL}/api/weeks`);
-        if (!Array.isArray(resW.data)) throw new Error("Redirected to HTML");
-        
+        if (!Array.isArray(resW.data)) throw new Error();
         const resT = await axios.get(`${API_BASE_URL}/api/trends`);
         wData = resW.data;
         tData = resT.data;
@@ -42,9 +41,10 @@ const App = () => {
         setAllStaticData(resS.data);
         wData = resS.data.weeks;
         tData = resS.data.trends;
-        source = 'Local File';
+        source = 'File';
       }
 
+      // 1. Map keys to consistent short names
       const mapped = (tData || []).map(d => ({
         ...d,
         opt: Number(d.Optimism_Index || d["Optimism Index"] || 0),
@@ -52,15 +52,31 @@ const App = () => {
         con: Number(d.Topic_Clarity || d["Topic Clarity"] || 0)
       }));
 
+      // 2. Apply 5-period smoothing to ALL keys
+      const smoothed = mapped.map((entry, index, array) => {
+        const start = Math.max(0, index - 2);
+        const end = Math.min(array.length, index + 3);
+        const window = array.slice(start, end);
+        const smoothedEntry = { ...entry };
+        
+        ['opt', 'foc', 'con', 'Romance', 'Party/Celebration', 'Resilience/Success', 'Melancholy', 'Social/Identity', 'Nostalgia'].forEach(key => {
+          if (entry[key] !== undefined) {
+            const avg = window.reduce((acc, curr) => acc + (Number(curr[key]) || 0), 0) / window.length;
+            smoothedEntry[key] = parseFloat(avg.toFixed(4));
+          }
+        });
+        return smoothedEntry;
+      });
+
       const getRange = (key) => {
-        const vals = mapped.map(m => m[key]).filter(v => v > 0);
+        const vals = smoothed.map(m => m[key]).filter(v => v > 0);
         return vals.length ? `${Math.min(...vals).toFixed(2)}-${Math.max(...vals).toFixed(2)}` : '0';
       };
 
       setStats({ opt: getRange('opt'), foc: getRange('foc'), con: getRange('con'), source: source });
       setWeeks(wData);
       setSelectedWeek(wData[0]);
-      setTrends(mapped);
+      setTrends(smoothed);
       setLoading(false);
     } catch (err) {
       setLoading(false);
@@ -107,7 +123,7 @@ const App = () => {
           <section style={{ backgroundColor: '#1e1e1e', padding: '25px', borderRadius: '12px', marginBottom: '30px', border: '1px solid #222' }}>
             <h2 style={{ fontSize: '1.2rem', margin: '0 0 10px 0', display: 'flex', alignItems: 'center', gap: '10px' }}><BarChart3 size={20}/> Cultural Theme Evolution</h2>
             <p style={{ color: '#888', marginBottom: '25px', fontSize: '0.9rem' }}>
-              This chart tracks how the "mood" of the country has shifted. By following these lines, you can see when society leaned into Romance, sought Resilience during tough times, or embraced Melancholy. It visualizes the rise and fall of our collective emotional priorities.
+              This chart tracks how the "mood" of the country has shifted. By following these lines, you can see when society leaned into Romance, sought Resilience during tough times, or embraced Melancholy.
             </p>
             <div style={{ height: '350px' }}>
               <ResponsiveContainer width="100%" height="100%">
@@ -140,7 +156,7 @@ const App = () => {
                       <YAxis domain={['dataMin', 'dataMax']} stroke="#444" tick={{fontSize: 8}} width={35} />
                       <XAxis dataKey="date" hide />
                       <Tooltip contentStyle={{backgroundColor: '#1e1e1e', fontSize: '10px'}} />
-                      <Line type="monotone" dataKey={m.k} stroke={m.color} strokeWidth={3} dot={false} isAnimationActive={false} />
+                      <Line type="basis" dataKey={m.k} stroke={m.color} strokeWidth={2} dot={false} isAnimationActive={false} />
                     </LineChart>
                   </ResponsiveContainer>
                 </div>
@@ -150,18 +166,14 @@ const App = () => {
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '30px', marginBottom: '40px' }}>
-            {/* Weekly Detail Chart */}
             <section style={{ backgroundColor: '#1e1e1e', padding: '25px', borderRadius: '12px', border: '1px solid #222' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '15px' }}>
                 <h2 style={{ fontSize: '1.1rem', margin: 0 }}>Themes for {selectedWeek?.date}</h2>
-                <select 
-                  onChange={e => setSelectedWeek(weeks.find(w => String(w.id) === e.target.value))} 
-                  style={{ backgroundColor: '#333', color: '#fff', border: 'none', borderRadius: '4px', padding: '5px 10px', fontSize: '0.85rem' }}
-                >
+                <select onChange={e => setSelectedWeek(weeks.find(w => String(w.id) === e.target.value))} style={{ backgroundColor: '#333', color: '#fff', border: 'none', borderRadius: '4px', padding: '5px 10px', fontSize: '0.85rem' }}>
                   {weeks.map(w => <option key={w.id} value={w.id}>{w.date}</option>)}
                 </select>
               </div>
-              <p style={{ color: '#888', fontSize: '0.85rem', marginBottom: '20px' }}>Deep-dive into the specific emotional makeup of the Top 10 hits for this week.</p>
+              <p style={{ color: '#888', fontSize: '0.85rem', marginBottom: '20px' }}>Deep-dive into the specific emotional makeup of the Top 10 hits.</p>
               <div style={{ height: '280px' }}>
                 <ResponsiveContainer width="100%" height="100%">
                   <BarChart data={themes} layout="vertical">
@@ -177,13 +189,12 @@ const App = () => {
               </div>
             </section>
 
-            {/* Song List */}
             <section style={{ backgroundColor: '#1e1e1e', padding: '25px', borderRadius: '12px', border: '1px solid #222' }}>
               <h2 style={{ fontSize: '1.1rem', margin: '0 0 20px 0', display: 'flex', alignItems: 'center', gap: '10px' }}><Music size={20}/> Top Hits This Week</h2>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
                 {songs.length > 0 ? songs.slice(0, 8).map(s => (
                   <div key={`${s.rank}-${s.title}`} style={{ backgroundColor: '#252525', padding: '12px', borderRadius: '8px', display: 'flex', alignItems: 'center', gap: '15px' }}>
-                    <span style={{ color: '#1DB954', fontWeight: 'bold', fontSize: '1.1rem', width: '25px' }}>{s.rank}</span>
+                    <span style={{ color: '#1DB954', fontWeight: 'bold', width: '25px' }}>{s.rank}</span>
                     <div>
                       <div style={{ fontWeight: '600', fontSize: '0.95rem' }}>{s.title}</div>
                       <div style={{ color: '#666', fontSize: '0.85rem' }}>{s.artist}</div>
@@ -197,7 +208,7 @@ const App = () => {
       )}
       
       <footer style={{ marginTop: '60px', padding: '20px 0', borderTop: '1px solid #222', textAlign: 'center', color: '#444', fontSize: '0.8rem' }}>
-        Built with Gemini CLI • Analytics for Spotify Weekly Charts
+        Built with Gemini CLI • Cultural Analytics Engine
       </footer>
     </div>
   );
