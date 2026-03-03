@@ -16,7 +16,6 @@ const App = () => {
   const [themes, setThemes] = useState([]);
   const [trends, setTrends] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
 
   useEffect(() => {
     loadAllData();
@@ -39,15 +38,21 @@ const App = () => {
         tData = resS.data.trends;
       }
 
-      // 1. Map keys to consistent short names
-      const mapped = tData.map(d => ({
-        ...d,
-        opt: d.Optimism_Index || d["Optimism Index"] || 0,
-        foc: d.Keyword_Density || d["Keyword Density"] || 0,
-        con: d.Topic_Clarity || d["Topic Clarity"] || 0
-      }));
+      // 1. Aggressive Fuzzy Mapping
+      const mapped = (tData || []).map(d => {
+        const getV = (terms) => {
+          const key = Object.keys(d).find(k => terms.some(t => k.toLowerCase().includes(t)));
+          return key ? Number(d[key]) : 0;
+        };
+        return {
+          ...d,
+          opt: getV(['optimism']),
+          foc: getV(['density', 'focus']),
+          con: getV(['clarity', 'consistency'])
+        };
+      });
 
-      // 2. Smooth data (using the correct keys)
+      // 2. Smoothing
       const smoothed = mapped.map((entry, index, array) => {
         const start = Math.max(0, index - 2);
         const end = Math.min(array.length, index + 3);
@@ -68,7 +73,6 @@ const App = () => {
       setTrends(smoothed);
       setLoading(false);
     } catch (err) {
-      setError("Data load error");
       setLoading(false);
     }
   };
@@ -90,8 +94,8 @@ const App = () => {
   return (
     <div style={{ padding: '20px', maxWidth: '1200px', margin: '0 auto', color: '#fff', backgroundColor: '#121212', minHeight: '100vh', fontFamily: 'sans-serif' }}>
       <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '30px', borderBottom: '1px solid #333', paddingBottom: '20px' }}>
-        <h1 style={{ color: '#1DB954', margin: 0, display: 'flex', alignItems: 'center', gap: '10px' }}><TrendingUp /> Cultural Trends</h1>
-        <button onClick={() => window.location.reload()} style={{ backgroundColor: '#222', color: '#888', border: '1px solid #444', padding: '8px 15px', borderRadius: '20px', cursor: 'pointer', fontSize: '0.8rem' }}>
+        <h1 style={{ color: '#1DB954', margin: 0, display: 'flex', alignItems: 'center', gap: '10px', fontSize: '1.8rem' }}><TrendingUp /> Cultural Trends</h1>
+        <button onClick={() => window.location.reload()} style={{ backgroundColor: '#222', color: '#888', border: '1px solid #444', padding: '6px 12px', borderRadius: '20px', cursor: 'pointer', fontSize: '0.75rem' }}>
           Force Refresh
         </button>
       </header>
@@ -101,7 +105,7 @@ const App = () => {
       ) : (
         <>
           <section style={{ backgroundColor: '#1e1e1e', padding: '20px', borderRadius: '12px', marginBottom: '30px', border: '1px solid #222' }}>
-            <h2 style={{ fontSize: '1.1rem', margin: '0 0 20px 0' }}>Theme Evolution (Smoothed)</h2>
+            <h2 style={{ fontSize: '1.1rem', margin: '0 0 20px 0' }}>Thematic Evolution</h2>
             <div style={{ height: '350px' }}>
               <ResponsiveContainer width="100%" height="100%">
                 <LineChart data={trends}>
@@ -111,7 +115,7 @@ const App = () => {
                   <Tooltip contentStyle={{backgroundColor: '#1e1e1e', border: '1px solid #333'}} />
                   <Legend />
                   {['Romance', 'Party/Celebration', 'Resilience/Success', 'Melancholy', 'Social/Identity', 'Nostalgia'].map((k, i) => (
-                    <Line key={k} type="basis" dataKey={k} stroke={COLORS[i]} strokeWidth={2} dot={false} />
+                    <Line key={k} type="basis" dataKey={k} stroke={COLORS[i % COLORS.length]} strokeWidth={2} dot={false} />
                   ))}
                 </LineChart>
               </ResponsiveContainer>
@@ -120,19 +124,20 @@ const App = () => {
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px', marginBottom: '40px' }}>
             {[
-              { label: 'Optimism Index', k: 'opt', color: '#F1C40F', domain: [0.3, 0.9] },
-              { label: 'Lyrical Focus', k: 'foc', color: '#E67E22', domain: [0, 0.3] },
-              { label: 'Topic Consistency', k: 'con', color: '#3498DB', domain: [1, 3] }
+              { label: 'Optimism Index', k: 'opt', color: '#F1C40F' },
+              { label: 'Lyrical Focus', k: 'foc', color: '#E67E22' },
+              { label: 'Topic Consistency', k: 'con', color: '#3498DB' }
             ].map(m => (
               <div key={m.k} style={{ backgroundColor: '#1e1e1e', padding: '15px', borderRadius: '12px', border: '1px solid #333' }}>
                 <h3 style={{ fontSize: '0.85rem', color: '#1DB954', marginBottom: '10px' }}>{m.label}</h3>
-                <div style={{ height: '120px' }}>
+                <div style={{ height: '140px' }}>
                   <ResponsiveContainer width="100%" height="100%">
                     <LineChart data={trends}>
-                      <YAxis domain={m.domain} hide />
+                      <CartesianGrid strokeDasharray="3 3" stroke="#222" vertical={false} />
+                      <YAxis domain={['dataMin - 0.05', 'dataMax + 0.05']} stroke="#444" tick={{fontSize: 8}} width={30} />
                       <XAxis dataKey="date" hide />
                       <Tooltip contentStyle={{backgroundColor: '#1e1e1e', fontSize: '10px'}} />
-                      <Line type="basis" dataKey={m.k} stroke={m.color} strokeWidth={2} dot={false} />
+                      <Line type="monotone" dataKey={m.k} stroke={m.color} strokeWidth={3} dot={{r: 1}} isAnimationActive={false} />
                     </LineChart>
                   </ResponsiveContainer>
                 </div>
@@ -144,7 +149,7 @@ const App = () => {
             <section style={{ backgroundColor: '#1e1e1e', padding: '20px', borderRadius: '12px' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '20px' }}>
                 <h2 style={{ fontSize: '1rem', margin: 0 }}>{selectedWeek?.date}</h2>
-                <select onChange={e => setSelectedWeek(weeks.find(w => String(w.id) === e.target.value))} style={{ backgroundColor: '#333', color: '#fff', border: 'none', borderRadius: '4px' }}>
+                <select onChange={e => setSelectedWeek(weeks.find(w => String(w.id) === e.target.value))} style={{ backgroundColor: '#333', color: '#fff', border: 'none', borderRadius: '4px', fontSize: '0.8rem' }}>
                   {weeks.map(w => <option key={w.id} value={w.id}>{w.date}</option>)}
                 </select>
               </div>
@@ -163,11 +168,14 @@ const App = () => {
 
             <section style={{ backgroundColor: '#1e1e1e', padding: '20px', borderRadius: '12px' }}>
               <h2 style={{ fontSize: '1rem', margin: '0 0 20px 0' }}>Top Hits</h2>
-              {songs.slice(0, 5).map(s => (
-                <div key={`${s.rank}-${s.title}`} style={{ padding: '8px 0', borderBottom: '1px solid #222', fontSize: '0.85rem' }}>
-                  <span style={{ color: '#1DB954', fontWeight: 'bold', marginRight: '10px' }}>{s.rank}</span> {s.title}
-                </div>
-              ))}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                {songs.slice(0, 5).map(s => (
+                  <div key={`${s.rank}-${s.title}`} style={{ padding: '8px', borderBottom: '1px solid #222', fontSize: '0.8rem', display: 'flex', gap: '15px' }}>
+                    <span style={{ color: '#1DB954', fontWeight: 'bold' }}>{s.rank}</span>
+                    <span>{s.title}</span>
+                  </div>
+                ))}
+              </div>
             </section>
           </div>
         </>
