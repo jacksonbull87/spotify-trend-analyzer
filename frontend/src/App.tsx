@@ -36,42 +36,48 @@ const App = () => {
           tRaw = staticObj.trends;
         }
 
+        // 1. UNIVERSAL MAPPING & NUMBER FORCING
         const mapped = (tRaw || []).map(d => {
-          const getVal = (k1, k2) => {
+          const getV = (k1, k2) => {
             const v = d[k1] !== undefined ? d[k1] : d[k2];
             return v !== undefined ? Number(v) : 0;
           };
           return {
             ...d,
-            m_opt: getVal("Optimism Index", "Optimism_Index"),
-            m_foc: getVal("Keyword Density", "Keyword_Density"),
-            m_con: getVal("Topic Clarity", "Topic_Clarity"),
-            Romance: Number(d.Romance || 0),
-            "Party/Celebration": Number(d["Party/Celebration"] || 0),
-            "Resilience/Success": Number(d["Resilience/Success"] || 0),
-            Melancholy: Number(d.Melancholy || 0),
-            "Social/Identity": Number(d["Social/Identity"] || 0),
-            Nostalgia: Number(d.Nostalgia || 0),
+            m_opt: getV("Optimism Index", "Optimism_Index"),
+            m_foc: getV("Keyword Density", "Keyword_Density"),
+            m_con: getV("Topic Clarity", "Topic_Clarity")
           };
         });
 
-        const smoothed = mapped.map((entry, index, array) => {
+        // 2. SELECTIVE SMOOTHING
+        // We smooth the 6 major themes, but keep m_opt, m_foc, m_con RAW 
+        // to ensure we see the movement (smoothing tiny variances makes them look like straight lines)
+        const finalTrends = mapped.map((entry, index, array) => {
           const startIdx = Math.max(0, index - 2);
           const endIdx = Math.min(array.length, index + 3);
           const window = array.slice(startIdx, endIdx);
           const res = { ...entry };
           
-          ['m_opt', 'm_foc', 'm_con', 'Romance', 'Party/Celebration', 'Resilience/Success', 'Melancholy', 'Social/Identity', 'Nostalgia'].forEach(k => {
-            const avg = window.reduce((acc, curr) => acc + (curr[k] || 0), 0) / window.length;
-            res[k] = parseFloat(avg.toFixed(4));
+          ['Romance', 'Party/Celebration', 'Resilience/Success', 'Melancholy', 'Social/Identity', 'Nostalgia'].forEach(k => {
+            if (entry[k] !== undefined) {
+              const avg = window.reduce((acc, curr) => acc + (Number(curr[k]) || 0), 0) / window.length;
+              res[k] = parseFloat(avg.toFixed(4));
+            }
           });
+          
+          // DO NOT SMOOTH THESE (Keep raw variance)
+          res.m_opt = entry.m_opt;
+          res.m_foc = entry.m_foc;
+          res.m_con = entry.m_con;
+          
           return res;
         });
 
         setAllStaticData(staticObj);
         setWeeks(wRaw);
         setSelectedWeek(wRaw[0]);
-        setTrends(smoothed);
+        setTrends(finalTrends);
         setLoading(false);
       } catch (err) { setLoading(false); }
     };
@@ -106,7 +112,7 @@ const App = () => {
             <TrendingUp size={40} /> Spotify Cultural Trends
           </h1>
           <button onClick={() => window.location.reload()} style={{ backgroundColor: '#222', color: '#888', border: '1px solid #444', padding: '8px 16px', borderRadius: '20px', cursor: 'pointer', fontSize: '0.8rem' }}>
-            <RefreshCw size={14} /> Refresh Application
+            <RefreshCw size={14} style={{marginRight: 8}}/> Refresh Application
           </button>
         </div>
 
@@ -160,15 +166,15 @@ const App = () => {
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '20px', marginBottom: '40px' }}>
             {[
-              { label: 'Optimism Index', k: 'm_opt', color: '#F1C40F' },
-              { label: 'Lyrical Focus', k: 'm_foc', color: '#E67E22' },
-              { label: 'Topic Consistency', k: 'm_con', color: '#3498DB' }
+              { label: 'Optimism Index', k: 'm_opt', color: '#F1C40F', d: 'Mood Score: Higher = more positive.' },
+              { label: 'Lyrical Focus', k: 'm_foc', color: '#E67E22', d: 'Directness: Theme keyword density.' },
+              { label: 'Topic Consistency', k: 'm_con', color: '#3498DB', d: 'Unity: How similar charting hits are.' }
             ].map(m => (
               <div key={m.k} style={{ backgroundColor: '#1e1e1e', padding: '20px', borderRadius: '12px', border: '1px solid #333' }}>
                 <h3 style={{ fontSize: '1.1rem', color: '#1DB954', marginBottom: '15px' }}>{m.label}</h3>
                 <div style={{ height: '160px' }}>
                   <ResponsiveContainer width="100%" height="100%">
-                    <LineChart data={trends}>
+                    <LineChart data={trends} key={trends.length}>
                       <CartesianGrid strokeDasharray="3 3" stroke="#222" vertical={false} />
                       <YAxis domain={['dataMin', 'dataMax']} stroke="#555" tick={{fontSize: 9}} width={35} allowDecimals={true} />
                       <XAxis dataKey="date" hide />
@@ -177,6 +183,7 @@ const App = () => {
                     </LineChart>
                   </ResponsiveContainer>
                 </div>
+                <p style={{ fontSize: '0.8rem', color: '#666', marginTop: '15px' }}>{m.d}</p>
               </div>
             ))}
           </div>
@@ -185,14 +192,13 @@ const App = () => {
             <section style={{ backgroundColor: '#1e1e1e', padding: '25px', borderRadius: '12px', border: '1px solid #222' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '15px' }}>
                 <h2 style={{ fontSize: '1.2rem', margin: 0 }}>Analysis: {selectedWeek?.date}</h2>
-                <select onChange={e => setSelectedWeek(weeks.find(w => String(w.id) === e.target.value))} style={{ backgroundColor: '#333', color: '#fff', border: 'none', borderRadius: '4px', padding: '6px 12px', fontSize: '0.9rem' }}>
+                <select onChange={e => setSelectedWeek(weeks.find(w => String(w.id) === e.target.value))} style={{ backgroundColor: '#333', color: '#fff', border: 'none', borderRadius: '4px', padding: '6px 12px' }}>
                   {weeks.map(w => <option key={w.id} value={w.id}>{w.date}</option>)}
                 </select>
               </div>
               <div style={{ height: '280px' }}>
                 <ResponsiveContainer width="100%" height="100%">
                   <BarChart data={themes} layout="vertical">
-                    <CartesianGrid strokeDasharray="3 3" stroke="#333" horizontal={false} />
                     <YAxis dataKey="name" type="category" width={110} tick={{fontSize: 10}} stroke="#888" />
                     <XAxis type="number" hide />
                     <Bar dataKey="score">
@@ -217,6 +223,10 @@ const App = () => {
                 )) : <div style={{ color: '#444' }}>Select a week.</div>}
               </div>
             </section>
+          </div>
+
+          <div style={{ borderTop: '1px dashed #222', paddingTop: '20px', fontSize: '0.75rem', color: '#222', textAlign: 'center' }}>
+            INTEGRITY CHECK • P1: {trends[0]?.m_opt} / {trends[0]?.m_foc} / {trends[0]?.m_con}
           </div>
         </>
       )}
