@@ -70,7 +70,7 @@ async def get_week_themes(week_id: int):
     conn = sqlite3.connect(DB_NAME)
     cursor = conn.cursor()
     cursor.execute("SELECT name, score FROM themes WHERE week_id = ? ORDER BY score DESC", (week_id,))
-    themes = [{"name": row[0], "score": round(row[1], 2)} for row in cursor.fetchall()]
+    themes = [{"name": row[0].replace(" ", "_"), "score": round(row[1], 2)} for row in cursor.fetchall()]
     conn.close()
     return themes
 
@@ -96,12 +96,14 @@ async def get_trends():
     rows = cursor.fetchall()
     conn.close()
     
-    # Restructure for visualization: [{date: '2025-01-01', Theme1: 0.5, Theme2: 0.8}, ...]
+    # Restructure for visualization
     trends_map = {}
     for theme_name, chart_date, score in rows:
         if chart_date not in trends_map:
             trends_map[chart_date] = {"date": chart_date}
-        trends_map[chart_date][theme_name] = round(score, 2)
+        # Normalize key names
+        safe_name = theme_name.replace(" ", "_")
+        trends_map[chart_date][safe_name] = round(score, 2)
     
     return list(trends_map.values())
 

@@ -44,15 +44,22 @@ const App = () => {
       setWeeks(weeksData);
       if (weeksData.length > 0) {
         setSelectedWeek(weeksData[0]);
-      }
-      
+      // Delay processing slightly to ensure layout is ready
       setTimeout(() => {
-        const rawData = trendsData || [];
+        // Normalize keys and apply 5-period moving average smoothing
+        const rawData = (trendsData || []).map(entry => {
+          const normalized = { date: entry.date };
+          Object.keys(entry).forEach(k => {
+            if (k !== 'date') normalized[k.replace(/\s+/g, '_')] = entry[k];
+          });
+          return normalized;
+        });
+
         const smoothed = rawData.map((entry, index, array) => {
           const start = Math.max(0, index - 2);
           const end = Math.min(array.length, index + 3);
           const window = array.slice(start, end);
-          
+
           const smoothedEntry = { ...entry };
           Object.keys(entry).forEach(key => {
             if (key !== 'date') {
@@ -62,11 +69,12 @@ const App = () => {
           });
           return smoothedEntry;
         });
-        
-        console.log("Smoothing Complete. Data Sample:", smoothed[0]);
+
+        console.log("Data normalized and smoothed. Sample:", smoothed[0]);
         setTrends(smoothed);
         setLoading(false);
       }, 800);
+
     } catch (err) {
       console.error("Error fetching data:", err);
       setLoading(false);
@@ -78,32 +86,35 @@ const App = () => {
       fetchWeekData(selectedWeek.id);
     }
   }, [selectedWeek]);
-
-  const fetchWeekData = async (weekId) => {
+const fetchWeekData = async (weekId) => {
+  try {
+    // 1. Try Live API
     try {
-      try {
-        const themesRes = await axios.get(`${API_BASE_URL}/api/week/${weekId}/themes`);
-        // Normalize live keys
-        setThemes(themesRes.data.map(t => ({ ...t, name: t.name.replace(" ", "_") })));
-        const songsRes = await axios.get(`${API_BASE_URL}/api/week/${weekId}/songs`);
-        setSongs(songsRes.data);
-      } catch (e) {
-        if (allStaticData) {
-          const sWeekId = String(weekId);
-          setThemes(allStaticData.themes_by_week[sWeekId] || []);
-          setSongs(allStaticData.songs_by_week[sWeekId] || []);
-        } else {
-          const staticRes = await axios.get('/data.json');
-          const sWeekId = String(weekId);
-          setAllStaticData(staticRes.data);
-          setThemes(staticRes.data.themes_by_week[sWeekId] || []);
-          setSongs(staticRes.data.songs_by_week[sWeekId] || []);
-        }
+      const themesRes = await axios.get(`${API_BASE_URL}/api/week/${weekId}/themes`);
+      // Normalize live keys
+      setThemes(themesRes.data.map(t => ({ ...t, name: t.name.replace(/\s+/g, "_") })));
+      const songsRes = await axios.get(`${API_BASE_URL}/api/week/${weekId}/songs`);
+      setSongs(songsRes.data);
+    } catch (e) {
+      // 2. Fallback to cached static data
+      if (allStaticData) {
+        const sWeekId = String(weekId);
+        const staticThemes = allStaticData.themes_by_week[sWeekId] || [];
+        setThemes(staticThemes.map(t => ({ ...t, name: t.name.replace(/\s+/g, "_") })));
+        setSongs(allStaticData.songs_by_week[sWeekId] || []);
+      } else {
+        const staticRes = await axios.get('/data.json');
+        const sWeekId = String(weekId);
+        setAllStaticData(staticRes.data);
+        const staticThemes = staticRes.data.themes_by_week[sWeekId] || [];
+        setThemes(staticThemes.map(t => ({ ...t, name: t.name.replace(/\s+/g, "_") })));
+        setSongs(staticRes.data.songs_by_week[sWeekId] || []);
       }
-    } catch (err) {
-      console.error("Error fetching week data:", err);
     }
-  };
+  } catch (err) {
+    console.error("Error fetching week data:", err);
+  }
+};
 
   const themeKeys = trends.length > 0 ? Object.keys(trends[0]).filter(k => k !== 'date') : [];
 
