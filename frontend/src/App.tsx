@@ -116,9 +116,12 @@ const App = () => {
           <h1 style={{ display: 'flex', alignItems: 'center', gap: '15px', color: '#1DB954', fontSize: '2.4rem', margin: 0 }}>
             <TrendingUp size={36} /> US Spotify Cultural Trends
           </h1>
-          <button onClick={() => window.location.reload()} style={{ backgroundColor: '#222', color: '#888', border: '1px solid #444', padding: '8px 16px', borderRadius: '20px', cursor: 'pointer', fontSize: '0.8rem' }}>
-            <RefreshCw size={14} style={{marginRight: 8}}/> Refresh
-          </button>
+          <div style={{ display: 'flex', gap: '15px', alignItems: 'center' }}>
+            <span style={{ fontSize: '0.7rem', color: '#444' }}>Build: MARCH-03-V3</span>
+            <button onClick={() => window.location.reload()} style={{ backgroundColor: '#222', color: '#888', border: '1px solid #444', padding: '8px 16px', borderRadius: '20px', cursor: 'pointer', fontSize: '0.8rem' }}>
+              <RefreshCw size={14} style={{marginRight: 8}}/> Refresh
+            </button>
+          </div>
         </div>
 
         <div style={{ backgroundColor: '#1e1e1e', padding: '25px', borderRadius: '12px', marginTop: '25px', border: '1px solid #333' }}>
