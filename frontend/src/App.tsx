@@ -179,6 +179,8 @@ const App = () => {
             <div style={{ height: '150px' }}>
               <ResponsiveContainer width="100%" height="100%">
                 <LineChart data={trends}>
+                  <XAxis dataKey="date" hide />
+                  <YAxis hide domain={['auto', 'auto']} />
                   <Line type="basis" dataKey="Optimism Index" stroke="#F1C40F" strokeWidth={2} dot={false} />
                   <Tooltip contentStyle={{ display: 'none' }} />
                 </LineChart>
@@ -193,6 +195,8 @@ const App = () => {
             <div style={{ height: '150px' }}>
               <ResponsiveContainer width="100%" height="100%">
                 <LineChart data={trends}>
+                  <XAxis dataKey="date" hide />
+                  <YAxis hide domain={['auto', 'auto']} />
                   <Line type="basis" dataKey="Keyword Density" stroke="#E67E22" strokeWidth={2} dot={false} />
                   <Tooltip contentStyle={{ display: 'none' }} />
                 </LineChart>
@@ -207,6 +211,8 @@ const App = () => {
             <div style={{ height: '150px' }}>
               <ResponsiveContainer width="100%" height="100%">
                 <LineChart data={trends}>
+                  <XAxis dataKey="date" hide />
+                  <YAxis hide domain={['auto', 'auto']} />
                   <Line type="basis" dataKey="Topic Clarity" stroke="#3498DB" strokeWidth={2} dot={false} />
                   <Tooltip contentStyle={{ display: 'none' }} />
                 </LineChart>
