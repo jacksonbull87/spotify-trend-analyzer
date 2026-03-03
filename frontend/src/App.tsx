@@ -26,10 +26,19 @@ const App = () => {
         try {
           const resW = await axios.get(`${API_BASE_URL}/api/weeks`);
           const resT = await axios.get(`${API_BASE_URL}/api/trends`);
-          if (!Array.isArray(resW.data)) throw new Error();
+          if (!Array.isArray(resW.data)) throw new Error("Not an array");
+          
+          // STALE API BYPASS: Render might be serving an old database without our new metrics.
+          if (resT.data.length > 0 && 
+              resT.data[0]["Optimism_Index"] === undefined && 
+              resT.data[0]["Optimism Index"] === undefined) {
+             throw new Error("API missing new metrics");
+          }
+
           wRaw = resW.data;
           tRaw = resT.data;
         } catch (e) {
+          console.log("Fallback triggered:", e.message);
           const resS = await axios.get(`/data.json?t=${Date.now()}`);
           staticObj = resS.data;
           wRaw = staticObj.weeks;
