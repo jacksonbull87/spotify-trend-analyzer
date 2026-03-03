@@ -4,7 +4,7 @@ import {
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer,
   BarChart, Bar, Cell
 } from 'recharts';
-import { TrendingUp, Calendar, Music, BarChart3, RefreshCw, Loader2 } from 'lucide-react';
+import { TrendingUp, Calendar, Music, BarChart3, RefreshCw, Loader2, Database } from 'lucide-react';
 
 const COLORS = ['#1DB954', '#8E44AD', '#3498DB', '#E67E22', '#E74C3C', '#F1C40F'];
 const API_BASE_URL = import.meta.env.VITE_API_URL || '';
@@ -16,6 +16,7 @@ const App = () => {
   const [themes, setThemes] = useState([]);
   const [trends, setTrends] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [stats, setStats] = useState({ opt: '', foc: '', con: '', source: '' });
 
   useEffect(() => {
     loadAllData();
@@ -26,45 +27,49 @@ const App = () => {
       setLoading(true);
       let tData = [];
       let wData = [];
+      let source = 'API';
       
       try {
         const resW = await axios.get(`${API_BASE_URL}/api/weeks`);
         const resT = await axios.get(`${API_BASE_URL}/api/trends`);
+        if (!Array.isArray(resT.data) || resT.data.length === 0) throw new Error();
+        
+        // Validation: If all optimism values are 0, the API is likely unpopulated
+        const hasData = resT.data.some(d => (d.Optimism_Index || d["Optimism Index"] || 0) > 0);
+        if (!hasData) throw new Error("API metrics empty");
+
         wData = resW.data;
         tData = resT.data;
       } catch (e) {
         const resS = await axios.get(`/data.json?t=${Date.now()}`);
         wData = resS.data.weeks;
         tData = resS.data.trends;
+        source = 'File';
       }
 
-      // Map keys DIRECTLY to the data.json audit results
-      const mapped = (tData || []).map(d => ({
+      const mapped = tData.map(d => ({
         ...d,
-        opt: d.Optimism_Index || d["Optimism Index"] || 0,
-        foc: d.Keyword_Density || d["Keyword Density"] || 0,
-        con: d.Topic_Clarity || d["Topic Clarity"] || 0
+        opt: Number(d.Optimism_Index || d["Optimism Index"] || 0),
+        foc: Number(d.Keyword_Density || d["Keyword Density"] || 0),
+        con: Number(d.Topic_Clarity || d["Topic Clarity"] || 0)
       }));
 
-      // Only smooth the main categories, leave metrics raw to avoid flattening
-      const finalData = mapped.map((entry, index, array) => {
-        const start = Math.max(0, index - 2);
-        const end = Math.min(array.length, index + 3);
-        const window = array.slice(start, end);
-        const smoothedEntry = { ...entry };
-        
-        ['Romance', 'Party/Celebration', 'Resilience/Success', 'Melancholy', 'Social/Identity', 'Nostalgia'].forEach(key => {
-          if (entry[key] !== undefined) {
-            const avg = window.reduce((acc, curr) => acc + (Number(curr[key]) || 0), 0) / window.length;
-            smoothedEntry[key] = parseFloat(avg.toFixed(4));
-          }
-        });
-        return smoothedEntry;
+      // Calculate Min/Max for Debug
+      const getRange = (key) => {
+        const vals = mapped.map(m => m[key]).filter(v => v > 0);
+        return vals.length ? `${Math.min(...vals).toFixed(2)} - ${Math.max(...vals).toFixed(2)}` : '0';
+      };
+
+      setStats({
+        opt: getRange('opt'),
+        foc: getRange('foc'),
+        con: getRange('con'),
+        source: source
       });
 
       setWeeks(wData);
       setSelectedWeek(wData[0]);
-      setTrends(finalData);
+      setTrends(mapped);
       setLoading(false);
     } catch (err) {
       setLoading(false);
@@ -73,7 +78,7 @@ const App = () => {
 
   useEffect(() => {
     if (selectedWeek) {
-      const loadWeek = async () => {
+      const fetchDetails = async () => {
         try {
           const resT = await axios.get(`${API_BASE_URL}/api/week/${selectedWeek.id}/themes`);
           setThemes(resT.data);
@@ -81,17 +86,25 @@ const App = () => {
           setSongs(resS.data);
         } catch (e) {}
       };
-      loadWeek();
+      fetchDetails();
     }
   }, [selectedWeek]);
 
   return (
     <div style={{ padding: '20px', maxWidth: '1200px', margin: '0 auto', color: '#fff', backgroundColor: '#121212', minHeight: '100vh', fontFamily: 'sans-serif' }}>
-      <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '30px', borderBottom: '1px solid #333', paddingBottom: '20px' }}>
-        <h1 style={{ color: '#1DB954', margin: 0, display: 'flex', alignItems: 'center', gap: '10px', fontSize: '1.8rem' }}><TrendingUp /> Cultural Trends</h1>
-        <button onClick={() => window.location.reload()} style={{ backgroundColor: '#222', color: '#888', border: '1px solid #444', padding: '6px 12px', borderRadius: '20px', cursor: 'pointer', fontSize: '0.75rem' }}>
-          Force Refresh
-        </button>
+      <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '30px', borderBottom: '1px solid #333', paddingBottom: '20px' }}>
+        <div>
+          <h1 style={{ color: '#1DB954', margin: 0, display: 'flex', alignItems: 'center', gap: '10px', fontSize: '1.8rem' }}><TrendingUp /> Cultural Trends</h1>
+          <p style={{ color: '#666', fontSize: '0.8rem', margin: '5px 0 0 0' }}>Data Source: {stats.source}</p>
+        </div>
+        <div style={{ display: 'flex', gap: '10px' }}>
+          <div style={{ padding: '5px 10px', backgroundColor: '#1a1a1a', borderRadius: '6px', fontSize: '0.7rem', border: '1px solid #333', color: '#888' }}>
+            Ranges: Opt({stats.opt}) • Foc({stats.foc}) • Con({stats.con})
+          </div>
+          <button onClick={() => window.location.reload()} style={{ backgroundColor: '#222', color: '#888', border: '1px solid #444', padding: '6px 12px', borderRadius: '20px', cursor: 'pointer', fontSize: '0.75rem' }}>
+            Refresh
+          </button>
+        </div>
       </header>
 
       {loading ? (
@@ -128,10 +141,11 @@ const App = () => {
                   <ResponsiveContainer width="100%" height="100%">
                     <LineChart data={trends}>
                       <CartesianGrid strokeDasharray="3 3" stroke="#222" vertical={false} />
-                      <YAxis domain={['auto', 'auto']} stroke="#444" tick={{fontSize: 8}} width={35} />
+                      {/* ZOOMED Y-AXIS: dataMin/Max forces the line to fill the container */}
+                      <YAxis domain={['dataMin', 'dataMax']} stroke="#444" tick={{fontSize: 8}} width={35} />
                       <XAxis dataKey="date" hide />
                       <Tooltip contentStyle={{backgroundColor: '#1e1e1e', fontSize: '10px'}} />
-                      <Line type="monotone" dataKey={m.k} stroke={m.color} strokeWidth={2} dot={{r: 1}} isAnimationActive={false} />
+                      <Line type="monotone" dataKey={m.k} stroke={m.color} strokeWidth={3} dot={false} isAnimationActive={false} />
                     </LineChart>
                   </ResponsiveContainer>
                 </div>
@@ -171,10 +185,6 @@ const App = () => {
                 ))}
               </div>
             </section>
-          </div>
-
-          <div style={{ marginTop: '40px', padding: '10px', fontSize: '0.7rem', color: '#333', borderTop: '1px solid #222' }}>
-            Data Sample: {trends[0]?.date} - {trends[0]?.opt} / {trends[0]?.foc} / {trends[0]?.con}
           </div>
         </>
       )}
