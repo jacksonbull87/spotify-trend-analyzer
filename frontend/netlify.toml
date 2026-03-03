@@ -2,6 +2,12 @@
   command = "npm run build"
   publish = "dist"
 
+# Ensure API calls actually fail if the backend isn't there 
+# (instead of redirecting to index.html with a 200 OK)
+[[redirects]]
+  from = "/api/*"
+  status = 404
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
