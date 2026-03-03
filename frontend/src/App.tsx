@@ -67,9 +67,10 @@ const App = () => {
           return smoothedEntry;
         });
         
+        console.log("Smoothing Complete. Data Sample:", smoothed[0]);
         setTrends(smoothed);
         setLoading(false);
-      }, 500);
+      }, 800);
     } catch (err) {
       console.error("Error fetching data:", err);
       setLoading(false);
@@ -187,56 +188,56 @@ const App = () => {
               </div>
             </section>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr)', gap: '20px' }}>
               {/* Optimism Index */}
               <section style={{ backgroundColor: '#1e1e1e', padding: '20px', borderRadius: '12px' }}>
                 <h3 style={{ marginTop: 0, color: '#1DB954', fontSize: '1rem' }}>Optimism Index</h3>
-                <div style={{ height: '150px' }}>
+                <div style={{ height: '150px', width: '100%' }}>
                   <ResponsiveContainer width="100%" height="100%">
-                    <LineChart data={trends} margin={{ top: 5, right: 5, left: -20, bottom: 5 }}>
+                    <LineChart key={`opt-${trends.length}`} data={trends} margin={{ top: 5, right: 5, left: 5, bottom: 5 }}>
                       <CartesianGrid strokeDasharray="3 3" stroke="#333" vertical={false} />
                       <XAxis dataKey="date" hide />
                       <YAxis hide domain={['auto', 'auto']} />
                       <Tooltip contentStyle={{ backgroundColor: '#1e1e1e', border: '1px solid #333', fontSize: '0.8rem' }} />
-                      <Line type="basis" dataKey="Optimism Index" stroke="#F1C40F" strokeWidth={2} dot={false} />
+                      <Line type="monotone" dataKey="Optimism Index" stroke="#F1C40F" strokeWidth={2} dot={false} isAnimationActive={false} />
                     </LineChart>
                   </ResponsiveContainer>
                 </div>
-                <p style={{ fontSize: '0.8rem', color: '#888', marginTop: '10px' }}><strong>The "Mood" Score:</strong> Higher points mean songs were generally more positive and upbeat, while lower points suggest a more serious or somber musical landscape.</p>
+                <p style={{ fontSize: '0.8rem', color: '#888', marginTop: '10px' }}><strong>The "Mood" Score:</strong> Higher points mean songs were generally more positive and upbeat, while lower points suggest a more serious landscape.</p>
               </section>
 
               {/* Keyword Density */}
               <section style={{ backgroundColor: '#1e1e1e', padding: '20px', borderRadius: '12px' }}>
                 <h3 style={{ marginTop: 0, color: '#1DB954', fontSize: '1rem' }}>Lyrical Focus</h3>
-                <div style={{ height: '150px' }}>
+                <div style={{ height: '150px', width: '100%' }}>
                   <ResponsiveContainer width="100%" height="100%">
-                    <LineChart data={trends} margin={{ top: 5, right: 5, left: -20, bottom: 5 }}>
+                    <LineChart key={`key-${trends.length}`} data={trends} margin={{ top: 5, right: 5, left: 5, bottom: 5 }}>
                       <CartesianGrid strokeDasharray="3 3" stroke="#333" vertical={false} />
                       <XAxis dataKey="date" hide />
                       <YAxis hide domain={['auto', 'auto']} />
                       <Tooltip contentStyle={{ backgroundColor: '#1e1e1e', border: '1px solid #333', fontSize: '0.8rem' }} />
-                      <Line type="basis" dataKey="Keyword Density" stroke="#E67E22" strokeWidth={2} dot={false} />
+                      <Line type="monotone" dataKey="Keyword Density" stroke="#E67E22" strokeWidth={2} dot={false} isAnimationActive={false} />
                     </LineChart>
                   </ResponsiveContainer>
                 </div>
-                <p style={{ fontSize: '0.8rem', color: '#888', marginTop: '10px' }}><strong>The "Directness" Score:</strong> High scores mean songs used clear, repetitive keywords about their themes. Low scores mean more abstract or unique songwriting.</p>
+                <p style={{ fontSize: '0.8rem', color: '#888', marginTop: '10px' }}><strong>The "Directness" Score:</strong> High scores mean songs used clear keywords about their themes. Low scores mean more abstract songwriting.</p>
               </section>
 
               {/* Topic Clarity */}
               <section style={{ backgroundColor: '#1e1e1e', padding: '20px', borderRadius: '12px' }}>
                 <h3 style={{ marginTop: 0, color: '#1DB954', fontSize: '1rem' }}>Topic Consistency</h3>
-                <div style={{ height: '150px' }}>
+                <div style={{ height: '150px', width: '100%' }}>
                   <ResponsiveContainer width="100%" height="100%">
-                    <LineChart data={trends} margin={{ top: 5, right: 5, left: -20, bottom: 5 }}>
+                    <LineChart key={`top-${trends.length}`} data={trends} margin={{ top: 5, right: 5, left: 5, bottom: 5 }}>
                       <CartesianGrid strokeDasharray="3 3" stroke="#333" vertical={false} />
                       <XAxis dataKey="date" hide />
                       <YAxis hide domain={['auto', 'auto']} />
                       <Tooltip contentStyle={{ backgroundColor: '#1e1e1e', border: '1px solid #333', fontSize: '0.8rem' }} />
-                      <Line type="basis" dataKey="Topic Clarity" stroke="#3498DB" strokeWidth={2} dot={false} />
+                      <Line type="monotone" dataKey="Topic Clarity" stroke="#3498DB" strokeWidth={2} dot={false} isAnimationActive={false} />
                     </LineChart>
                   </ResponsiveContainer>
                 </div>
-                <p style={{ fontSize: '0.8rem', color: '#888', marginTop: '10px' }}><strong>The "Unity" Score:</strong> High scores mean all top hits were singing about the same core subject. Low scores suggest a more fragmented cultural moment.</p>
+                <p style={{ fontSize: '0.8rem', color: '#888', marginTop: '10px' }}><strong>The "Unity" Score:</strong> High scores mean all hits were about the same subject. Low scores suggest a fragmented cultural moment.</p>
               </section>
             </div>
           </div>
