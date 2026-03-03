@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { 
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer,
@@ -19,40 +19,44 @@ const App = () => {
   const [allStaticData, setAllStaticData] = useState(null);
 
   useEffect(() => {
-    const fetchData = async () => {
+    const start = async () => {
       try {
         setLoading(true);
-        let tData = [], wData = [], staticObj = null;
-        
+        let tRaw = [], wRaw = [], staticObj = null;
         try {
           const resW = await axios.get(`${API_BASE_URL}/api/weeks`);
           const resT = await axios.get(`${API_BASE_URL}/api/trends`);
-          if (!Array.isArray(resW.data)) throw new Error("Invalid API Response");
-          wData = resW.data;
-          tData = resT.data;
+          if (!Array.isArray(resW.data)) throw new Error();
+          wRaw = resW.data;
+          tRaw = resT.data;
         } catch (e) {
-          console.log("API unavailable, using data.json fallback");
           const resS = await axios.get(`/data.json?t=${Date.now()}`);
           staticObj = resS.data;
-          wData = staticObj.weeks;
-          tData = staticObj.trends;
+          wRaw = staticObj.weeks;
+          tRaw = staticObj.trends;
         }
 
-        // Map keys to be consistent across sources
-        const mapped = (tData || []).map(d => ({
-          ...d,
-          // Use exact keys found in data.json audit
-          opt: Number(d.Optimism_Index || d["Optimism Index"] || 0),
-          foc: Number(d.Keyword_Density || d["Keyword Density"] || 0),
-          con: Number(d.Topic_Clarity || d["Topic Clarity"] || 0)
-        }));
+        // 1. UNIVERSAL NORMALIZER
+        const mapped = (tRaw || []).map(d => {
+          // Helper to find a value regardless of spaces or underscores
+          const find = (term) => {
+            const key = Object.keys(d).find(k => k.toLowerCase().replace(/_/g, ' ').includes(term.toLowerCase()));
+            return key ? Number(d[key]) : 0;
+          };
+          return {
+            ...d,
+            m_opt: find('optimism'),
+            m_foc: find('density') || find('focus'),
+            m_con: find('clarity') || find('consistency')
+          };
+        });
 
-        // Smooth main categories for the big chart
+        // 2. SMOOTH THEMES ONLY
         const mainKeys = ['Romance', 'Party/Celebration', 'Resilience/Success', 'Melancholy', 'Social/Identity', 'Nostalgia'];
-        const processed = mapped.map((entry, index, array) => {
-          const start = Math.max(0, index - 2);
-          const end = Math.min(array.length, index + 3);
-          const window = array.slice(start, end);
+        const smoothed = mapped.map((entry, index, array) => {
+          const startIdx = Math.max(0, index - 2);
+          const endIdx = Math.min(array.length, index + 3);
+          const window = array.slice(startIdx, endIdx);
           const res = { ...entry };
           mainKeys.forEach(k => {
             if (entry[k] !== undefined) {
@@ -64,15 +68,13 @@ const App = () => {
         });
 
         setAllStaticData(staticObj);
-        setWeeks(wData);
-        setSelectedWeek(wData[0]);
-        setTrends(processed);
+        setWeeks(wRaw);
+        setSelectedWeek(wRaw[0]);
+        setTrends(smoothed);
         setLoading(false);
-      } catch (err) {
-        setLoading(false);
-      }
+      } catch (err) { setLoading(false); }
     };
-    fetchData();
+    start();
   }, []);
 
   useEffect(() => {
@@ -95,52 +97,51 @@ const App = () => {
     }
   }, [selectedWeek, allStaticData]);
 
-  // Force Y-Axis scaling per chart
-  const getDomain = (key) => {
-    const vals = trends.map(d => d[key]).filter(v => v > 0);
-    if (!vals.length) return [0, 1];
-    const min = Math.min(...vals);
-    const max = Math.max(...vals);
-    const pad = (max - min) * 0.1 || 0.05;
-    return [min - pad, max + pad];
-  };
-
   return (
-    <div style={{ padding: '20px', maxWidth: '1200px', margin: '0 auto', color: '#fff', backgroundColor: '#121212', minHeight: '100vh', fontFamily: 'sans-serif' }}>
+    <div style={{ padding: '20px', maxWidth: '1200px', margin: '0 auto', color: '#fff', backgroundColor: '#121212', minHeight: '100vh', fontFamily: 'system-ui, sans-serif' }}>
       <header style={{ borderBottom: '1px solid #333', paddingBottom: '25px', marginBottom: '30px' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <h1 style={{ display: 'flex', alignItems: 'center', gap: '15px', color: '#1DB954', fontSize: '2.5rem', margin: 0 }}>
             <TrendingUp size={40} /> Spotify Cultural Trends
           </h1>
           <button onClick={() => window.location.reload()} style={{ backgroundColor: '#222', color: '#888', border: '1px solid #444', padding: '8px 16px', borderRadius: '20px', cursor: 'pointer', fontSize: '0.8rem' }}>
-            <RefreshCw size={12} style={{marginRight: 8}}/> Refresh Application
+            <RefreshCw size={14} /> Refresh Application
           </button>
         </div>
-        
+
+        {/* FULL HEADER RESTORED */}
         <div style={{ backgroundColor: '#1e1e1e', padding: '25px', borderRadius: '12px', marginTop: '25px', border: '1px solid #333' }}>
-          <div style={{ marginBottom: '20px', borderBottom: '1px solid #333', paddingBottom: '15px' }}>
+          <div style={{ marginBottom: '25px', borderBottom: '1px solid #333', paddingBottom: '20px' }}>
             <h3 style={{ marginTop: 0, color: '#1DB954', fontSize: '1.3rem' }}>The Mission</h3>
-            <p style={{ fontSize: '1rem', color: '#ccc', lineHeight: '1.6', margin: 0 }}>
+            <p style={{ fontSize: '1.05rem', color: '#ccc', lineHeight: '1.6', margin: 0 }}>
               Music is the ultimate mirror of society. This tool aims to quantify the <strong>evolution of our collective consciousness</strong> by algorithmically dissecting the themes that dominate the airwaves. By tracking these shifts over years, we can visualize how our values, anxieties, and celebrations transform in real-time.
             </p>
           </div>
 
           <h3 style={{ marginTop: 0, color: '#1DB954', fontSize: '1.1rem', marginBottom: '15px' }}>How it Works</h3>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '25px' }}>
-            <div><strong style={{color:'#fff'}}>1. Data Sourcing</strong><br/><span style={{color:'#888', fontSize:'0.9rem'}}>Weekly Top 200 chart data is pulled directly from the provided dataset covering 2020 to 2026.</span></div>
-            <div><strong style={{color:'#fff'}}>2. Lyric Extraction</strong><br/><span style={{color:'#888', fontSize:'0.9rem'}}>Full song lyrics are retrieved via the Genius API for every track in the charting history.</span></div>
-            <div><strong style={{color:'#fff'}}>3. NLP Analysis</strong><br/><span style={{color:'#888', fontSize:'0.9rem'}}>Using Natural Language Processing (NLTK), we categorize lyrics into themes based on keyword prominence and sentiment.</span></div>
+            <div>
+              <strong style={{ color: '#fff', display: 'block', marginBottom: '5px' }}>1. Data Sourcing</strong>
+              <span style={{ color: '#888', fontSize: '0.9rem' }}>Weekly chart data is pulled directly from the provided dataset covering 2020 to 2026.</span>
+            </div>
+            <div>
+              <strong style={{ color: '#fff', display: 'block', marginBottom: '5px' }}>2. Lyric Extraction</strong>
+              <span style={{ color: '#888', fontSize: '0.9rem' }}>Full song lyrics are retrieved via the Genius API for every track in the charting history.</span>
+            </div>
+            <div>
+              <strong style={{ color: '#fff', display: 'block', marginBottom: '5px' }}>3. NLP Analysis</strong>
+              <span style={{ color: '#888', fontSize: '0.9rem' }}>Using Natural Language Processing (NLTK), we categorize lyrics into themes based on keyword prominence and sentiment.</span>
+            </div>
           </div>
         </div>
       </header>
 
       {loading ? (
-        <div style={{ height: '400px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}><Loader2 className="animate-spin" size={48} color="#1DB954" /></div>
+        <div style={{ height: '400px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}><Loader2 className="animate-spin" size={50} color="#1DB954" /></div>
       ) : (
         <>
           <section style={{ backgroundColor: '#1e1e1e', padding: '25px', borderRadius: '12px', marginBottom: '30px', border: '1px solid #222' }}>
             <h2 style={{ fontSize: '1.3rem', margin: '0 0 10px 0', display: 'flex', alignItems: 'center', gap: '10px' }}><BarChart3 /> Cultural Theme Evolution</h2>
-            <p style={{ color: '#888', marginBottom: '25px', fontSize: '0.9rem' }}>Tracks societal emotional priorities (Romance, Resilience, etc.)</p>
             <div style={{ height: '380px' }}>
               <ResponsiveContainer width="100%" height="100%">
                 <LineChart data={trends}>
@@ -159,24 +160,24 @@ const App = () => {
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '20px', marginBottom: '40px' }}>
             {[
-              { label: 'Optimism Index', k: 'opt', color: '#F1C40F', d: 'Mood Score: Higher = more positive.' },
-              { label: 'Lyrical Focus', k: 'foc', color: '#E67E22', d: 'Directness: Theme keyword density.' },
-              { label: 'Topic Consistency', k: 'con', color: '#3498DB', d: 'Unity: How similar chart hits are.' }
+              { label: 'Optimism Index', k: 'm_opt', color: '#F1C40F' },
+              { label: 'Lyrical Focus', k: 'm_foc', color: '#E67E22' },
+              { label: 'Topic Consistency', k: 'm_con', color: '#3498DB' }
             ].map(m => (
-              <div key={m.k} style={{ backgroundColor: '#1e1e1e', padding: '20px', borderRadius: '12px', border: '1px solid #333', minHeight: '250px' }}>
+              <div key={m.k} style={{ backgroundColor: '#1e1e1e', padding: '20px', borderRadius: '12px', border: '1px solid #333' }}>
                 <h3 style={{ fontSize: '1.1rem', color: '#1DB954', marginBottom: '15px' }}>{m.label}</h3>
-                <div style={{ height: '150px', width: '100%' }}>
+                <div style={{ height: '160px' }}>
                   <ResponsiveContainer width="100%" height="100%">
                     <LineChart data={trends} key={trends.length}>
                       <CartesianGrid strokeDasharray="3 3" stroke="#222" vertical={false} />
-                      <YAxis domain={getDomain(m.k)} stroke="#555" tick={{fontSize: 9}} width={35} allowDecimals={true} />
+                      {/* dataMin/dataMax forces the zoom effect */}
+                      <YAxis domain={['dataMin', 'dataMax']} stroke="#555" tick={{fontSize: 9}} width={35} allowDecimals={true} />
                       <XAxis dataKey="date" hide />
                       <Tooltip contentStyle={{backgroundColor: '#1e1e1e', border: '1px solid #333', fontSize: '11px'}} />
-                      <Line type="monotone" dataKey={m.k} stroke={m.color} strokeWidth={3} dot={false} isAnimationActive={false} />
+                      <Line type="monotone" dataKey={m.k} stroke={m.color} strokeWidth={2} dot={false} isAnimationActive={false} />
                     </LineChart>
                   </ResponsiveContainer>
                 </div>
-                <p style={{ fontSize: '0.8rem', color: '#666', marginTop: '15px' }}>{m.d}</p>
               </div>
             ))}
           </div>
@@ -184,7 +185,7 @@ const App = () => {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '30px', marginBottom: '40px' }}>
             <section style={{ backgroundColor: '#1e1e1e', padding: '25px', borderRadius: '12px', border: '1px solid #222' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '15px' }}>
-                <h2 style={{ fontSize: '1.1rem', margin: 0 }}>Analysis: {selectedWeek?.date}</h2>
+                <h2 style={{ fontSize: '1.2rem', margin: 0 }}>Analysis: {selectedWeek?.date}</h2>
                 <select onChange={e => setSelectedWeek(weeks.find(w => String(w.id) === e.target.value))} style={{ backgroundColor: '#333', color: '#fff', border: 'none', borderRadius: '4px', padding: '6px 12px' }}>
                   {weeks.map(w => <option key={w.id} value={w.id}>{w.date}</option>)}
                 </select>
@@ -192,7 +193,6 @@ const App = () => {
               <div style={{ height: '280px' }}>
                 <ResponsiveContainer width="100%" height="100%">
                   <BarChart data={themes} layout="vertical">
-                    <CartesianGrid strokeDasharray="3 3" stroke="#333" horizontal={false} />
                     <YAxis dataKey="name" type="category" width={110} tick={{fontSize: 10}} stroke="#888" />
                     <XAxis type="number" hide />
                     <Bar dataKey="score">
@@ -204,7 +204,7 @@ const App = () => {
             </section>
 
             <section style={{ backgroundColor: '#1e1e1e', padding: '25px', borderRadius: '12px', border: '1px solid #222' }}>
-              <h2 style={{ fontSize: '1.1rem', margin: '0 0 20px 0', display: 'flex', alignItems: 'center', gap: '10px' }}><Music size={20}/> Top Hits</h2>
+              <h2 style={{ fontSize: '1.2rem', margin: '0 0 20px 0', display: 'flex', alignItems: 'center', gap: '10px' }}><Music /> Top hits</h2>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
                 {songs.length > 0 ? songs.slice(0, 8).map(s => (
                   <div key={`${s.rank}-${s.title}`} style={{ backgroundColor: '#252525', padding: '12px', borderRadius: '8px', display: 'flex', alignItems: 'center', gap: '15px' }}>
@@ -214,7 +214,7 @@ const App = () => {
                       <div style={{ color: '#777', fontSize: '0.85rem' }}>{s.artist}</div>
                     </div>
                   </div>
-                )) : <div style={{ color: '#444' }}>Select a week to load hits.</div>}
+                )) : <div style={{ color: '#444' }}>Select a week.</div>}
               </div>
             </section>
           </div>
