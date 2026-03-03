@@ -19,54 +19,54 @@ const App = () => {
   const [allStaticData, setAllStaticData] = useState(null);
 
   useEffect(() => {
-    loadAllData();
+    loadData();
   }, []);
 
-  const loadAllData = async () => {
+  const loadData = async () => {
     try {
       setLoading(true);
-      let tData = [];
-      let wData = [];
+      let tRaw = [];
+      let wRaw = [];
       
       try {
         const resW = await axios.get(`${API_BASE_URL}/api/weeks`);
         const resT = await axios.get(`${API_BASE_URL}/api/trends`);
         if (!Array.isArray(resW.data)) throw new Error();
-        wData = resW.data;
-        tData = resT.data;
+        wRaw = resW.data;
+        tRaw = resT.data;
       } catch (e) {
         const resS = await axios.get(`/data.json?t=${Date.now()}`);
         setAllStaticData(resS.data);
-        wData = resS.data.weeks;
-        tData = resS.data.trends;
+        wRaw = resS.data.weeks;
+        tRaw = resS.data.trends;
       }
 
-      // 1. Map all potential key variations to consistent internal keys
-      const mapped = (tData || []).map(d => ({
+      // 1. Map to internal keys (matching data.json audit)
+      const mapped = (tRaw || []).map(d => ({
         ...d,
-        opt: d.Optimism_Index !== undefined ? d.Optimism_Index : (d["Optimism Index"] || 0),
-        foc: d.Keyword_Density !== undefined ? d.Keyword_Density : (d["Keyword Density"] || 0),
-        con: d.Topic_Clarity !== undefined ? d.Topic_Clarity : (d["Topic Clarity"] || 0)
+        m_opt: d.Optimism_Index || d["Optimism Index"] || 0,
+        m_foc: d.Keyword_Density || d["Keyword Density"] || 0,
+        m_con: d.Topic_Clarity || d["Topic Clarity"] || 0
       }));
 
-      // 2. Apply smoothing to EVERYTHING (Themes + Metrics)
+      // 2. Apply smoothing to EVERY line
       const smoothed = mapped.map((entry, index, array) => {
         const start = Math.max(0, index - 2);
         const end = Math.min(array.length, index + 3);
         const window = array.slice(start, end);
-        const smoothedEntry = { ...entry };
+        const res = { ...entry };
         
-        ['opt', 'foc', 'con', 'Romance', 'Party/Celebration', 'Resilience/Success', 'Melancholy', 'Social/Identity', 'Nostalgia'].forEach(key => {
+        ['m_opt', 'm_foc', 'm_con', 'Romance', 'Party/Celebration', 'Resilience/Success', 'Melancholy', 'Social/Identity', 'Nostalgia'].forEach(key => {
           if (entry[key] !== undefined) {
             const avg = window.reduce((acc, curr) => acc + (Number(curr[key]) || 0), 0) / window.length;
-            smoothedEntry[key] = parseFloat(avg.toFixed(4));
+            res[key] = parseFloat(avg.toFixed(4));
           }
         });
-        return smoothedEntry;
+        return res;
       });
 
-      setWeeks(wData);
-      setSelectedWeek(wData[0]);
+      setWeeks(wRaw);
+      setSelectedWeek(wRaw[0]);
       setTrends(smoothed);
       setLoading(false);
     } catch (err) {
@@ -76,7 +76,7 @@ const App = () => {
 
   useEffect(() => {
     if (selectedWeek) {
-      const loadDetails = async () => {
+      const fetchDetails = async () => {
         try {
           const resT = await axios.get(`${API_BASE_URL}/api/week/${selectedWeek.id}/themes`);
           setThemes(resT.data);
@@ -90,7 +90,7 @@ const App = () => {
           }
         }
       };
-      loadDetails();
+      fetchDetails();
     }
   }, [selectedWeek, allStaticData]);
 
@@ -102,10 +102,11 @@ const App = () => {
             <TrendingUp size={40} /> Spotify Cultural Trends
           </h1>
           <button onClick={() => window.location.reload()} style={{ backgroundColor: '#222', color: '#888', border: '1px solid #444', padding: '8px 15px', borderRadius: '20px', cursor: 'pointer', fontSize: '0.75rem' }}>
-            <RefreshCw size={12} style={{marginRight: 5}}/> Refresh Data
+            <RefreshCw size={12} style={{marginRight: 5}}/> Refresh Page
           </button>
         </div>
         
+        {/* FULL HEADER OVERVIEW RESTORED */}
         <div style={{ backgroundColor: '#1e1e1e', padding: '25px', borderRadius: '12px', marginTop: '20px', border: '1px solid #333' }}>
           <div style={{ marginBottom: '20px', borderBottom: '1px solid #333', paddingBottom: '15px' }}>
             <h3 style={{ marginTop: 0, color: '#1DB954', fontSize: '1.2rem' }}>The Mission</h3>
@@ -127,11 +128,10 @@ const App = () => {
         <div style={{ height: '300px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}><Loader2 className="animate-spin" size={48} color="#1DB954" /></div>
       ) : (
         <>
+          {/* Main Chart */}
           <section style={{ backgroundColor: '#1e1e1e', padding: '25px', borderRadius: '12px', marginBottom: '30px', border: '1px solid #222' }}>
             <h2 style={{ fontSize: '1.3rem', margin: '0 0 10px 0', display: 'flex', alignItems: 'center', gap: '10px' }}><BarChart3 /> Cultural Theme Evolution</h2>
-            <p style={{ color: '#888', marginBottom: '25px', fontSize: '0.9rem' }}>
-              This chart tracks how the "mood" of the country has shifted. By following these lines, you can see when society leaned into Romance, sought Resilience during tough times, or embraced Melancholy.
-            </p>
+            <p style={{ color: '#888', marginBottom: '25px', fontSize: '0.9rem' }}>Tracks societal emotional priorities (Romance, Resilience, etc.)</p>
             <div style={{ height: '380px' }}>
               <ResponsiveContainer width="100%" height="100%">
                 <LineChart data={trends}>
@@ -148,11 +148,12 @@ const App = () => {
             </div>
           </section>
 
+          {/* Metrics row - FIXED SCALING TO SHOW MOVEMENT */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '20px', marginBottom: '40px' }}>
             {[
-              { label: 'Optimism Index', k: 'opt', color: '#F1C40F', desc: 'The Mood Score: Higher means songs were generally more positive and upbeat.' },
-              { label: 'Lyrical Focus', k: 'foc', color: '#E67E22', desc: 'The Directness Score: High scores mean songs used clear keywords about their themes.' },
-              { label: 'Topic Consistency', k: 'con', color: '#3498DB', desc: 'The Unity Score: High scores mean top hits were all singing about the same core subject.' }
+              { label: 'Optimism Index', k: 'm_opt', color: '#F1C40F', desc: 'The Mood Score: Higher means songs were generally more positive.' },
+              { label: 'Lyrical Focus', k: 'm_foc', color: '#E67E22', desc: 'The Directness Score: Density of thematic keywords.' },
+              { label: 'Topic Consistency', k: 'm_con', color: '#3498DB', desc: 'The Unity Score: How unified chart-topping hits were.' }
             ].map(m => (
               <div key={m.k} style={{ backgroundColor: '#1e1e1e', padding: '20px', borderRadius: '12px', border: '1px solid #333' }}>
                 <h3 style={{ fontSize: '1rem', color: '#1DB954', marginBottom: '15px' }}>{m.label}</h3>
@@ -163,7 +164,7 @@ const App = () => {
                       <YAxis domain={['dataMin', 'dataMax']} stroke="#444" tick={{fontSize: 9}} width={35} />
                       <XAxis dataKey="date" hide />
                       <Tooltip contentStyle={{backgroundColor: '#1e1e1e', border: '1px solid #333', fontSize: '10px'}} />
-                      <Line type="basis" dataKey={m.k} stroke={m.color} strokeWidth={3} dot={false} />
+                      <Line type="monotone" dataKey={m.k} stroke={m.color} strokeWidth={3} dot={false} isAnimationActive={false} />
                     </LineChart>
                   </ResponsiveContainer>
                 </div>
@@ -175,12 +176,12 @@ const App = () => {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '30px', marginBottom: '40px' }}>
             <section style={{ backgroundColor: '#1e1e1e', padding: '25px', borderRadius: '12px', border: '1px solid #222' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '15px' }}>
-                <h2 style={{ fontSize: '1.1rem', margin: 0 }}>Themes for {selectedWeek?.date}</h2>
+                <h2 style={{ fontSize: '1.1rem', margin: 0 }}>Analysis: {selectedWeek?.date}</h2>
                 <select onChange={e => setSelectedWeek(weeks.find(w => String(w.id) === e.target.value))} style={{ backgroundColor: '#333', color: '#fff', border: 'none', borderRadius: '4px', padding: '5px 10px' }}>
                   {weeks.map(w => <option key={w.id} value={w.id}>{w.date}</option>)}
                 </select>
               </div>
-              <p style={{ color: '#888', fontSize: '0.85rem', marginBottom: '20px' }}>Deep-dive into the specific emotional makeup of the Top 10 hits for this week.</p>
+              <p style={{ color: '#888', fontSize: '0.85rem', marginBottom: '20px' }}>Emotional makeup of the Top 10 hits for this week.</p>
               <div style={{ height: '280px' }}>
                 <ResponsiveContainer width="100%" height="100%">
                   <BarChart data={themes} layout="vertical">
@@ -197,7 +198,7 @@ const App = () => {
             </section>
 
             <section style={{ backgroundColor: '#1e1e1e', padding: '25px', borderRadius: '12px', border: '1px solid #222' }}>
-              <h2 style={{ fontSize: '1.1rem', margin: '0 0 20px 0', display: 'flex', alignItems: 'center', gap: '10px' }}><Music size={20}/> Top Hits This Week</h2>
+              <h2 style={{ fontSize: '1.1rem', margin: '0 0 20px 0', display: 'flex', alignItems: 'center', gap: '10px' }}><Music size={20}/> Weekly Top Hits</h2>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
                 {songs.length > 0 ? songs.slice(0, 8).map(s => (
                   <div key={`${s.rank}-${s.title}`} style={{ backgroundColor: '#252525', padding: '12px', borderRadius: '8px', display: 'flex', alignItems: 'center', gap: '15px' }}>
@@ -210,6 +211,10 @@ const App = () => {
                 )) : <div style={{ color: '#444', padding: '20px', textAlign: 'center' }}>Loading chart data...</div>}
               </div>
             </section>
+          </div>
+
+          <div style={{ marginTop: '40px', padding: '15px', fontSize: '0.75rem', color: '#333', borderTop: '1px dashed #222' }}>
+            Data Check: First Point Metrics: {trends[0]?.m_opt} / {trends[0]?.m_foc} / {trends[0]?.m_con}
           </div>
         </>
       )}
