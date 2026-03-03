@@ -926,9 +926,9 @@
       "Melancholy": 0.44,
       "Social/Identity": 0.66,
       "Nostalgia": 0.46,
-      "Optimism Index": 0.59,
-      "Keyword Density": 0.1,
-      "Topic Clarity": 1.91
+      "Optimism_Index": 0.59,
+      "Keyword_Density": 0.1,
+      "Topic_Clarity": 1.91
     },
     {
       "date": "2021-10-21",
@@ -938,9 +938,9 @@
       "Melancholy": 0.45,
       "Social/Identity": 0.6,
       "Nostalgia": 0.45,
-      "Optimism Index": 0.7,
-      "Keyword Density": 0.11,
-      "Topic Clarity": 2.31
+      "Optimism_Index": 0.7,
+      "Keyword_Density": 0.11,
+      "Topic_Clarity": 2.31
     },
     {
       "date": "2021-10-28",
@@ -950,9 +950,9 @@
       "Melancholy": 0.45,
       "Social/Identity": 0.6,
       "Nostalgia": 0.45,
-      "Optimism Index": 0.7,
-      "Keyword Density": 0.11,
-      "Topic Clarity": 2.31
+      "Optimism_Index": 0.7,
+      "Keyword_Density": 0.11,
+      "Topic_Clarity": 2.31
     },
     {
       "date": "2021-11-04",
@@ -962,9 +962,9 @@
       "Melancholy": 1.0,
       "Social/Identity": 0.58,
       "Nostalgia": 0.48,
-      "Optimism Index": 0.51,
-      "Keyword Density": 0.1,
-      "Topic Clarity": 2.16
+      "Optimism_Index": 0.51,
+      "Keyword_Density": 0.1,
+      "Topic_Clarity": 2.16
     },
     {
       "date": "2021-11-11",
@@ -974,9 +974,9 @@
       "Melancholy": 0.43,
       "Social/Identity": 0.38,
       "Nostalgia": 0.43,
-      "Optimism Index": 0.58,
-      "Keyword Density": 0.1,
-      "Topic Clarity": 2.32
+      "Optimism_Index": 0.58,
+      "Keyword_Density": 0.1,
+      "Topic_Clarity": 2.32
     },
     {
       "date": "2021-11-18",
@@ -986,9 +986,9 @@
       "Melancholy": 0.38,
       "Social/Identity": 0.27,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.43,
-      "Keyword Density": 0.07,
-      "Topic Clarity": 2.06
+      "Optimism_Index": 0.43,
+      "Keyword_Density": 0.07,
+      "Topic_Clarity": 2.06
     },
     {
       "date": "2021-11-25",
@@ -998,9 +998,9 @@
       "Melancholy": 0.38,
       "Social/Identity": 0.27,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.47,
-      "Keyword Density": 0.08,
-      "Topic Clarity": 2.17
+      "Optimism_Index": 0.47,
+      "Keyword_Density": 0.08,
+      "Topic_Clarity": 2.17
     },
     {
       "date": "2021-12-02",
@@ -1010,9 +1010,9 @@
       "Melancholy": 0.38,
       "Social/Identity": 0.27,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.47,
-      "Keyword Density": 0.08,
-      "Topic Clarity": 2.17
+      "Optimism_Index": 0.47,
+      "Keyword_Density": 0.08,
+      "Topic_Clarity": 2.17
     },
     {
       "date": "2021-12-09",
@@ -1022,9 +1022,9 @@
       "Melancholy": 0.58,
       "Social/Identity": 0.31,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.32,
-      "Keyword Density": 0.07,
-      "Topic Clarity": 1.99
+      "Optimism_Index": 0.32,
+      "Keyword_Density": 0.07,
+      "Topic_Clarity": 1.99
     },
     {
       "date": "2021-12-16",
@@ -1034,9 +1034,9 @@
       "Melancholy": 0.55,
       "Social/Identity": 0.41,
       "Nostalgia": 0.9,
-      "Optimism Index": 0.41,
-      "Keyword Density": 0.08,
-      "Topic Clarity": 1.84
+      "Optimism_Index": 0.41,
+      "Keyword_Density": 0.08,
+      "Topic_Clarity": 1.84
     },
     {
       "date": "2021-12-23",
@@ -1046,9 +1046,9 @@
       "Melancholy": 0.41,
       "Social/Identity": 0.41,
       "Nostalgia": 0.85,
-      "Optimism Index": 0.48,
-      "Keyword Density": 0.07,
-      "Topic Clarity": 1.9
+      "Optimism_Index": 0.48,
+      "Keyword_Density": 0.07,
+      "Topic_Clarity": 1.9
     },
     {
       "date": "2021-12-30",
@@ -1058,9 +1058,9 @@
       "Melancholy": 0.55,
       "Social/Identity": 0.41,
       "Nostalgia": 0.9,
-      "Optimism Index": 0.41,
-      "Keyword Density": 0.08,
-      "Topic Clarity": 1.84
+      "Optimism_Index": 0.41,
+      "Keyword_Density": 0.08,
+      "Topic_Clarity": 1.84
     },
     {
       "date": "2022-01-06",
@@ -1070,9 +1070,9 @@
       "Melancholy": 0.46,
       "Social/Identity": 0.35,
       "Nostalgia": 0.78,
-      "Optimism Index": 0.5,
-      "Keyword Density": 0.09,
-      "Topic Clarity": 1.88
+      "Optimism_Index": 0.5,
+      "Keyword_Density": 0.09,
+      "Topic_Clarity": 1.88
     },
     {
       "date": "2022-01-13",
@@ -1082,9 +1082,9 @@
       "Melancholy": 0.56,
       "Social/Identity": 0.25,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.38,
-      "Keyword Density": 0.08,
-      "Topic Clarity": 1.85
+      "Optimism_Index": 0.38,
+      "Keyword_Density": 0.08,
+      "Topic_Clarity": 1.85
     },
     {
       "date": "2022-01-20",
@@ -1094,9 +1094,9 @@
       "Melancholy": 0.47,
       "Social/Identity": 0.29,
       "Nostalgia": 0.82,
-      "Optimism Index": 0.45,
-      "Keyword Density": 0.09,
-      "Topic Clarity": 1.99
+      "Optimism_Index": 0.45,
+      "Keyword_Density": 0.09,
+      "Topic_Clarity": 1.99
     },
     {
       "date": "2022-01-27",
@@ -1106,9 +1106,9 @@
       "Melancholy": 0.42,
       "Social/Identity": 0.31,
       "Nostalgia": 0.71,
-      "Optimism Index": 0.38,
-      "Keyword Density": 0.08,
-      "Topic Clarity": 2.06
+      "Optimism_Index": 0.38,
+      "Keyword_Density": 0.08,
+      "Topic_Clarity": 2.06
     },
     {
       "date": "2022-02-03",
@@ -1118,9 +1118,9 @@
       "Melancholy": 0.46,
       "Social/Identity": 0.54,
       "Nostalgia": 0.83,
-      "Optimism Index": 0.32,
-      "Keyword Density": 0.07,
-      "Topic Clarity": 2.17
+      "Optimism_Index": 0.32,
+      "Keyword_Density": 0.07,
+      "Topic_Clarity": 2.17
     },
     {
       "date": "2022-02-10",
@@ -1130,9 +1130,9 @@
       "Melancholy": 0.42,
       "Social/Identity": 0.33,
       "Nostalgia": 0.73,
-      "Optimism Index": 0.31,
-      "Keyword Density": 0.05,
-      "Topic Clarity": 3.03
+      "Optimism_Index": 0.31,
+      "Keyword_Density": 0.05,
+      "Topic_Clarity": 3.03
     },
     {
       "date": "2022-02-17",
@@ -1142,9 +1142,9 @@
       "Melancholy": 0.43,
       "Social/Identity": 0.43,
       "Nostalgia": 0.72,
-      "Optimism Index": 0.29,
-      "Keyword Density": 0.05,
-      "Topic Clarity": 3.11
+      "Optimism_Index": 0.29,
+      "Keyword_Density": 0.05,
+      "Topic_Clarity": 3.11
     },
     {
       "date": "2022-02-24",
@@ -1154,9 +1154,9 @@
       "Melancholy": 0.43,
       "Social/Identity": 0.4,
       "Nostalgia": 0.47,
-      "Optimism Index": 0.36,
-      "Keyword Density": 0.06,
-      "Topic Clarity": 3.12
+      "Optimism_Index": 0.36,
+      "Keyword_Density": 0.06,
+      "Topic_Clarity": 3.12
     },
     {
       "date": "2022-03-03",
@@ -1166,9 +1166,9 @@
       "Melancholy": 0.44,
       "Social/Identity": 0.36,
       "Nostalgia": 0.44,
-      "Optimism Index": 0.31,
-      "Keyword Density": 0.05,
-      "Topic Clarity": 2.58
+      "Optimism_Index": 0.31,
+      "Keyword_Density": 0.05,
+      "Topic_Clarity": 2.58
     },
     {
       "date": "2022-03-10",
@@ -1178,9 +1178,9 @@
       "Melancholy": 0.49,
       "Social/Identity": 0.33,
       "Nostalgia": 0.59,
-      "Optimism Index": 0.4,
-      "Keyword Density": 0.08,
-      "Topic Clarity": 1.8
+      "Optimism_Index": 0.4,
+      "Keyword_Density": 0.08,
+      "Topic_Clarity": 1.8
     },
     {
       "date": "2022-03-17",
@@ -1190,9 +1190,9 @@
       "Melancholy": 0.45,
       "Social/Identity": 0.36,
       "Nostalgia": 0.47,
-      "Optimism Index": 0.41,
-      "Keyword Density": 0.09,
-      "Topic Clarity": 1.86
+      "Optimism_Index": 0.41,
+      "Keyword_Density": 0.09,
+      "Topic_Clarity": 1.86
     },
     {
       "date": "2022-03-24",
@@ -1202,9 +1202,9 @@
       "Melancholy": 0.45,
       "Social/Identity": 0.36,
       "Nostalgia": 0.47,
-      "Optimism Index": 0.41,
-      "Keyword Density": 0.09,
-      "Topic Clarity": 1.86
+      "Optimism_Index": 0.41,
+      "Keyword_Density": 0.09,
+      "Topic_Clarity": 1.86
     },
     {
       "date": "2022-03-31",
@@ -1214,9 +1214,9 @@
       "Melancholy": 0.45,
       "Social/Identity": 0.36,
       "Nostalgia": 0.47,
-      "Optimism Index": 0.41,
-      "Keyword Density": 0.09,
-      "Topic Clarity": 1.86
+      "Optimism_Index": 0.41,
+      "Keyword_Density": 0.09,
+      "Topic_Clarity": 1.86
     },
     {
       "date": "2022-04-07",
@@ -1226,9 +1226,9 @@
       "Melancholy": 0.66,
       "Social/Identity": 0.45,
       "Nostalgia": 0.57,
-      "Optimism Index": 0.31,
-      "Keyword Density": 0.08,
-      "Topic Clarity": 1.91
+      "Optimism_Index": 0.31,
+      "Keyword_Density": 0.08,
+      "Topic_Clarity": 1.91
     },
     {
       "date": "2022-04-14",
@@ -1238,9 +1238,9 @@
       "Melancholy": 0.55,
       "Social/Identity": 0.43,
       "Nostalgia": 0.51,
-      "Optimism Index": 0.33,
-      "Keyword Density": 0.05,
-      "Topic Clarity": 2.98
+      "Optimism_Index": 0.33,
+      "Keyword_Density": 0.05,
+      "Topic_Clarity": 2.98
     },
     {
       "date": "2022-04-21",
@@ -1250,9 +1250,9 @@
       "Melancholy": 0.45,
       "Social/Identity": 0.36,
       "Nostalgia": 0.47,
-      "Optimism Index": 0.41,
-      "Keyword Density": 0.09,
-      "Topic Clarity": 1.86
+      "Optimism_Index": 0.41,
+      "Keyword_Density": 0.09,
+      "Topic_Clarity": 1.86
     },
     {
       "date": "2022-04-28",
@@ -1262,9 +1262,9 @@
       "Melancholy": 0.36,
       "Social/Identity": 0.3,
       "Nostalgia": 0.3,
-      "Optimism Index": 0.33,
-      "Keyword Density": 0.07,
-      "Topic Clarity": 1.93
+      "Optimism_Index": 0.33,
+      "Keyword_Density": 0.07,
+      "Topic_Clarity": 1.93
     },
     {
       "date": "2022-05-05",
@@ -1274,9 +1274,9 @@
       "Melancholy": 0.36,
       "Social/Identity": 0.3,
       "Nostalgia": 0.3,
-      "Optimism Index": 0.33,
-      "Keyword Density": 0.07,
-      "Topic Clarity": 1.93
+      "Optimism_Index": 0.33,
+      "Keyword_Density": 0.07,
+      "Topic_Clarity": 1.93
     },
     {
       "date": "2022-05-12",
@@ -1286,9 +1286,9 @@
       "Melancholy": 0.62,
       "Social/Identity": 0.44,
       "Nostalgia": 0.12,
-      "Optimism Index": 0.1,
-      "Keyword Density": 0.05,
-      "Topic Clarity": 1.98
+      "Optimism_Index": 0.1,
+      "Keyword_Density": 0.05,
+      "Topic_Clarity": 1.98
     },
     {
       "date": "2022-05-19",
@@ -1298,9 +1298,9 @@
       "Melancholy": 0.62,
       "Social/Identity": 0.44,
       "Nostalgia": 0.12,
-      "Optimism Index": 0.1,
-      "Keyword Density": 0.05,
-      "Topic Clarity": 1.98
+      "Optimism_Index": 0.1,
+      "Keyword_Density": 0.05,
+      "Topic_Clarity": 1.98
     },
     {
       "date": "2022-05-26",
@@ -1310,9 +1310,9 @@
       "Melancholy": 0.62,
       "Social/Identity": 0.44,
       "Nostalgia": 0.12,
-      "Optimism Index": 0.1,
-      "Keyword Density": 0.05,
-      "Topic Clarity": 1.98
+      "Optimism_Index": 0.1,
+      "Keyword_Density": 0.05,
+      "Topic_Clarity": 1.98
     },
     {
       "date": "2022-06-02",
@@ -1322,9 +1322,9 @@
       "Melancholy": 0.62,
       "Social/Identity": 0.44,
       "Nostalgia": 0.12,
-      "Optimism Index": 0.1,
-      "Keyword Density": 0.05,
-      "Topic Clarity": 1.98
+      "Optimism_Index": 0.1,
+      "Keyword_Density": 0.05,
+      "Topic_Clarity": 1.98
     },
     {
       "date": "2022-06-09",
@@ -1334,9 +1334,9 @@
       "Melancholy": 0.62,
       "Social/Identity": 0.44,
       "Nostalgia": 0.12,
-      "Optimism Index": 0.1,
-      "Keyword Density": 0.05,
-      "Topic Clarity": 1.98
+      "Optimism_Index": 0.1,
+      "Keyword_Density": 0.05,
+      "Topic_Clarity": 1.98
     },
     {
       "date": "2022-06-16",
@@ -1346,9 +1346,9 @@
       "Melancholy": 0.47,
       "Social/Identity": 0.53,
       "Nostalgia": 0.86,
-      "Optimism Index": 0.44,
-      "Keyword Density": 0.06,
-      "Topic Clarity": 2.91
+      "Optimism_Index": 0.44,
+      "Keyword_Density": 0.06,
+      "Topic_Clarity": 2.91
     },
     {
       "date": "2022-06-23",
@@ -1358,9 +1358,9 @@
       "Melancholy": 0.57,
       "Social/Identity": 0.57,
       "Nostalgia": 0.76,
-      "Optimism Index": 0.46,
-      "Keyword Density": 0.06,
-      "Topic Clarity": 2.5
+      "Optimism_Index": 0.46,
+      "Keyword_Density": 0.06,
+      "Topic_Clarity": 2.5
     },
     {
       "date": "2022-06-30",
@@ -1370,9 +1370,9 @@
       "Melancholy": 0.63,
       "Social/Identity": 0.63,
       "Nostalgia": 0.53,
-      "Optimism Index": 0.33,
-      "Keyword Density": 0.06,
-      "Topic Clarity": 2.25
+      "Optimism_Index": 0.33,
+      "Keyword_Density": 0.06,
+      "Topic_Clarity": 2.25
     },
     {
       "date": "2022-07-07",
@@ -1382,9 +1382,9 @@
       "Melancholy": 0.58,
       "Social/Identity": 0.65,
       "Nostalgia": 0.38,
-      "Optimism Index": 0.32,
-      "Keyword Density": 0.06,
-      "Topic Clarity": 2.26
+      "Optimism_Index": 0.32,
+      "Keyword_Density": 0.06,
+      "Topic_Clarity": 2.26
     },
     {
       "date": "2022-07-14",
@@ -1394,9 +1394,9 @@
       "Melancholy": 0.58,
       "Social/Identity": 0.65,
       "Nostalgia": 0.38,
-      "Optimism Index": 0.32,
-      "Keyword Density": 0.06,
-      "Topic Clarity": 2.26
+      "Optimism_Index": 0.32,
+      "Keyword_Density": 0.06,
+      "Topic_Clarity": 2.26
     },
     {
       "date": "2022-07-21",
@@ -1406,9 +1406,9 @@
       "Melancholy": 0.58,
       "Social/Identity": 0.65,
       "Nostalgia": 0.38,
-      "Optimism Index": 0.32,
-      "Keyword Density": 0.06,
-      "Topic Clarity": 2.26
+      "Optimism_Index": 0.32,
+      "Keyword_Density": 0.06,
+      "Topic_Clarity": 2.26
     },
     {
       "date": "2022-07-28",
@@ -1418,9 +1418,9 @@
       "Melancholy": 0.58,
       "Social/Identity": 0.65,
       "Nostalgia": 0.38,
-      "Optimism Index": 0.32,
-      "Keyword Density": 0.06,
-      "Topic Clarity": 2.26
+      "Optimism_Index": 0.32,
+      "Keyword_Density": 0.06,
+      "Topic_Clarity": 2.26
     },
     {
       "date": "2022-08-04",
@@ -1430,9 +1430,9 @@
       "Melancholy": 0.57,
       "Social/Identity": 0.52,
       "Nostalgia": 0.04,
-      "Optimism Index": 0.18,
-      "Keyword Density": 0.06,
-      "Topic Clarity": 2.13
+      "Optimism_Index": 0.18,
+      "Keyword_Density": 0.06,
+      "Topic_Clarity": 2.13
     },
     {
       "date": "2022-08-11",
@@ -1442,9 +1442,9 @@
       "Melancholy": 0.57,
       "Social/Identity": 0.52,
       "Nostalgia": 0.04,
-      "Optimism Index": 0.18,
-      "Keyword Density": 0.06,
-      "Topic Clarity": 2.13
+      "Optimism_Index": 0.18,
+      "Keyword_Density": 0.06,
+      "Topic_Clarity": 2.13
     },
     {
       "date": "2022-08-18",
@@ -1454,9 +1454,9 @@
       "Melancholy": 0.57,
       "Social/Identity": 0.52,
       "Nostalgia": 0.04,
-      "Optimism Index": 0.18,
-      "Keyword Density": 0.06,
-      "Topic Clarity": 2.13
+      "Optimism_Index": 0.18,
+      "Keyword_Density": 0.06,
+      "Topic_Clarity": 2.13
     },
     {
       "date": "2022-08-25",
@@ -1466,9 +1466,9 @@
       "Melancholy": 0.7,
       "Social/Identity": 0.73,
       "Nostalgia": 0.4,
-      "Optimism Index": 0.51,
-      "Keyword Density": 0.06,
-      "Topic Clarity": 2.35
+      "Optimism_Index": 0.51,
+      "Keyword_Density": 0.06,
+      "Topic_Clarity": 2.35
     },
     {
       "date": "2022-09-01",
@@ -1478,9 +1478,9 @@
       "Melancholy": 0.57,
       "Social/Identity": 0.6,
       "Nostalgia": 0.24,
-      "Optimism Index": 0.46,
-      "Keyword Density": 0.06,
-      "Topic Clarity": 2.9
+      "Optimism_Index": 0.46,
+      "Keyword_Density": 0.06,
+      "Topic_Clarity": 2.9
     },
     {
       "date": "2022-09-08",
@@ -1490,9 +1490,9 @@
       "Melancholy": 0.7,
       "Social/Identity": 0.73,
       "Nostalgia": 0.4,
-      "Optimism Index": 0.51,
-      "Keyword Density": 0.06,
-      "Topic Clarity": 2.35
+      "Optimism_Index": 0.51,
+      "Keyword_Density": 0.06,
+      "Topic_Clarity": 2.35
     },
     {
       "date": "2022-09-15",
@@ -1502,9 +1502,9 @@
       "Melancholy": 0.7,
       "Social/Identity": 0.73,
       "Nostalgia": 0.4,
-      "Optimism Index": 0.51,
-      "Keyword Density": 0.06,
-      "Topic Clarity": 2.35
+      "Optimism_Index": 0.51,
+      "Keyword_Density": 0.06,
+      "Topic_Clarity": 2.35
     },
     {
       "date": "2022-09-22",
@@ -1514,9 +1514,9 @@
       "Melancholy": 0.64,
       "Social/Identity": 0.56,
       "Nostalgia": 0.24,
-      "Optimism Index": 0.74,
-      "Keyword Density": 0.07,
-      "Topic Clarity": 2.26
+      "Optimism_Index": 0.74,
+      "Keyword_Density": 0.07,
+      "Topic_Clarity": 2.26
     },
     {
       "date": "2022-09-29",
@@ -1526,9 +1526,9 @@
       "Melancholy": 0.58,
       "Social/Identity": 0.69,
       "Nostalgia": 0.46,
-      "Optimism Index": 0.63,
-      "Keyword Density": 0.05,
-      "Topic Clarity": 2.5
+      "Optimism_Index": 0.63,
+      "Keyword_Density": 0.05,
+      "Topic_Clarity": 2.5
     },
     {
       "date": "2022-10-06",
@@ -1538,9 +1538,9 @@
       "Melancholy": 0.58,
       "Social/Identity": 0.69,
       "Nostalgia": 0.46,
-      "Optimism Index": 0.63,
-      "Keyword Density": 0.05,
-      "Topic Clarity": 2.5
+      "Optimism_Index": 0.63,
+      "Keyword_Density": 0.05,
+      "Topic_Clarity": 2.5
     },
     {
       "date": "2022-10-13",
@@ -1550,9 +1550,9 @@
       "Melancholy": 0.42,
       "Social/Identity": 0.62,
       "Nostalgia": 0.46,
-      "Optimism Index": 0.57,
-      "Keyword Density": 0.06,
-      "Topic Clarity": 2.29
+      "Optimism_Index": 0.57,
+      "Keyword_Density": 0.06,
+      "Topic_Clarity": 2.29
     },
     {
       "date": "2022-10-20",
@@ -1562,9 +1562,9 @@
       "Melancholy": 0.39,
       "Social/Identity": 0.48,
       "Nostalgia": 0.13,
-      "Optimism Index": 0.5,
-      "Keyword Density": 0.05,
-      "Topic Clarity": 2.18
+      "Optimism_Index": 0.5,
+      "Keyword_Density": 0.05,
+      "Topic_Clarity": 2.18
     },
     {
       "date": "2022-10-27",
@@ -1574,9 +1574,9 @@
       "Melancholy": 0.39,
       "Social/Identity": 0.48,
       "Nostalgia": 0.13,
-      "Optimism Index": 0.5,
-      "Keyword Density": 0.05,
-      "Topic Clarity": 2.18
+      "Optimism_Index": 0.5,
+      "Keyword_Density": 0.05,
+      "Topic_Clarity": 2.18
     },
     {
       "date": "2022-11-03",
@@ -1586,9 +1586,9 @@
       "Melancholy": 0.65,
       "Social/Identity": 0.3,
       "Nostalgia": 0.48,
-      "Optimism Index": 0.45,
-      "Keyword Density": 0.07,
-      "Topic Clarity": 1.77
+      "Optimism_Index": 0.45,
+      "Keyword_Density": 0.07,
+      "Topic_Clarity": 1.77
     },
     {
       "date": "2022-11-10",
@@ -1598,9 +1598,9 @@
       "Melancholy": 0.83,
       "Social/Identity": 0.33,
       "Nostalgia": 0.61,
-      "Optimism Index": 0.32,
-      "Keyword Density": 0.07,
-      "Topic Clarity": 1.93
+      "Optimism_Index": 0.32,
+      "Keyword_Density": 0.07,
+      "Topic_Clarity": 1.93
     },
     {
       "date": "2022-11-17",
@@ -1610,9 +1610,9 @@
       "Melancholy": 0.62,
       "Social/Identity": 0.25,
       "Nostalgia": 0.62,
-      "Optimism Index": 0.35,
-      "Keyword Density": 0.08,
-      "Topic Clarity": 1.91
+      "Optimism_Index": 0.35,
+      "Keyword_Density": 0.08,
+      "Topic_Clarity": 1.91
     },
     {
       "date": "2022-11-24",
@@ -1622,9 +1622,9 @@
       "Melancholy": 1.0,
       "Social/Identity": 0.4,
       "Nostalgia": 0.73,
-      "Optimism Index": 0.33,
-      "Keyword Density": 0.12,
-      "Topic Clarity": 1.26
+      "Optimism_Index": 0.33,
+      "Keyword_Density": 0.12,
+      "Topic_Clarity": 1.26
     },
     {
       "date": "2022-12-01",
@@ -1634,9 +1634,9 @@
       "Melancholy": 1.0,
       "Social/Identity": 0.4,
       "Nostalgia": 0.73,
-      "Optimism Index": 0.33,
-      "Keyword Density": 0.12,
-      "Topic Clarity": 1.26
+      "Optimism_Index": 0.33,
+      "Keyword_Density": 0.12,
+      "Topic_Clarity": 1.26
     },
     {
       "date": "2022-12-08",
@@ -1646,9 +1646,9 @@
       "Melancholy": 0.74,
       "Social/Identity": 0.39,
       "Nostalgia": 0.78,
-      "Optimism Index": 0.26,
-      "Keyword Density": 0.1,
-      "Topic Clarity": 1.72
+      "Optimism_Index": 0.26,
+      "Keyword_Density": 0.1,
+      "Topic_Clarity": 1.72
     },
     {
       "date": "2022-12-15",
@@ -1658,9 +1658,9 @@
       "Melancholy": 0.55,
       "Social/Identity": 0.32,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.31,
-      "Keyword Density": 0.07,
-      "Topic Clarity": 1.61
+      "Optimism_Index": 0.31,
+      "Keyword_Density": 0.07,
+      "Topic_Clarity": 1.61
     },
     {
       "date": "2022-12-22",
@@ -1670,9 +1670,9 @@
       "Melancholy": 0.63,
       "Social/Identity": 0.43,
       "Nostalgia": 0.97,
-      "Optimism Index": 0.39,
-      "Keyword Density": 0.07,
-      "Topic Clarity": 1.58
+      "Optimism_Index": 0.39,
+      "Keyword_Density": 0.07,
+      "Topic_Clarity": 1.58
     },
     {
       "date": "2022-12-29",
@@ -1682,9 +1682,9 @@
       "Melancholy": 0.56,
       "Social/Identity": 0.47,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.48,
-      "Keyword Density": 0.07,
-      "Topic Clarity": 1.72
+      "Optimism_Index": 0.48,
+      "Keyword_Density": 0.07,
+      "Topic_Clarity": 1.72
     },
     {
       "date": "2023-01-05",
@@ -1694,9 +1694,9 @@
       "Melancholy": 0.56,
       "Social/Identity": 0.47,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.48,
-      "Keyword Density": 0.07,
-      "Topic Clarity": 1.72
+      "Optimism_Index": 0.48,
+      "Keyword_Density": 0.07,
+      "Topic_Clarity": 1.72
     },
     {
       "date": "2023-01-12",
@@ -1706,9 +1706,9 @@
       "Melancholy": 0.56,
       "Social/Identity": 0.47,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.48,
-      "Keyword Density": 0.07,
-      "Topic Clarity": 1.72
+      "Optimism_Index": 0.48,
+      "Keyword_Density": 0.07,
+      "Topic_Clarity": 1.72
     },
     {
       "date": "2023-01-19",
@@ -1718,9 +1718,9 @@
       "Melancholy": 0.56,
       "Social/Identity": 0.47,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.48,
-      "Keyword Density": 0.07,
-      "Topic Clarity": 1.72
+      "Optimism_Index": 0.48,
+      "Keyword_Density": 0.07,
+      "Topic_Clarity": 1.72
     },
     {
       "date": "2023-01-26",
@@ -1730,9 +1730,9 @@
       "Melancholy": 0.41,
       "Social/Identity": 0.32,
       "Nostalgia": 0.7,
-      "Optimism Index": 0.49,
-      "Keyword Density": 0.08,
-      "Topic Clarity": 1.84
+      "Optimism_Index": 0.49,
+      "Keyword_Density": 0.08,
+      "Topic_Clarity": 1.84
     },
     {
       "date": "2023-02-02",
@@ -1742,9 +1742,9 @@
       "Melancholy": 0.6,
       "Social/Identity": 0.44,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.48,
-      "Keyword Density": 0.08,
-      "Topic Clarity": 1.72
+      "Optimism_Index": 0.48,
+      "Keyword_Density": 0.08,
+      "Topic_Clarity": 1.72
     },
     {
       "date": "2023-02-09",
@@ -1754,9 +1754,9 @@
       "Melancholy": 0.55,
       "Social/Identity": 0.43,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.44,
-      "Keyword Density": 0.08,
-      "Topic Clarity": 1.74
+      "Optimism_Index": 0.44,
+      "Keyword_Density": 0.08,
+      "Topic_Clarity": 1.74
     },
     {
       "date": "2023-02-16",
@@ -1766,9 +1766,9 @@
       "Melancholy": 0.55,
       "Social/Identity": 0.43,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.44,
-      "Keyword Density": 0.08,
-      "Topic Clarity": 1.74
+      "Optimism_Index": 0.44,
+      "Keyword_Density": 0.08,
+      "Topic_Clarity": 1.74
     },
     {
       "date": "2023-02-23",
@@ -1778,9 +1778,9 @@
       "Melancholy": 0.36,
       "Social/Identity": 0.35,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.48,
-      "Keyword Density": 0.09,
-      "Topic Clarity": 2.09
+      "Optimism_Index": 0.48,
+      "Keyword_Density": 0.09,
+      "Topic_Clarity": 2.09
     },
     {
       "date": "2023-03-02",
@@ -1790,9 +1790,9 @@
       "Melancholy": 0.32,
       "Social/Identity": 0.33,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.49,
-      "Keyword Density": 0.07,
-      "Topic Clarity": 2.47
+      "Optimism_Index": 0.49,
+      "Keyword_Density": 0.07,
+      "Topic_Clarity": 2.47
     },
     {
       "date": "2023-03-09",
@@ -1802,9 +1802,9 @@
       "Melancholy": 0.36,
       "Social/Identity": 0.35,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.48,
-      "Keyword Density": 0.09,
-      "Topic Clarity": 2.09
+      "Optimism_Index": 0.48,
+      "Keyword_Density": 0.09,
+      "Topic_Clarity": 2.09
     },
     {
       "date": "2023-03-16",
@@ -1814,9 +1814,9 @@
       "Melancholy": 0.34,
       "Social/Identity": 0.37,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.58,
-      "Keyword Density": 0.08,
-      "Topic Clarity": 2.21
+      "Optimism_Index": 0.58,
+      "Keyword_Density": 0.08,
+      "Topic_Clarity": 2.21
     },
     {
       "date": "2023-03-23",
@@ -1826,9 +1826,9 @@
       "Melancholy": 0.55,
       "Social/Identity": 0.42,
       "Nostalgia": 0.89,
-      "Optimism Index": 0.44,
-      "Keyword Density": 0.06,
-      "Topic Clarity": 1.9
+      "Optimism_Index": 0.44,
+      "Keyword_Density": 0.06,
+      "Topic_Clarity": 1.9
     },
     {
       "date": "2023-03-30",
@@ -1838,9 +1838,9 @@
       "Melancholy": 0.55,
       "Social/Identity": 0.42,
       "Nostalgia": 0.89,
-      "Optimism Index": 0.48,
-      "Keyword Density": 0.07,
-      "Topic Clarity": 1.7
+      "Optimism_Index": 0.48,
+      "Keyword_Density": 0.07,
+      "Topic_Clarity": 1.7
     },
     {
       "date": "2023-04-06",
@@ -1850,9 +1850,9 @@
       "Melancholy": 0.55,
       "Social/Identity": 0.42,
       "Nostalgia": 0.89,
-      "Optimism Index": 0.48,
-      "Keyword Density": 0.07,
-      "Topic Clarity": 1.7
+      "Optimism_Index": 0.48,
+      "Keyword_Density": 0.07,
+      "Topic_Clarity": 1.7
     },
     {
       "date": "2023-04-13",
@@ -1862,9 +1862,9 @@
       "Melancholy": 0.35,
       "Social/Identity": 0.49,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.68,
-      "Keyword Density": 0.08,
-      "Topic Clarity": 2.68
+      "Optimism_Index": 0.68,
+      "Keyword_Density": 0.08,
+      "Topic_Clarity": 2.68
     },
     {
       "date": "2023-04-20",
@@ -1874,9 +1874,9 @@
       "Melancholy": 0.42,
       "Social/Identity": 0.44,
       "Nostalgia": 0.67,
-      "Optimism Index": 0.53,
-      "Keyword Density": 0.08,
-      "Topic Clarity": 1.92
+      "Optimism_Index": 0.53,
+      "Keyword_Density": 0.08,
+      "Topic_Clarity": 1.92
     },
     {
       "date": "2023-04-27",
@@ -1886,9 +1886,9 @@
       "Melancholy": 0.47,
       "Social/Identity": 0.39,
       "Nostalgia": 0.69,
-      "Optimism Index": 0.48,
-      "Keyword Density": 0.08,
-      "Topic Clarity": 1.81
+      "Optimism_Index": 0.48,
+      "Keyword_Density": 0.08,
+      "Topic_Clarity": 1.81
     },
     {
       "date": "2023-05-04",
@@ -1898,9 +1898,9 @@
       "Melancholy": 0.47,
       "Social/Identity": 0.39,
       "Nostalgia": 0.69,
-      "Optimism Index": 0.48,
-      "Keyword Density": 0.08,
-      "Topic Clarity": 1.81
+      "Optimism_Index": 0.48,
+      "Keyword_Density": 0.08,
+      "Topic_Clarity": 1.81
     },
     {
       "date": "2023-05-11",
@@ -1910,9 +1910,9 @@
       "Melancholy": 0.47,
       "Social/Identity": 0.39,
       "Nostalgia": 0.69,
-      "Optimism Index": 0.48,
-      "Keyword Density": 0.08,
-      "Topic Clarity": 1.81
+      "Optimism_Index": 0.48,
+      "Keyword_Density": 0.08,
+      "Topic_Clarity": 1.81
     },
     {
       "date": "2023-05-18",
@@ -1922,9 +1922,9 @@
       "Melancholy": 0.47,
       "Social/Identity": 0.39,
       "Nostalgia": 0.69,
-      "Optimism Index": 0.48,
-      "Keyword Density": 0.08,
-      "Topic Clarity": 1.81
+      "Optimism_Index": 0.48,
+      "Keyword_Density": 0.08,
+      "Topic_Clarity": 1.81
     },
     {
       "date": "2023-05-25",
@@ -1934,9 +1934,9 @@
       "Melancholy": 0.34,
       "Social/Identity": 0.43,
       "Nostalgia": 0.61,
-      "Optimism Index": 0.54,
-      "Keyword Density": 0.08,
-      "Topic Clarity": 1.79
+      "Optimism_Index": 0.54,
+      "Keyword_Density": 0.08,
+      "Topic_Clarity": 1.79
     },
     {
       "date": "2023-06-01",
@@ -1946,9 +1946,9 @@
       "Melancholy": 0.28,
       "Social/Identity": 0.42,
       "Nostalgia": 0.65,
-      "Optimism Index": 0.62,
-      "Keyword Density": 0.08,
-      "Topic Clarity": 1.83
+      "Optimism_Index": 0.62,
+      "Keyword_Density": 0.08,
+      "Topic_Clarity": 1.83
     },
     {
       "date": "2023-06-08",
@@ -1958,9 +1958,9 @@
       "Melancholy": 0.32,
       "Social/Identity": 0.5,
       "Nostalgia": 0.65,
-      "Optimism Index": 0.64,
-      "Keyword Density": 0.07,
-      "Topic Clarity": 1.84
+      "Optimism_Index": 0.64,
+      "Keyword_Density": 0.07,
+      "Topic_Clarity": 1.84
     },
     {
       "date": "2023-06-15",
@@ -1970,9 +1970,9 @@
       "Melancholy": 0.22,
       "Social/Identity": 0.29,
       "Nostalgia": 0.59,
-      "Optimism Index": 0.65,
-      "Keyword Density": 0.08,
-      "Topic Clarity": 1.85
+      "Optimism_Index": 0.65,
+      "Keyword_Density": 0.08,
+      "Topic_Clarity": 1.85
     },
     {
       "date": "2023-06-22",
@@ -1982,9 +1982,9 @@
       "Melancholy": 0.39,
       "Social/Identity": 0.39,
       "Nostalgia": 0.47,
-      "Optimism Index": 0.42,
-      "Keyword Density": 0.07,
-      "Topic Clarity": 1.74
+      "Optimism_Index": 0.42,
+      "Keyword_Density": 0.07,
+      "Topic_Clarity": 1.74
     },
     {
       "date": "2023-06-29",
@@ -1994,9 +1994,9 @@
       "Melancholy": 0.27,
       "Social/Identity": 0.32,
       "Nostalgia": 0.43,
-      "Optimism Index": 0.43,
-      "Keyword Density": 0.06,
-      "Topic Clarity": 2.01
+      "Optimism_Index": 0.43,
+      "Keyword_Density": 0.06,
+      "Topic_Clarity": 2.01
     },
     {
       "date": "2023-07-06",
@@ -2006,9 +2006,9 @@
       "Melancholy": 0.32,
       "Social/Identity": 0.32,
       "Nostalgia": 0.39,
-      "Optimism Index": 0.73,
-      "Keyword Density": 0.09,
-      "Topic Clarity": 1.45
+      "Optimism_Index": 0.73,
+      "Keyword_Density": 0.09,
+      "Topic_Clarity": 1.45
     },
     {
       "date": "2023-07-13",
@@ -2018,9 +2018,9 @@
       "Melancholy": 0.32,
       "Social/Identity": 0.32,
       "Nostalgia": 0.39,
-      "Optimism Index": 0.73,
-      "Keyword Density": 0.09,
-      "Topic Clarity": 1.45
+      "Optimism_Index": 0.73,
+      "Keyword_Density": 0.09,
+      "Topic_Clarity": 1.45
     },
     {
       "date": "2023-07-20",
@@ -2030,9 +2030,9 @@
       "Melancholy": 0.29,
       "Social/Identity": 0.26,
       "Nostalgia": 0.41,
-      "Optimism Index": 0.43,
-      "Keyword Density": 0.05,
-      "Topic Clarity": 2.22
+      "Optimism_Index": 0.43,
+      "Keyword_Density": 0.05,
+      "Topic_Clarity": 2.22
     },
     {
       "date": "2023-07-27",
@@ -2042,9 +2042,9 @@
       "Melancholy": 0.29,
       "Social/Identity": 0.26,
       "Nostalgia": 0.51,
-      "Optimism Index": 0.57,
-      "Keyword Density": 0.08,
-      "Topic Clarity": 1.64
+      "Optimism_Index": 0.57,
+      "Keyword_Density": 0.08,
+      "Topic_Clarity": 1.64
     },
     {
       "date": "2023-08-03",
@@ -2054,9 +2054,9 @@
       "Melancholy": 0.34,
       "Social/Identity": 0.31,
       "Nostalgia": 0.48,
-      "Optimism Index": 0.59,
-      "Keyword Density": 0.08,
-      "Topic Clarity": 1.61
+      "Optimism_Index": 0.59,
+      "Keyword_Density": 0.08,
+      "Topic_Clarity": 1.61
     },
     {
       "date": "2023-08-10",
@@ -2066,9 +2066,9 @@
       "Melancholy": 0.29,
       "Social/Identity": 0.26,
       "Nostalgia": 0.51,
-      "Optimism Index": 0.57,
-      "Keyword Density": 0.08,
-      "Topic Clarity": 1.64
+      "Optimism_Index": 0.57,
+      "Keyword_Density": 0.08,
+      "Topic_Clarity": 1.64
     },
     {
       "date": "2023-08-17",
@@ -2078,9 +2078,9 @@
       "Melancholy": 0.24,
       "Social/Identity": 0.22,
       "Nostalgia": 0.44,
-      "Optimism Index": 0.36,
-      "Keyword Density": 0.04,
-      "Topic Clarity": 2.35
+      "Optimism_Index": 0.36,
+      "Keyword_Density": 0.04,
+      "Topic_Clarity": 2.35
     },
     {
       "date": "2023-08-24",
@@ -2090,9 +2090,9 @@
       "Melancholy": 0.23,
       "Social/Identity": 0.28,
       "Nostalgia": 0.47,
-      "Optimism Index": 0.36,
-      "Keyword Density": 0.05,
-      "Topic Clarity": 2.32
+      "Optimism_Index": 0.36,
+      "Keyword_Density": 0.05,
+      "Topic_Clarity": 2.32
     },
     {
       "date": "2023-08-31",
@@ -2102,9 +2102,9 @@
       "Melancholy": 0.28,
       "Social/Identity": 0.33,
       "Nostalgia": 0.63,
-      "Optimism Index": 0.45,
-      "Keyword Density": 0.05,
-      "Topic Clarity": 2.33
+      "Optimism_Index": 0.45,
+      "Keyword_Density": 0.05,
+      "Topic_Clarity": 2.33
     },
     {
       "date": "2023-09-07",
@@ -2114,9 +2114,9 @@
       "Melancholy": 0.28,
       "Social/Identity": 0.33,
       "Nostalgia": 0.63,
-      "Optimism Index": 0.45,
-      "Keyword Density": 0.05,
-      "Topic Clarity": 2.33
+      "Optimism_Index": 0.45,
+      "Keyword_Density": 0.05,
+      "Topic_Clarity": 2.33
     },
     {
       "date": "2023-09-14",
@@ -2126,9 +2126,9 @@
       "Melancholy": 0.32,
       "Social/Identity": 0.37,
       "Nostalgia": 0.71,
-      "Optimism Index": 0.55,
-      "Keyword Density": 0.07,
-      "Topic Clarity": 1.96
+      "Optimism_Index": 0.55,
+      "Keyword_Density": 0.07,
+      "Topic_Clarity": 1.96
     },
     {
       "date": "2023-09-21",
@@ -2138,9 +2138,9 @@
       "Melancholy": 0.32,
       "Social/Identity": 0.37,
       "Nostalgia": 0.71,
-      "Optimism Index": 0.55,
-      "Keyword Density": 0.07,
-      "Topic Clarity": 1.96
+      "Optimism_Index": 0.55,
+      "Keyword_Density": 0.07,
+      "Topic_Clarity": 1.96
     },
     {
       "date": "2023-09-28",
@@ -2150,9 +2150,9 @@
       "Melancholy": 0.38,
       "Social/Identity": 0.38,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.5,
-      "Keyword Density": 0.06,
-      "Topic Clarity": 1.95
+      "Optimism_Index": 0.5,
+      "Keyword_Density": 0.06,
+      "Topic_Clarity": 1.95
     },
     {
       "date": "2023-10-05",
@@ -2162,9 +2162,9 @@
       "Melancholy": 0.38,
       "Social/Identity": 0.38,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.5,
-      "Keyword Density": 0.06,
-      "Topic Clarity": 1.95
+      "Optimism_Index": 0.5,
+      "Keyword_Density": 0.06,
+      "Topic_Clarity": 1.95
     },
     {
       "date": "2023-10-12",
@@ -2174,9 +2174,9 @@
       "Melancholy": 0.35,
       "Social/Identity": 0.39,
       "Nostalgia": 0.91,
-      "Optimism Index": 0.68,
-      "Keyword Density": 0.08,
-      "Topic Clarity": 1.66
+      "Optimism_Index": 0.68,
+      "Keyword_Density": 0.08,
+      "Topic_Clarity": 1.66
     },
     {
       "date": "2023-10-19",
@@ -2186,9 +2186,9 @@
       "Melancholy": 0.35,
       "Social/Identity": 0.39,
       "Nostalgia": 0.91,
-      "Optimism Index": 0.68,
-      "Keyword Density": 0.08,
-      "Topic Clarity": 1.66
+      "Optimism_Index": 0.68,
+      "Keyword_Density": 0.08,
+      "Topic_Clarity": 1.66
     },
     {
       "date": "2023-10-26",
@@ -2198,9 +2198,9 @@
       "Melancholy": 0.35,
       "Social/Identity": 0.39,
       "Nostalgia": 0.91,
-      "Optimism Index": 0.68,
-      "Keyword Density": 0.08,
-      "Topic Clarity": 1.66
+      "Optimism_Index": 0.68,
+      "Keyword_Density": 0.08,
+      "Topic_Clarity": 1.66
     },
     {
       "date": "2023-11-02",
@@ -2210,9 +2210,9 @@
       "Melancholy": 0.34,
       "Social/Identity": 0.45,
       "Nostalgia": 0.83,
-      "Optimism Index": 0.63,
-      "Keyword Density": 0.07,
-      "Topic Clarity": 1.82
+      "Optimism_Index": 0.63,
+      "Keyword_Density": 0.07,
+      "Topic_Clarity": 1.82
     },
     {
       "date": "2023-11-09",
@@ -2222,9 +2222,9 @@
       "Melancholy": 0.41,
       "Social/Identity": 0.47,
       "Nostalgia": 0.69,
-      "Optimism Index": 0.63,
-      "Keyword Density": 0.08,
-      "Topic Clarity": 1.68
+      "Optimism_Index": 0.63,
+      "Keyword_Density": 0.08,
+      "Topic_Clarity": 1.68
     },
     {
       "date": "2023-11-16",
@@ -2234,9 +2234,9 @@
       "Melancholy": 0.32,
       "Social/Identity": 0.46,
       "Nostalgia": 0.75,
-      "Optimism Index": 0.73,
-      "Keyword Density": 0.08,
-      "Topic Clarity": 1.72
+      "Optimism_Index": 0.73,
+      "Keyword_Density": 0.08,
+      "Topic_Clarity": 1.72
     },
     {
       "date": "2023-11-23",
@@ -2246,9 +2246,9 @@
       "Melancholy": 0.34,
       "Social/Identity": 0.45,
       "Nostalgia": 0.83,
-      "Optimism Index": 0.63,
-      "Keyword Density": 0.07,
-      "Topic Clarity": 1.82
+      "Optimism_Index": 0.63,
+      "Keyword_Density": 0.07,
+      "Topic_Clarity": 1.82
     },
     {
       "date": "2023-11-30",
@@ -2258,9 +2258,9 @@
       "Melancholy": 0.35,
       "Social/Identity": 0.39,
       "Nostalgia": 0.91,
-      "Optimism Index": 0.68,
-      "Keyword Density": 0.08,
-      "Topic Clarity": 1.66
+      "Optimism_Index": 0.68,
+      "Keyword_Density": 0.08,
+      "Topic_Clarity": 1.66
     },
     {
       "date": "2023-12-07",
@@ -2270,9 +2270,9 @@
       "Melancholy": 0.17,
       "Social/Identity": 0.14,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.7,
-      "Keyword Density": 0.1,
-      "Topic Clarity": 1.73
+      "Optimism_Index": 0.7,
+      "Keyword_Density": 0.1,
+      "Topic_Clarity": 1.73
     },
     {
       "date": "2023-12-14",
@@ -2282,9 +2282,9 @@
       "Melancholy": 0.12,
       "Social/Identity": 0.06,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.62,
-      "Keyword Density": 0.1,
-      "Topic Clarity": 1.84
+      "Optimism_Index": 0.62,
+      "Keyword_Density": 0.1,
+      "Topic_Clarity": 1.84
     },
     {
       "date": "2023-12-21",
@@ -2294,9 +2294,9 @@
       "Melancholy": 0.12,
       "Social/Identity": 0.06,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.62,
-      "Keyword Density": 0.1,
-      "Topic Clarity": 1.84
+      "Optimism_Index": 0.62,
+      "Keyword_Density": 0.1,
+      "Topic_Clarity": 1.84
     },
     {
       "date": "2023-12-28",
@@ -2306,9 +2306,9 @@
       "Melancholy": 0.12,
       "Social/Identity": 0.06,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.62,
-      "Keyword Density": 0.1,
-      "Topic Clarity": 1.84
+      "Optimism_Index": 0.62,
+      "Keyword_Density": 0.1,
+      "Topic_Clarity": 1.84
     },
     {
       "date": "2024-01-04",
@@ -2318,9 +2318,9 @@
       "Melancholy": 0.38,
       "Social/Identity": 0.38,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.57,
-      "Keyword Density": 0.07,
-      "Topic Clarity": 1.78
+      "Optimism_Index": 0.57,
+      "Keyword_Density": 0.07,
+      "Topic_Clarity": 1.78
     },
     {
       "date": "2024-01-11",
@@ -2330,9 +2330,9 @@
       "Melancholy": 0.38,
       "Social/Identity": 0.38,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.57,
-      "Keyword Density": 0.07,
-      "Topic Clarity": 1.78
+      "Optimism_Index": 0.57,
+      "Keyword_Density": 0.07,
+      "Topic_Clarity": 1.78
     },
     {
       "date": "2024-01-18",
@@ -2342,9 +2342,9 @@
       "Melancholy": 0.32,
       "Social/Identity": 0.27,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.48,
-      "Keyword Density": 0.06,
-      "Topic Clarity": 1.87
+      "Optimism_Index": 0.48,
+      "Keyword_Density": 0.06,
+      "Topic_Clarity": 1.87
     },
     {
       "date": "2024-01-25",
@@ -2354,9 +2354,9 @@
       "Melancholy": 0.32,
       "Social/Identity": 0.32,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.6,
-      "Keyword Density": 0.07,
-      "Topic Clarity": 1.76
+      "Optimism_Index": 0.6,
+      "Keyword_Density": 0.07,
+      "Topic_Clarity": 1.76
     },
     {
       "date": "2024-02-01",
@@ -2366,9 +2366,9 @@
       "Melancholy": 0.32,
       "Social/Identity": 0.32,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.6,
-      "Keyword Density": 0.07,
-      "Topic Clarity": 1.76
+      "Optimism_Index": 0.6,
+      "Keyword_Density": 0.07,
+      "Topic_Clarity": 1.76
     },
     {
       "date": "2024-02-08",
@@ -2378,9 +2378,9 @@
       "Melancholy": 0.32,
       "Social/Identity": 0.32,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.6,
-      "Keyword Density": 0.07,
-      "Topic Clarity": 1.76
+      "Optimism_Index": 0.6,
+      "Keyword_Density": 0.07,
+      "Topic_Clarity": 1.76
     },
     {
       "date": "2024-02-15",
@@ -2390,9 +2390,9 @@
       "Melancholy": 0.14,
       "Social/Identity": 0.14,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.68,
-      "Keyword Density": 0.08,
-      "Topic Clarity": 2.01
+      "Optimism_Index": 0.68,
+      "Keyword_Density": 0.08,
+      "Topic_Clarity": 2.01
     },
     {
       "date": "2024-02-22",
@@ -2402,9 +2402,9 @@
       "Melancholy": 0.32,
       "Social/Identity": 0.32,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.6,
-      "Keyword Density": 0.07,
-      "Topic Clarity": 1.76
+      "Optimism_Index": 0.6,
+      "Keyword_Density": 0.07,
+      "Topic_Clarity": 1.76
     },
     {
       "date": "2024-02-29",
@@ -2414,9 +2414,9 @@
       "Melancholy": 0.3,
       "Social/Identity": 0.41,
       "Nostalgia": 0.85,
-      "Optimism Index": 0.49,
-      "Keyword Density": 0.06,
-      "Topic Clarity": 1.9
+      "Optimism_Index": 0.49,
+      "Keyword_Density": 0.06,
+      "Topic_Clarity": 1.9
     },
     {
       "date": "2024-03-07",
@@ -2426,9 +2426,9 @@
       "Melancholy": 0.16,
       "Social/Identity": 0.18,
       "Nostalgia": 0.69,
-      "Optimism Index": 0.49,
-      "Keyword Density": 0.1,
-      "Topic Clarity": 1.92
+      "Optimism_Index": 0.49,
+      "Keyword_Density": 0.1,
+      "Topic_Clarity": 1.92
     },
     {
       "date": "2024-03-14",
@@ -2438,9 +2438,9 @@
       "Melancholy": 0.16,
       "Social/Identity": 0.18,
       "Nostalgia": 0.69,
-      "Optimism Index": 0.49,
-      "Keyword Density": 0.1,
-      "Topic Clarity": 1.92
+      "Optimism_Index": 0.49,
+      "Keyword_Density": 0.1,
+      "Topic_Clarity": 1.92
     },
     {
       "date": "2024-03-21",
@@ -2450,9 +2450,9 @@
       "Melancholy": 0.2,
       "Social/Identity": 0.2,
       "Nostalgia": 0.62,
-      "Optimism Index": 0.49,
-      "Keyword Density": 0.11,
-      "Topic Clarity": 1.79
+      "Optimism_Index": 0.49,
+      "Keyword_Density": 0.11,
+      "Topic_Clarity": 1.79
     },
     {
       "date": "2024-03-28",
@@ -2462,9 +2462,9 @@
       "Melancholy": 0.17,
       "Social/Identity": 0.2,
       "Nostalgia": 0.65,
-      "Optimism Index": 0.59,
-      "Keyword Density": 0.11,
-      "Topic Clarity": 1.86
+      "Optimism_Index": 0.59,
+      "Keyword_Density": 0.11,
+      "Topic_Clarity": 1.86
     },
     {
       "date": "2024-04-04",
@@ -2474,9 +2474,9 @@
       "Melancholy": 0.15,
       "Social/Identity": 0.18,
       "Nostalgia": 0.65,
-      "Optimism Index": 0.66,
-      "Keyword Density": 0.1,
-      "Topic Clarity": 1.97
+      "Optimism_Index": 0.66,
+      "Keyword_Density": 0.1,
+      "Topic_Clarity": 1.97
     },
     {
       "date": "2024-04-11",
@@ -2486,9 +2486,9 @@
       "Melancholy": 0.2,
       "Social/Identity": 0.2,
       "Nostalgia": 0.62,
-      "Optimism Index": 0.56,
-      "Keyword Density": 0.1,
-      "Topic Clarity": 1.9
+      "Optimism_Index": 0.56,
+      "Keyword_Density": 0.1,
+      "Topic_Clarity": 1.9
     },
     {
       "date": "2024-04-18",
@@ -2498,9 +2498,9 @@
       "Melancholy": 0.2,
       "Social/Identity": 0.2,
       "Nostalgia": 0.62,
-      "Optimism Index": 0.56,
-      "Keyword Density": 0.1,
-      "Topic Clarity": 1.9
+      "Optimism_Index": 0.56,
+      "Keyword_Density": 0.1,
+      "Topic_Clarity": 1.9
     },
     {
       "date": "2024-04-25",
@@ -2510,9 +2510,9 @@
       "Melancholy": 0.22,
       "Social/Identity": 0.2,
       "Nostalgia": 0.66,
-      "Optimism Index": 0.49,
-      "Keyword Density": 0.09,
-      "Topic Clarity": 1.97
+      "Optimism_Index": 0.49,
+      "Keyword_Density": 0.09,
+      "Topic_Clarity": 1.97
     },
     {
       "date": "2024-05-02",
@@ -2522,9 +2522,9 @@
       "Melancholy": 0.2,
       "Social/Identity": 0.2,
       "Nostalgia": 0.62,
-      "Optimism Index": 0.56,
-      "Keyword Density": 0.1,
-      "Topic Clarity": 1.9
+      "Optimism_Index": 0.56,
+      "Keyword_Density": 0.1,
+      "Topic_Clarity": 1.9
     },
     {
       "date": "2024-05-09",
@@ -2534,9 +2534,9 @@
       "Melancholy": 0.2,
       "Social/Identity": 0.22,
       "Nostalgia": 0.65,
-      "Optimism Index": 0.61,
-      "Keyword Density": 0.1,
-      "Topic Clarity": 1.79
+      "Optimism_Index": 0.61,
+      "Keyword_Density": 0.1,
+      "Topic_Clarity": 1.79
     },
     {
       "date": "2024-05-16",
@@ -2546,9 +2546,9 @@
       "Melancholy": 0.22,
       "Social/Identity": 0.2,
       "Nostalgia": 0.66,
-      "Optimism Index": 0.49,
-      "Keyword Density": 0.09,
-      "Topic Clarity": 1.97
+      "Optimism_Index": 0.49,
+      "Keyword_Density": 0.09,
+      "Topic_Clarity": 1.97
     },
     {
       "date": "2024-05-23",
@@ -2558,9 +2558,9 @@
       "Melancholy": 0.22,
       "Social/Identity": 0.24,
       "Nostalgia": 0.64,
-      "Optimism Index": 0.55,
-      "Keyword Density": 0.1,
-      "Topic Clarity": 1.67
+      "Optimism_Index": 0.55,
+      "Keyword_Density": 0.1,
+      "Topic_Clarity": 1.67
     },
     {
       "date": "2024-05-30",
@@ -2570,9 +2570,9 @@
       "Melancholy": 0.22,
       "Social/Identity": 0.22,
       "Nostalgia": 0.62,
-      "Optimism Index": 0.49,
-      "Keyword Density": 0.11,
-      "Topic Clarity": 1.78
+      "Optimism_Index": 0.49,
+      "Keyword_Density": 0.11,
+      "Topic_Clarity": 1.78
     },
     {
       "date": "2024-06-06",
@@ -2582,9 +2582,9 @@
       "Melancholy": 0.22,
       "Social/Identity": 0.22,
       "Nostalgia": 0.64,
-      "Optimism Index": 0.56,
-      "Keyword Density": 0.11,
-      "Topic Clarity": 1.73
+      "Optimism_Index": 0.56,
+      "Keyword_Density": 0.11,
+      "Topic_Clarity": 1.73
     },
     {
       "date": "2024-06-13",
@@ -2594,9 +2594,9 @@
       "Melancholy": 0.52,
       "Social/Identity": 0.57,
       "Nostalgia": 0.9,
-      "Optimism Index": 0.49,
-      "Keyword Density": 0.07,
-      "Topic Clarity": 1.59
+      "Optimism_Index": 0.49,
+      "Keyword_Density": 0.07,
+      "Topic_Clarity": 1.59
     },
     {
       "date": "2024-06-20",
@@ -2606,9 +2606,9 @@
       "Melancholy": 0.22,
       "Social/Identity": 0.22,
       "Nostalgia": 0.64,
-      "Optimism Index": 0.56,
-      "Keyword Density": 0.11,
-      "Topic Clarity": 1.73
+      "Optimism_Index": 0.56,
+      "Keyword_Density": 0.11,
+      "Topic_Clarity": 1.73
     },
     {
       "date": "2024-06-27",
@@ -2618,9 +2618,9 @@
       "Melancholy": 0.16,
       "Social/Identity": 0.2,
       "Nostalgia": 0.67,
-      "Optimism Index": 0.56,
-      "Keyword Density": 0.09,
-      "Topic Clarity": 2.06
+      "Optimism_Index": 0.56,
+      "Keyword_Density": 0.09,
+      "Topic_Clarity": 2.06
     },
     {
       "date": "2024-07-04",
@@ -2630,9 +2630,9 @@
       "Melancholy": 0.38,
       "Social/Identity": 0.41,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.41,
-      "Keyword Density": 0.07,
-      "Topic Clarity": 1.9
+      "Optimism_Index": 0.41,
+      "Keyword_Density": 0.07,
+      "Topic_Clarity": 1.9
     },
     {
       "date": "2024-07-11",
@@ -2642,9 +2642,9 @@
       "Melancholy": 0.52,
       "Social/Identity": 0.57,
       "Nostalgia": 0.9,
-      "Optimism Index": 0.42,
-      "Keyword Density": 0.06,
-      "Topic Clarity": 1.89
+      "Optimism_Index": 0.42,
+      "Keyword_Density": 0.06,
+      "Topic_Clarity": 1.89
     },
     {
       "date": "2024-07-18",
@@ -2654,9 +2654,9 @@
       "Melancholy": 0.38,
       "Social/Identity": 0.48,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.42,
-      "Keyword Density": 0.05,
-      "Topic Clarity": 2.03
+      "Optimism_Index": 0.42,
+      "Keyword_Density": 0.05,
+      "Topic_Clarity": 2.03
     },
     {
       "date": "2024-07-25",
@@ -2666,9 +2666,9 @@
       "Melancholy": 0.55,
       "Social/Identity": 0.55,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.37,
-      "Keyword Density": 0.05,
-      "Topic Clarity": 1.96
+      "Optimism_Index": 0.37,
+      "Keyword_Density": 0.05,
+      "Topic_Clarity": 1.96
     },
     {
       "date": "2024-08-01",
@@ -2678,9 +2678,9 @@
       "Melancholy": 0.41,
       "Social/Identity": 0.47,
       "Nostalgia": 0.62,
-      "Optimism Index": 0.45,
-      "Keyword Density": 0.06,
-      "Topic Clarity": 1.93
+      "Optimism_Index": 0.45,
+      "Keyword_Density": 0.06,
+      "Topic_Clarity": 1.93
     },
     {
       "date": "2024-08-08",
@@ -2690,9 +2690,9 @@
       "Melancholy": 0.42,
       "Social/Identity": 0.45,
       "Nostalgia": 0.7,
-      "Optimism Index": 0.4,
-      "Keyword Density": 0.06,
-      "Topic Clarity": 1.99
+      "Optimism_Index": 0.4,
+      "Keyword_Density": 0.06,
+      "Topic_Clarity": 1.99
     },
     {
       "date": "2024-08-15",
@@ -2702,9 +2702,9 @@
       "Melancholy": 0.23,
       "Social/Identity": 0.23,
       "Nostalgia": 0.59,
-      "Optimism Index": 0.46,
-      "Keyword Density": 0.08,
-      "Topic Clarity": 2.06
+      "Optimism_Index": 0.46,
+      "Keyword_Density": 0.08,
+      "Topic_Clarity": 2.06
     },
     {
       "date": "2024-08-22",
@@ -2714,9 +2714,9 @@
       "Melancholy": 0.17,
       "Social/Identity": 0.21,
       "Nostalgia": 0.58,
-      "Optimism Index": 0.58,
-      "Keyword Density": 0.09,
-      "Topic Clarity": 2.08
+      "Optimism_Index": 0.58,
+      "Keyword_Density": 0.09,
+      "Topic_Clarity": 2.08
     },
     {
       "date": "2024-08-29",
@@ -2726,9 +2726,9 @@
       "Melancholy": 0.21,
       "Social/Identity": 0.23,
       "Nostalgia": 0.56,
-      "Optimism Index": 0.51,
-      "Keyword Density": 0.09,
-      "Topic Clarity": 2.01
+      "Optimism_Index": 0.51,
+      "Keyword_Density": 0.09,
+      "Topic_Clarity": 2.01
     },
     {
       "date": "2024-09-05",
@@ -2738,9 +2738,9 @@
       "Melancholy": 0.21,
       "Social/Identity": 0.23,
       "Nostalgia": 0.58,
-      "Optimism Index": 0.46,
-      "Keyword Density": 0.08,
-      "Topic Clarity": 2.15
+      "Optimism_Index": 0.46,
+      "Keyword_Density": 0.08,
+      "Topic_Clarity": 2.15
     },
     {
       "date": "2024-09-12",
@@ -2750,9 +2750,9 @@
       "Melancholy": 0.21,
       "Social/Identity": 0.23,
       "Nostalgia": 0.58,
-      "Optimism Index": 0.46,
-      "Keyword Density": 0.08,
-      "Topic Clarity": 2.15
+      "Optimism_Index": 0.46,
+      "Keyword_Density": 0.08,
+      "Topic_Clarity": 2.15
     },
     {
       "date": "2024-09-19",
@@ -2762,9 +2762,9 @@
       "Melancholy": 0.21,
       "Social/Identity": 0.23,
       "Nostalgia": 0.56,
-      "Optimism Index": 0.51,
-      "Keyword Density": 0.09,
-      "Topic Clarity": 2.01
+      "Optimism_Index": 0.51,
+      "Keyword_Density": 0.09,
+      "Topic_Clarity": 2.01
     },
     {
       "date": "2024-09-26",
@@ -2774,9 +2774,9 @@
       "Melancholy": 0.22,
       "Social/Identity": 0.23,
       "Nostalgia": 0.54,
-      "Optimism Index": 0.45,
-      "Keyword Density": 0.08,
-      "Topic Clarity": 2.08
+      "Optimism_Index": 0.45,
+      "Keyword_Density": 0.08,
+      "Topic_Clarity": 2.08
     },
     {
       "date": "2024-10-03",
@@ -2786,9 +2786,9 @@
       "Melancholy": 0.22,
       "Social/Identity": 0.23,
       "Nostalgia": 0.54,
-      "Optimism Index": 0.45,
-      "Keyword Density": 0.08,
-      "Topic Clarity": 2.08
+      "Optimism_Index": 0.45,
+      "Keyword_Density": 0.08,
+      "Topic_Clarity": 2.08
     },
     {
       "date": "2024-10-10",
@@ -2798,9 +2798,9 @@
       "Melancholy": 0.18,
       "Social/Identity": 0.15,
       "Nostalgia": 0.44,
-      "Optimism Index": 0.4,
-      "Keyword Density": 0.09,
-      "Topic Clarity": 1.96
+      "Optimism_Index": 0.4,
+      "Keyword_Density": 0.09,
+      "Topic_Clarity": 1.96
     },
     {
       "date": "2024-10-17",
@@ -2810,9 +2810,9 @@
       "Melancholy": 0.28,
       "Social/Identity": 0.28,
       "Nostalgia": 0.62,
-      "Optimism Index": 0.46,
-      "Keyword Density": 0.06,
-      "Topic Clarity": 1.91
+      "Optimism_Index": 0.46,
+      "Keyword_Density": 0.06,
+      "Topic_Clarity": 1.91
     },
     {
       "date": "2024-10-24",
@@ -2822,9 +2822,9 @@
       "Melancholy": 0.19,
       "Social/Identity": 0.19,
       "Nostalgia": 0.5,
-      "Optimism Index": 0.5,
-      "Keyword Density": 0.06,
-      "Topic Clarity": 1.91
+      "Optimism_Index": 0.5,
+      "Keyword_Density": 0.06,
+      "Topic_Clarity": 1.91
     },
     {
       "date": "2024-10-31",
@@ -2834,9 +2834,9 @@
       "Melancholy": 0.2,
       "Social/Identity": 0.2,
       "Nostalgia": 0.34,
-      "Optimism Index": 0.43,
-      "Keyword Density": 0.06,
-      "Topic Clarity": 1.76
+      "Optimism_Index": 0.43,
+      "Keyword_Density": 0.06,
+      "Topic_Clarity": 1.76
     },
     {
       "date": "2024-11-07",
@@ -2846,9 +2846,9 @@
       "Melancholy": 0.38,
       "Social/Identity": 0.33,
       "Nostalgia": 0.58,
-      "Optimism Index": 0.35,
-      "Keyword Density": 0.05,
-      "Topic Clarity": 1.7
+      "Optimism_Index": 0.35,
+      "Keyword_Density": 0.05,
+      "Topic_Clarity": 1.7
     },
     {
       "date": "2024-11-14",
@@ -2858,9 +2858,9 @@
       "Melancholy": 0.38,
       "Social/Identity": 0.33,
       "Nostalgia": 0.58,
-      "Optimism Index": 0.35,
-      "Keyword Density": 0.05,
-      "Topic Clarity": 1.7
+      "Optimism_Index": 0.35,
+      "Keyword_Density": 0.05,
+      "Topic_Clarity": 1.7
     },
     {
       "date": "2024-11-21",
@@ -2870,9 +2870,9 @@
       "Melancholy": 0.33,
       "Social/Identity": 0.3,
       "Nostalgia": 0.52,
-      "Optimism Index": 0.43,
-      "Keyword Density": 0.05,
-      "Topic Clarity": 1.71
+      "Optimism_Index": 0.43,
+      "Keyword_Density": 0.05,
+      "Topic_Clarity": 1.71
     },
     {
       "date": "2024-11-28",
@@ -2882,9 +2882,9 @@
       "Melancholy": 0.33,
       "Social/Identity": 0.17,
       "Nostalgia": 0.54,
-      "Optimism Index": 0.49,
-      "Keyword Density": 0.05,
-      "Topic Clarity": 1.72
+      "Optimism_Index": 0.49,
+      "Keyword_Density": 0.05,
+      "Topic_Clarity": 1.72
     },
     {
       "date": "2024-12-05",
@@ -2894,9 +2894,9 @@
       "Melancholy": 0.23,
       "Social/Identity": 0.23,
       "Nostalgia": 0.97,
-      "Optimism Index": 0.56,
-      "Keyword Density": 0.08,
-      "Topic Clarity": 1.63
+      "Optimism_Index": 0.56,
+      "Keyword_Density": 0.08,
+      "Topic_Clarity": 1.63
     },
     {
       "date": "2024-12-12",
@@ -2906,9 +2906,9 @@
       "Melancholy": 0.23,
       "Social/Identity": 0.23,
       "Nostalgia": 0.97,
-      "Optimism Index": 0.5,
-      "Keyword Density": 0.07,
-      "Topic Clarity": 1.88
+      "Optimism_Index": 0.5,
+      "Keyword_Density": 0.07,
+      "Topic_Clarity": 1.88
     },
     {
       "date": "2024-12-19",
@@ -2918,9 +2918,9 @@
       "Melancholy": 0.23,
       "Social/Identity": 0.23,
       "Nostalgia": 0.97,
-      "Optimism Index": 0.56,
-      "Keyword Density": 0.08,
-      "Topic Clarity": 1.63
+      "Optimism_Index": 0.56,
+      "Keyword_Density": 0.08,
+      "Topic_Clarity": 1.63
     },
     {
       "date": "2024-12-26",
@@ -2930,9 +2930,9 @@
       "Melancholy": 0.27,
       "Social/Identity": 0.44,
       "Nostalgia": 0.7,
-      "Optimism Index": 0.44,
-      "Keyword Density": 0.08,
-      "Topic Clarity": 2.15
+      "Optimism_Index": 0.44,
+      "Keyword_Density": 0.08,
+      "Topic_Clarity": 2.15
     },
     {
       "date": "2025-01-02",
@@ -2942,9 +2942,9 @@
       "Melancholy": 0.22,
       "Social/Identity": 0.33,
       "Nostalgia": 0.59,
-      "Optimism Index": 0.52,
-      "Keyword Density": 0.07,
-      "Topic Clarity": 1.63
+      "Optimism_Index": 0.52,
+      "Keyword_Density": 0.07,
+      "Topic_Clarity": 1.63
     },
     {
       "date": "2025-01-09",
@@ -2954,9 +2954,9 @@
       "Melancholy": 0.23,
       "Social/Identity": 0.4,
       "Nostalgia": 0.57,
-      "Optimism Index": 0.45,
-      "Keyword Density": 0.07,
-      "Topic Clarity": 1.66
+      "Optimism_Index": 0.45,
+      "Keyword_Density": 0.07,
+      "Topic_Clarity": 1.66
     },
     {
       "date": "2025-01-16",
@@ -2966,9 +2966,9 @@
       "Melancholy": 0.23,
       "Social/Identity": 0.35,
       "Nostalgia": 0.46,
-      "Optimism Index": 0.57,
-      "Keyword Density": 0.06,
-      "Topic Clarity": 1.88
+      "Optimism_Index": 0.57,
+      "Keyword_Density": 0.06,
+      "Topic_Clarity": 1.88
     },
     {
       "date": "2025-01-23",
@@ -2978,9 +2978,9 @@
       "Melancholy": 0.33,
       "Social/Identity": 0.36,
       "Nostalgia": 0.48,
-      "Optimism Index": 0.52,
-      "Keyword Density": 0.05,
-      "Topic Clarity": 2.15
+      "Optimism_Index": 0.52,
+      "Keyword_Density": 0.05,
+      "Topic_Clarity": 2.15
     },
     {
       "date": "2025-01-30",
@@ -2990,9 +2990,9 @@
       "Melancholy": 0.28,
       "Social/Identity": 0.31,
       "Nostalgia": 0.51,
-      "Optimism Index": 0.51,
-      "Keyword Density": 0.05,
-      "Topic Clarity": 2.12
+      "Optimism_Index": 0.51,
+      "Keyword_Density": 0.05,
+      "Topic_Clarity": 2.12
     },
     {
       "date": "2025-02-06",
@@ -3002,9 +3002,9 @@
       "Melancholy": 0.37,
       "Social/Identity": 0.37,
       "Nostalgia": 0.66,
-      "Optimism Index": 0.51,
-      "Keyword Density": 0.05,
-      "Topic Clarity": 2.22
+      "Optimism_Index": 0.51,
+      "Keyword_Density": 0.05,
+      "Topic_Clarity": 2.22
     },
     {
       "date": "2025-02-13",
@@ -3014,9 +3014,9 @@
       "Melancholy": 0.2,
       "Social/Identity": 0.24,
       "Nostalgia": 0.59,
-      "Optimism Index": 0.65,
-      "Keyword Density": 0.08,
-      "Topic Clarity": 2.09
+      "Optimism_Index": 0.65,
+      "Keyword_Density": 0.08,
+      "Topic_Clarity": 2.09
     },
     {
       "date": "2025-02-20",
@@ -3026,9 +3026,9 @@
       "Melancholy": 0.23,
       "Social/Identity": 0.28,
       "Nostalgia": 0.7,
-      "Optimism Index": 0.68,
-      "Keyword Density": 0.08,
-      "Topic Clarity": 2.13
+      "Optimism_Index": 0.68,
+      "Keyword_Density": 0.08,
+      "Topic_Clarity": 2.13
     },
     {
       "date": "2025-02-27",
@@ -3038,9 +3038,9 @@
       "Melancholy": 0.24,
       "Social/Identity": 0.22,
       "Nostalgia": 0.68,
-      "Optimism Index": 0.59,
-      "Keyword Density": 0.07,
-      "Topic Clarity": 2.31
+      "Optimism_Index": 0.59,
+      "Keyword_Density": 0.07,
+      "Topic_Clarity": 2.31
     },
     {
       "date": "2025-03-06",
@@ -3050,9 +3050,9 @@
       "Melancholy": 0.26,
       "Social/Identity": 0.24,
       "Nostalgia": 0.71,
-      "Optimism Index": 0.61,
-      "Keyword Density": 0.08,
-      "Topic Clarity": 2.16
+      "Optimism_Index": 0.61,
+      "Keyword_Density": 0.08,
+      "Topic_Clarity": 2.16
     },
     {
       "date": "2025-03-13",
@@ -3062,9 +3062,9 @@
       "Melancholy": 0.26,
       "Social/Identity": 0.24,
       "Nostalgia": 0.71,
-      "Optimism Index": 0.65,
-      "Keyword Density": 0.07,
-      "Topic Clarity": 2.18
+      "Optimism_Index": 0.65,
+      "Keyword_Density": 0.07,
+      "Topic_Clarity": 2.18
     },
     {
       "date": "2025-03-20",
@@ -3074,9 +3074,9 @@
       "Melancholy": 0.5,
       "Social/Identity": 0.5,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.69,
-      "Keyword Density": 0.05,
-      "Topic Clarity": 1.78
+      "Optimism_Index": 0.69,
+      "Keyword_Density": 0.05,
+      "Topic_Clarity": 1.78
     },
     {
       "date": "2025-03-27",
@@ -3086,9 +3086,9 @@
       "Melancholy": 0.5,
       "Social/Identity": 0.5,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.69,
-      "Keyword Density": 0.05,
-      "Topic Clarity": 1.78
+      "Optimism_Index": 0.69,
+      "Keyword_Density": 0.05,
+      "Topic_Clarity": 1.78
     },
     {
       "date": "2025-04-03",
@@ -3098,9 +3098,9 @@
       "Melancholy": 0.55,
       "Social/Identity": 0.5,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.65,
-      "Keyword Density": 0.05,
-      "Topic Clarity": 1.9
+      "Optimism_Index": 0.65,
+      "Keyword_Density": 0.05,
+      "Topic_Clarity": 1.9
     },
     {
       "date": "2025-04-10",
@@ -3110,9 +3110,9 @@
       "Melancholy": 0.37,
       "Social/Identity": 0.53,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.78,
-      "Keyword Density": 0.05,
-      "Topic Clarity": 1.95
+      "Optimism_Index": 0.78,
+      "Keyword_Density": 0.05,
+      "Topic_Clarity": 1.95
     },
     {
       "date": "2025-04-17",
@@ -3122,9 +3122,9 @@
       "Melancholy": 0.37,
       "Social/Identity": 0.53,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.78,
-      "Keyword Density": 0.05,
-      "Topic Clarity": 1.95
+      "Optimism_Index": 0.78,
+      "Keyword_Density": 0.05,
+      "Topic_Clarity": 1.95
     },
     {
       "date": "2025-04-24",
@@ -3134,9 +3134,9 @@
       "Melancholy": 0.2,
       "Social/Identity": 0.67,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.73,
-      "Keyword Density": 0.04,
-      "Topic Clarity": 1.84
+      "Optimism_Index": 0.73,
+      "Keyword_Density": 0.04,
+      "Topic_Clarity": 1.84
     },
     {
       "date": "2025-05-01",
@@ -3146,9 +3146,9 @@
       "Melancholy": 0.2,
       "Social/Identity": 0.67,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.73,
-      "Keyword Density": 0.04,
-      "Topic Clarity": 1.84
+      "Optimism_Index": 0.73,
+      "Keyword_Density": 0.04,
+      "Topic_Clarity": 1.84
     },
     {
       "date": "2025-05-08",
@@ -3158,9 +3158,9 @@
       "Melancholy": 0.2,
       "Social/Identity": 0.73,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.78,
-      "Keyword Density": 0.04,
-      "Topic Clarity": 1.91
+      "Optimism_Index": 0.78,
+      "Keyword_Density": 0.04,
+      "Topic_Clarity": 1.91
     },
     {
       "date": "2025-05-15",
@@ -3170,9 +3170,9 @@
       "Melancholy": 0.2,
       "Social/Identity": 0.73,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.65,
-      "Keyword Density": 0.03,
-      "Topic Clarity": 2.21
+      "Optimism_Index": 0.65,
+      "Keyword_Density": 0.03,
+      "Topic_Clarity": 2.21
     },
     {
       "date": "2025-05-22",
@@ -3182,9 +3182,9 @@
       "Melancholy": 0.14,
       "Social/Identity": 0.5,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.78,
-      "Keyword Density": 0.03,
-      "Topic Clarity": 2.33
+      "Optimism_Index": 0.78,
+      "Keyword_Density": 0.03,
+      "Topic_Clarity": 2.33
     },
     {
       "date": "2025-05-29",
@@ -3194,9 +3194,9 @@
       "Melancholy": 0.2,
       "Social/Identity": 0.73,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.77,
-      "Keyword Density": 0.03,
-      "Topic Clarity": 2.26
+      "Optimism_Index": 0.77,
+      "Keyword_Density": 0.03,
+      "Topic_Clarity": 2.26
     },
     {
       "date": "2025-06-05",
@@ -3206,9 +3206,9 @@
       "Melancholy": 0.2,
       "Social/Identity": 0.73,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.72,
-      "Keyword Density": 0.04,
-      "Topic Clarity": 2.24
+      "Optimism_Index": 0.72,
+      "Keyword_Density": 0.04,
+      "Topic_Clarity": 2.24
     },
     {
       "date": "2025-06-12",
@@ -3218,9 +3218,9 @@
       "Melancholy": 0.17,
       "Social/Identity": 1.0,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.67,
-      "Keyword Density": 0.03,
-      "Topic Clarity": 1.57
+      "Optimism_Index": 0.67,
+      "Keyword_Density": 0.03,
+      "Topic_Clarity": 1.57
     },
     {
       "date": "2025-06-19",
@@ -3230,9 +3230,9 @@
       "Melancholy": 0.17,
       "Social/Identity": 1.0,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.5,
-      "Keyword Density": 0.02,
-      "Topic Clarity": 2.05
+      "Optimism_Index": 0.5,
+      "Keyword_Density": 0.02,
+      "Topic_Clarity": 2.05
     },
     {
       "date": "2025-06-26",
@@ -3242,9 +3242,9 @@
       "Melancholy": 0.1,
       "Social/Identity": 0.29,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.59,
-      "Keyword Density": 0.03,
-      "Topic Clarity": 2.31
+      "Optimism_Index": 0.59,
+      "Keyword_Density": 0.03,
+      "Topic_Clarity": 2.31
     },
     {
       "date": "2025-07-03",
@@ -3254,9 +3254,9 @@
       "Melancholy": 0.14,
       "Social/Identity": 0.45,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.68,
-      "Keyword Density": 0.03,
-      "Topic Clarity": 2.77
+      "Optimism_Index": 0.68,
+      "Keyword_Density": 0.03,
+      "Topic_Clarity": 2.77
     },
     {
       "date": "2025-07-10",
@@ -3266,9 +3266,9 @@
       "Melancholy": 0.06,
       "Social/Identity": 0.11,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.75,
-      "Keyword Density": 0.04,
-      "Topic Clarity": 2.14
+      "Optimism_Index": 0.75,
+      "Keyword_Density": 0.04,
+      "Topic_Clarity": 2.14
     },
     {
       "date": "2025-07-17",
@@ -3278,9 +3278,9 @@
       "Melancholy": 0.11,
       "Social/Identity": 0.17,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.67,
-      "Keyword Density": 0.05,
-      "Topic Clarity": 1.75
+      "Optimism_Index": 0.67,
+      "Keyword_Density": 0.05,
+      "Topic_Clarity": 1.75
     },
     {
       "date": "2025-07-24",
@@ -3290,9 +3290,9 @@
       "Melancholy": 0.11,
       "Social/Identity": 0.17,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.67,
-      "Keyword Density": 0.05,
-      "Topic Clarity": 1.75
+      "Optimism_Index": 0.67,
+      "Keyword_Density": 0.05,
+      "Topic_Clarity": 1.75
     },
     {
       "date": "2025-07-31",
@@ -3302,9 +3302,9 @@
       "Melancholy": 0.11,
       "Social/Identity": 0.17,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.67,
-      "Keyword Density": 0.05,
-      "Topic Clarity": 1.75
+      "Optimism_Index": 0.67,
+      "Keyword_Density": 0.05,
+      "Topic_Clarity": 1.75
     },
     {
       "date": "2025-08-07",
@@ -3314,9 +3314,9 @@
       "Melancholy": 0.11,
       "Social/Identity": 0.17,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.67,
-      "Keyword Density": 0.05,
-      "Topic Clarity": 1.75
+      "Optimism_Index": 0.67,
+      "Keyword_Density": 0.05,
+      "Topic_Clarity": 1.75
     },
     {
       "date": "2025-08-14",
@@ -3326,9 +3326,9 @@
       "Melancholy": 0.3,
       "Social/Identity": 0.2,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.73,
-      "Keyword Density": 0.05,
-      "Topic Clarity": 1.91
+      "Optimism_Index": 0.73,
+      "Keyword_Density": 0.05,
+      "Topic_Clarity": 1.91
     },
     {
       "date": "2025-08-21",
@@ -3338,9 +3338,9 @@
       "Melancholy": 0.07,
       "Social/Identity": 0.07,
       "Nostalgia": 0.36,
-      "Optimism Index": 0.67,
-      "Keyword Density": 0.09,
-      "Topic Clarity": 1.78
+      "Optimism_Index": 0.67,
+      "Keyword_Density": 0.09,
+      "Topic_Clarity": 1.78
     },
     {
       "date": "2025-08-28",
@@ -3350,9 +3350,9 @@
       "Melancholy": 0.07,
       "Social/Identity": 0.07,
       "Nostalgia": 0.36,
-      "Optimism Index": 0.67,
-      "Keyword Density": 0.09,
-      "Topic Clarity": 1.78
+      "Optimism_Index": 0.67,
+      "Keyword_Density": 0.09,
+      "Topic_Clarity": 1.78
     },
     {
       "date": "2025-09-04",
@@ -3362,9 +3362,9 @@
       "Melancholy": 0.07,
       "Social/Identity": 0.07,
       "Nostalgia": 0.36,
-      "Optimism Index": 0.67,
-      "Keyword Density": 0.09,
-      "Topic Clarity": 1.78
+      "Optimism_Index": 0.67,
+      "Keyword_Density": 0.09,
+      "Topic_Clarity": 1.78
     },
     {
       "date": "2025-09-11",
@@ -3374,9 +3374,9 @@
       "Melancholy": 0.07,
       "Social/Identity": 0.09,
       "Nostalgia": 0.45,
-      "Optimism Index": 0.73,
-      "Keyword Density": 0.08,
-      "Topic Clarity": 1.85
+      "Optimism_Index": 0.73,
+      "Keyword_Density": 0.08,
+      "Topic_Clarity": 1.85
     },
     {
       "date": "2025-09-18",
@@ -3386,9 +3386,9 @@
       "Melancholy": 0.07,
       "Social/Identity": 0.09,
       "Nostalgia": 0.45,
-      "Optimism Index": 0.73,
-      "Keyword Density": 0.08,
-      "Topic Clarity": 1.85
+      "Optimism_Index": 0.73,
+      "Keyword_Density": 0.08,
+      "Topic_Clarity": 1.85
     },
     {
       "date": "2025-09-25",
@@ -3398,9 +3398,9 @@
       "Melancholy": 0.05,
       "Social/Identity": 0.03,
       "Nostalgia": 0.33,
-      "Optimism Index": 0.79,
-      "Keyword Density": 0.08,
-      "Topic Clarity": 2.25
+      "Optimism_Index": 0.79,
+      "Keyword_Density": 0.08,
+      "Topic_Clarity": 2.25
     },
     {
       "date": "2025-10-02",
@@ -3410,9 +3410,9 @@
       "Melancholy": 0.05,
       "Social/Identity": 0.03,
       "Nostalgia": 0.33,
-      "Optimism Index": 0.79,
-      "Keyword Density": 0.08,
-      "Topic Clarity": 2.25
+      "Optimism_Index": 0.79,
+      "Keyword_Density": 0.08,
+      "Topic_Clarity": 2.25
     },
     {
       "date": "2025-10-09",
@@ -3422,9 +3422,9 @@
       "Melancholy": 0.05,
       "Social/Identity": 0.09,
       "Nostalgia": 0.77,
-      "Optimism Index": 0.75,
-      "Keyword Density": 0.05,
-      "Topic Clarity": 2.36
+      "Optimism_Index": 0.75,
+      "Keyword_Density": 0.05,
+      "Topic_Clarity": 2.36
     },
     {
       "date": "2025-10-16",
@@ -3434,9 +3434,9 @@
       "Melancholy": 0.2,
       "Social/Identity": 0.12,
       "Nostalgia": 0.76,
-      "Optimism Index": 0.79,
-      "Keyword Density": 0.05,
-      "Topic Clarity": 2.41
+      "Optimism_Index": 0.79,
+      "Keyword_Density": 0.05,
+      "Topic_Clarity": 2.41
     },
     {
       "date": "2025-10-23",
@@ -3446,9 +3446,9 @@
       "Melancholy": 0.05,
       "Social/Identity": 0.09,
       "Nostalgia": 0.77,
-      "Optimism Index": 0.75,
-      "Keyword Density": 0.05,
-      "Topic Clarity": 2.36
+      "Optimism_Index": 0.75,
+      "Keyword_Density": 0.05,
+      "Topic_Clarity": 2.36
     },
     {
       "date": "2025-10-30",
@@ -3458,9 +3458,9 @@
       "Melancholy": 0.05,
       "Social/Identity": 0.09,
       "Nostalgia": 0.77,
-      "Optimism Index": 0.75,
-      "Keyword Density": 0.05,
-      "Topic Clarity": 2.36
+      "Optimism_Index": 0.75,
+      "Keyword_Density": 0.05,
+      "Topic_Clarity": 2.36
     },
     {
       "date": "2025-11-06",
@@ -3470,9 +3470,9 @@
       "Melancholy": 0.05,
       "Social/Identity": 0.05,
       "Nostalgia": 0.77,
-      "Optimism Index": 0.66,
-      "Keyword Density": 0.06,
-      "Topic Clarity": 2.39
+      "Optimism_Index": 0.66,
+      "Keyword_Density": 0.06,
+      "Topic_Clarity": 2.39
     },
     {
       "date": "2025-11-13",
@@ -3482,9 +3482,9 @@
       "Melancholy": 0.05,
       "Social/Identity": 0.05,
       "Nostalgia": 0.77,
-      "Optimism Index": 0.5,
-      "Keyword Density": 0.05,
-      "Topic Clarity": 2.05
+      "Optimism_Index": 0.5,
+      "Keyword_Density": 0.05,
+      "Topic_Clarity": 2.05
     },
     {
       "date": "2025-11-20",
@@ -3494,9 +3494,9 @@
       "Melancholy": 0.33,
       "Social/Identity": 0.24,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.64,
-      "Keyword Density": 0.08,
-      "Topic Clarity": 2.44
+      "Optimism_Index": 0.64,
+      "Keyword_Density": 0.08,
+      "Topic_Clarity": 2.44
     },
     {
       "date": "2025-11-27",
@@ -3506,9 +3506,9 @@
       "Melancholy": 0.41,
       "Social/Identity": 0.27,
       "Nostalgia": 0.91,
-      "Optimism Index": 0.41,
-      "Keyword Density": 0.08,
-      "Topic Clarity": 2.63
+      "Optimism_Index": 0.41,
+      "Keyword_Density": 0.08,
+      "Topic_Clarity": 2.63
     },
     {
       "date": "2025-12-04",
@@ -3518,9 +3518,9 @@
       "Melancholy": 0.05,
       "Social/Identity": 0.0,
       "Nostalgia": 0.6,
-      "Optimism Index": 0.5,
-      "Keyword Density": 0.06,
-      "Topic Clarity": 2.55
+      "Optimism_Index": 0.5,
+      "Keyword_Density": 0.06,
+      "Topic_Clarity": 2.55
     },
     {
       "date": "2025-12-11",
@@ -3530,9 +3530,9 @@
       "Melancholy": 0.02,
       "Social/Identity": 0.05,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.75,
-      "Keyword Density": 0.08,
-      "Topic Clarity": 2.57
+      "Optimism_Index": 0.75,
+      "Keyword_Density": 0.08,
+      "Topic_Clarity": 2.57
     },
     {
       "date": "2025-12-18",
@@ -3542,9 +3542,9 @@
       "Melancholy": 0.02,
       "Social/Identity": 0.05,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.75,
-      "Keyword Density": 0.08,
-      "Topic Clarity": 2.57
+      "Optimism_Index": 0.75,
+      "Keyword_Density": 0.08,
+      "Topic_Clarity": 2.57
     },
     {
       "date": "2025-12-25",
@@ -3554,9 +3554,9 @@
       "Melancholy": 0.03,
       "Social/Identity": 0.03,
       "Nostalgia": 1.0,
-      "Optimism Index": 0.67,
-      "Keyword Density": 0.09,
-      "Topic Clarity": 2.71
+      "Optimism_Index": 0.67,
+      "Keyword_Density": 0.09,
+      "Topic_Clarity": 2.71
     },
     {
       "date": "2026-01-01",
@@ -3566,9 +3566,9 @@
       "Melancholy": 0.05,
       "Social/Identity": 0.45,
       "Nostalgia": 0.82,
-      "Optimism Index": 0.67,
-      "Keyword Density": 0.05,
-      "Topic Clarity": 1.99
+      "Optimism_Index": 0.67,
+      "Keyword_Density": 0.05,
+      "Topic_Clarity": 1.99
     },
     {
       "date": "2026-01-08",
@@ -3578,9 +3578,9 @@
       "Melancholy": 0.08,
       "Social/Identity": 0.35,
       "Nostalgia": 0.88,
-      "Optimism Index": 0.71,
-      "Keyword Density": 0.05,
-      "Topic Clarity": 1.85
+      "Optimism_Index": 0.71,
+      "Keyword_Density": 0.05,
+      "Topic_Clarity": 1.85
     },
     {
       "date": "2026-01-15",
@@ -3590,9 +3590,9 @@
       "Melancholy": 0.08,
       "Social/Identity": 0.35,
       "Nostalgia": 0.88,
-      "Optimism Index": 0.82,
-      "Keyword Density": 0.05,
-      "Topic Clarity": 1.95
+      "Optimism_Index": 0.82,
+      "Keyword_Density": 0.05,
+      "Topic_Clarity": 1.95
     },
     {
       "date": "2026-01-22",
@@ -3602,9 +3602,9 @@
       "Melancholy": 0.23,
       "Social/Identity": 0.4,
       "Nostalgia": 0.66,
-      "Optimism Index": 0.72,
-      "Keyword Density": 0.06,
-      "Topic Clarity": 1.96
+      "Optimism_Index": 0.72,
+      "Keyword_Density": 0.06,
+      "Topic_Clarity": 1.96
     },
     {
       "date": "2026-01-29",
@@ -3614,9 +3614,9 @@
       "Melancholy": 0.23,
       "Social/Identity": 0.4,
       "Nostalgia": 0.66,
-      "Optimism Index": 0.72,
-      "Keyword Density": 0.06,
-      "Topic Clarity": 1.96
+      "Optimism_Index": 0.72,
+      "Keyword_Density": 0.06,
+      "Topic_Clarity": 1.96
     },
     {
       "date": "2026-02-05",
@@ -3626,9 +3626,9 @@
       "Melancholy": 0.23,
       "Social/Identity": 0.4,
       "Nostalgia": 0.63,
-      "Optimism Index": 0.68,
-      "Keyword Density": 0.07,
-      "Topic Clarity": 1.95
+      "Optimism_Index": 0.68,
+      "Keyword_Density": 0.07,
+      "Topic_Clarity": 1.95
     },
     {
       "date": "2026-02-12",
@@ -3638,9 +3638,9 @@
       "Melancholy": 0.08,
       "Social/Identity": 0.33,
       "Nostalgia": 0.71,
-      "Optimism Index": 0.74,
-      "Keyword Density": 0.07,
-      "Topic Clarity": 1.9
+      "Optimism_Index": 0.74,
+      "Keyword_Density": 0.07,
+      "Topic_Clarity": 1.9
     },
     {
       "date": "2026-02-19",
@@ -3650,9 +3650,9 @@
       "Melancholy": 0.23,
       "Social/Identity": 0.4,
       "Nostalgia": 0.63,
-      "Optimism Index": 0.68,
-      "Keyword Density": 0.07,
-      "Topic Clarity": 1.95
+      "Optimism_Index": 0.68,
+      "Keyword_Density": 0.07,
+      "Topic_Clarity": 1.95
     },
     {
       "date": "2026-02-26",
@@ -3662,9 +3662,9 @@
       "Melancholy": 0.08,
       "Social/Identity": 0.35,
       "Nostalgia": 0.85,
-      "Optimism Index": 0.79,
-      "Keyword Density": 0.06,
-      "Topic Clarity": 1.94
+      "Optimism_Index": 0.79,
+      "Keyword_Density": 0.06,
+      "Topic_Clarity": 1.94
     }
   ],
   "songs_by_week": {
@@ -12200,7 +12200,7 @@
   "themes_by_week": {
     "1": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.91
       },
       {
@@ -12216,7 +12216,7 @@
         "score": 0.59
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.59
       },
       {
@@ -12228,7 +12228,7 @@
         "score": 0.44
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.1
       },
       {
@@ -12238,7 +12238,7 @@
     ],
     "2": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.31
       },
       {
@@ -12246,7 +12246,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.7
       },
       {
@@ -12270,13 +12270,13 @@
         "score": 0.11
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.11
       }
     ],
     "3": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.31
       },
       {
@@ -12284,7 +12284,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.7
       },
       {
@@ -12308,13 +12308,13 @@
         "score": 0.11
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.11
       }
     ],
     "4": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.16
       },
       {
@@ -12334,7 +12334,7 @@
         "score": 0.52
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.51
       },
       {
@@ -12346,13 +12346,13 @@
         "score": 0.12
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.1
       }
     ],
     "5": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.32
       },
       {
@@ -12360,7 +12360,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.58
       },
       {
@@ -12384,13 +12384,13 @@
         "score": 0.11
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.1
       }
     ],
     "6": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.06
       },
       {
@@ -12406,7 +12406,7 @@
         "score": 0.73
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.43
       },
       {
@@ -12422,13 +12422,13 @@
         "score": 0.19
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.07
       }
     ],
     "7": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.17
       },
       {
@@ -12444,7 +12444,7 @@
         "score": 0.73
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.47
       },
       {
@@ -12460,13 +12460,13 @@
         "score": 0.19
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.08
       }
     ],
     "8": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.17
       },
       {
@@ -12482,7 +12482,7 @@
         "score": 0.73
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.47
       },
       {
@@ -12498,13 +12498,13 @@
         "score": 0.19
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.08
       }
     ],
     "9": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.99
       },
       {
@@ -12520,7 +12520,7 @@
         "score": 0.58
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.32
       },
       {
@@ -12536,13 +12536,13 @@
         "score": 0.08
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.07
       }
     ],
     "10": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.84
       },
       {
@@ -12562,7 +12562,7 @@
         "score": 0.41
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.41
       },
       {
@@ -12570,7 +12570,7 @@
         "score": 0.1
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.08
       },
       {
@@ -12580,7 +12580,7 @@
     ],
     "11": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.9
       },
       {
@@ -12592,7 +12592,7 @@
         "score": 0.85
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.48
       },
       {
@@ -12604,7 +12604,7 @@
         "score": 0.41
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.07
       },
       {
@@ -12618,7 +12618,7 @@
     ],
     "12": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.84
       },
       {
@@ -12638,7 +12638,7 @@
         "score": 0.41
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.41
       },
       {
@@ -12646,7 +12646,7 @@
         "score": 0.1
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.08
       },
       {
@@ -12656,7 +12656,7 @@
     ],
     "13": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.88
       },
       {
@@ -12668,7 +12668,7 @@
         "score": 0.78
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.5
       },
       {
@@ -12680,7 +12680,7 @@
         "score": 0.35
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.09
       },
       {
@@ -12694,7 +12694,7 @@
     ],
     "14": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.85
       },
       {
@@ -12710,7 +12710,7 @@
         "score": 0.56
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.38
       },
       {
@@ -12722,7 +12722,7 @@
         "score": 0.08
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.08
       },
       {
@@ -12732,7 +12732,7 @@
     ],
     "15": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.99
       },
       {
@@ -12748,7 +12748,7 @@
         "score": 0.47
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.45
       },
       {
@@ -12756,7 +12756,7 @@
         "score": 0.29
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.09
       },
       {
@@ -12770,7 +12770,7 @@
     ],
     "16": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.06
       },
       {
@@ -12786,7 +12786,7 @@
         "score": 0.42
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.38
       },
       {
@@ -12794,7 +12794,7 @@
         "score": 0.31
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.08
       },
       {
@@ -12808,7 +12808,7 @@
     ],
     "17": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.17
       },
       {
@@ -12828,11 +12828,11 @@
         "score": 0.46
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.32
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.07
       },
       {
@@ -12846,7 +12846,7 @@
     ],
     "18": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 3.03
       },
       {
@@ -12866,7 +12866,7 @@
         "score": 0.33
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.31
       },
       {
@@ -12878,13 +12878,13 @@
         "score": 0.07
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.05
       }
     ],
     "19": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 3.11
       },
       {
@@ -12904,7 +12904,7 @@
         "score": 0.43
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.29
       },
       {
@@ -12916,13 +12916,13 @@
         "score": 0.06
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.05
       }
     ],
     "20": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 3.12
       },
       {
@@ -12942,7 +12942,7 @@
         "score": 0.4
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.36
       },
       {
@@ -12950,7 +12950,7 @@
         "score": 0.11
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.06
       },
       {
@@ -12960,7 +12960,7 @@
     ],
     "21": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.58
       },
       {
@@ -12980,7 +12980,7 @@
         "score": 0.36
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.31
       },
       {
@@ -12988,7 +12988,7 @@
         "score": 0.09
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.05
       },
       {
@@ -12998,7 +12998,7 @@
     ],
     "22": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.8
       },
       {
@@ -13014,7 +13014,7 @@
         "score": 0.49
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.4
       },
       {
@@ -13022,7 +13022,7 @@
         "score": 0.33
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.08
       },
       {
@@ -13036,7 +13036,7 @@
     ],
     "23": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.86
       },
       {
@@ -13052,7 +13052,7 @@
         "score": 0.45
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.41
       },
       {
@@ -13064,7 +13064,7 @@
         "score": 0.1
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.09
       },
       {
@@ -13074,7 +13074,7 @@
     ],
     "24": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.86
       },
       {
@@ -13090,7 +13090,7 @@
         "score": 0.45
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.41
       },
       {
@@ -13102,7 +13102,7 @@
         "score": 0.1
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.09
       },
       {
@@ -13112,7 +13112,7 @@
     ],
     "25": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.86
       },
       {
@@ -13128,7 +13128,7 @@
         "score": 0.45
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.41
       },
       {
@@ -13140,7 +13140,7 @@
         "score": 0.1
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.09
       },
       {
@@ -13150,7 +13150,7 @@
     ],
     "26": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.91
       },
       {
@@ -13170,7 +13170,7 @@
         "score": 0.45
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.31
       },
       {
@@ -13178,7 +13178,7 @@
         "score": 0.13
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.08
       },
       {
@@ -13188,7 +13188,7 @@
     ],
     "27": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.98
       },
       {
@@ -13208,7 +13208,7 @@
         "score": 0.43
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.33
       },
       {
@@ -13216,7 +13216,7 @@
         "score": 0.13
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.05
       },
       {
@@ -13226,7 +13226,7 @@
     ],
     "28": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.86
       },
       {
@@ -13242,7 +13242,7 @@
         "score": 0.45
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.41
       },
       {
@@ -13254,7 +13254,7 @@
         "score": 0.1
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.09
       },
       {
@@ -13264,7 +13264,7 @@
     ],
     "29": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.93
       },
       {
@@ -13276,7 +13276,7 @@
         "score": 0.36
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.33
       },
       {
@@ -13288,7 +13288,7 @@
         "score": 0.3
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.07
       },
       {
@@ -13302,7 +13302,7 @@
     ],
     "30": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.93
       },
       {
@@ -13314,7 +13314,7 @@
         "score": 0.36
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.33
       },
       {
@@ -13326,7 +13326,7 @@
         "score": 0.3
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.07
       },
       {
@@ -13340,7 +13340,7 @@
     ],
     "31": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.98
       },
       {
@@ -13364,11 +13364,11 @@
         "score": 0.12
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.1
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.05
       },
       {
@@ -13378,7 +13378,7 @@
     ],
     "32": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.98
       },
       {
@@ -13402,11 +13402,11 @@
         "score": 0.12
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.1
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.05
       },
       {
@@ -13416,7 +13416,7 @@
     ],
     "33": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.98
       },
       {
@@ -13440,11 +13440,11 @@
         "score": 0.12
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.1
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.05
       },
       {
@@ -13454,7 +13454,7 @@
     ],
     "34": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.98
       },
       {
@@ -13478,11 +13478,11 @@
         "score": 0.12
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.1
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.05
       },
       {
@@ -13492,7 +13492,7 @@
     ],
     "35": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.98
       },
       {
@@ -13516,11 +13516,11 @@
         "score": 0.12
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.1
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.05
       },
       {
@@ -13530,7 +13530,7 @@
     ],
     "36": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.91
       },
       {
@@ -13550,7 +13550,7 @@
         "score": 0.47
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.44
       },
       {
@@ -13562,13 +13562,13 @@
         "score": 0.11
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.06
       }
     ],
     "37": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.5
       },
       {
@@ -13588,7 +13588,7 @@
         "score": 0.57
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.46
       },
       {
@@ -13596,7 +13596,7 @@
         "score": 0.1
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.06
       },
       {
@@ -13606,7 +13606,7 @@
     ],
     "38": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.25
       },
       {
@@ -13626,7 +13626,7 @@
         "score": 0.53
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.33
       },
       {
@@ -13634,7 +13634,7 @@
         "score": 0.11
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.06
       },
       {
@@ -13644,7 +13644,7 @@
     ],
     "39": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.26
       },
       {
@@ -13664,7 +13664,7 @@
         "score": 0.38
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.32
       },
       {
@@ -13672,7 +13672,7 @@
         "score": 0.08
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.06
       },
       {
@@ -13682,7 +13682,7 @@
     ],
     "40": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.26
       },
       {
@@ -13702,7 +13702,7 @@
         "score": 0.38
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.32
       },
       {
@@ -13710,7 +13710,7 @@
         "score": 0.08
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.06
       },
       {
@@ -13720,7 +13720,7 @@
     ],
     "41": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.26
       },
       {
@@ -13740,7 +13740,7 @@
         "score": 0.38
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.32
       },
       {
@@ -13748,7 +13748,7 @@
         "score": 0.08
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.06
       },
       {
@@ -13758,7 +13758,7 @@
     ],
     "42": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.26
       },
       {
@@ -13778,7 +13778,7 @@
         "score": 0.38
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.32
       },
       {
@@ -13786,7 +13786,7 @@
         "score": 0.08
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.06
       },
       {
@@ -13796,7 +13796,7 @@
     ],
     "43": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.13
       },
       {
@@ -13812,7 +13812,7 @@
         "score": 0.52
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.18
       },
       {
@@ -13820,7 +13820,7 @@
         "score": 0.09
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.06
       },
       {
@@ -13834,7 +13834,7 @@
     ],
     "44": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.13
       },
       {
@@ -13850,7 +13850,7 @@
         "score": 0.52
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.18
       },
       {
@@ -13858,7 +13858,7 @@
         "score": 0.09
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.06
       },
       {
@@ -13872,7 +13872,7 @@
     ],
     "45": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.13
       },
       {
@@ -13888,7 +13888,7 @@
         "score": 0.52
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.18
       },
       {
@@ -13896,7 +13896,7 @@
         "score": 0.09
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.06
       },
       {
@@ -13910,7 +13910,7 @@
     ],
     "46": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.35
       },
       {
@@ -13926,7 +13926,7 @@
         "score": 0.7
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.51
       },
       {
@@ -13942,13 +13942,13 @@
         "score": 0.1
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.06
       }
     ],
     "47": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.9
       },
       {
@@ -13964,7 +13964,7 @@
         "score": 0.57
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.46
       },
       {
@@ -13980,13 +13980,13 @@
         "score": 0.17
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.06
       }
     ],
     "48": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.35
       },
       {
@@ -14002,7 +14002,7 @@
         "score": 0.7
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.51
       },
       {
@@ -14018,13 +14018,13 @@
         "score": 0.1
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.06
       }
     ],
     "49": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.35
       },
       {
@@ -14040,7 +14040,7 @@
         "score": 0.7
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.51
       },
       {
@@ -14056,13 +14056,13 @@
         "score": 0.1
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.06
       }
     ],
     "50": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.26
       },
       {
@@ -14070,7 +14070,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.74
       },
       {
@@ -14094,13 +14094,13 @@
         "score": 0.09
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.07
       }
     ],
     "51": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.5
       },
       {
@@ -14112,7 +14112,7 @@
         "score": 0.69
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.63
       },
       {
@@ -14128,7 +14128,7 @@
         "score": 0.19
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.05
       },
       {
@@ -14138,7 +14138,7 @@
     ],
     "52": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.5
       },
       {
@@ -14150,7 +14150,7 @@
         "score": 0.69
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.63
       },
       {
@@ -14166,7 +14166,7 @@
         "score": 0.19
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.05
       },
       {
@@ -14176,7 +14176,7 @@
     ],
     "53": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.29
       },
       {
@@ -14188,7 +14188,7 @@
         "score": 0.62
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.57
       },
       {
@@ -14204,7 +14204,7 @@
         "score": 0.12
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.06
       },
       {
@@ -14214,7 +14214,7 @@
     ],
     "54": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.18
       },
       {
@@ -14222,7 +14222,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.5
       },
       {
@@ -14242,7 +14242,7 @@
         "score": 0.13
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.05
       },
       {
@@ -14252,7 +14252,7 @@
     ],
     "55": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.18
       },
       {
@@ -14260,7 +14260,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.5
       },
       {
@@ -14280,7 +14280,7 @@
         "score": 0.13
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.05
       },
       {
@@ -14290,7 +14290,7 @@
     ],
     "56": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.77
       },
       {
@@ -14306,7 +14306,7 @@
         "score": 0.48
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.45
       },
       {
@@ -14318,7 +14318,7 @@
         "score": 0.09
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.07
       },
       {
@@ -14328,7 +14328,7 @@
     ],
     "57": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.93
       },
       {
@@ -14348,7 +14348,7 @@
         "score": 0.33
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.32
       },
       {
@@ -14356,7 +14356,7 @@
         "score": 0.11
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.07
       },
       {
@@ -14366,7 +14366,7 @@
     ],
     "58": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.91
       },
       {
@@ -14382,7 +14382,7 @@
         "score": 0.62
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.35
       },
       {
@@ -14394,7 +14394,7 @@
         "score": 0.25
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.08
       },
       {
@@ -14404,7 +14404,7 @@
     ],
     "59": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.26
       },
       {
@@ -14424,7 +14424,7 @@
         "score": 0.4
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.33
       },
       {
@@ -14432,7 +14432,7 @@
         "score": 0.13
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.12
       },
       {
@@ -14442,7 +14442,7 @@
     ],
     "60": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.26
       },
       {
@@ -14462,7 +14462,7 @@
         "score": 0.4
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.33
       },
       {
@@ -14470,7 +14470,7 @@
         "score": 0.13
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.12
       },
       {
@@ -14480,7 +14480,7 @@
     ],
     "61": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.72
       },
       {
@@ -14500,7 +14500,7 @@
         "score": 0.39
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.26
       },
       {
@@ -14508,7 +14508,7 @@
         "score": 0.22
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.1
       },
       {
@@ -14518,7 +14518,7 @@
     ],
     "62": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.61
       },
       {
@@ -14538,7 +14538,7 @@
         "score": 0.32
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.31
       },
       {
@@ -14546,7 +14546,7 @@
         "score": 0.16
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.07
       },
       {
@@ -14556,7 +14556,7 @@
     ],
     "63": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.58
       },
       {
@@ -14576,7 +14576,7 @@
         "score": 0.43
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.39
       },
       {
@@ -14588,13 +14588,13 @@
         "score": 0.09
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.07
       }
     ],
     "64": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.72
       },
       {
@@ -14610,7 +14610,7 @@
         "score": 0.56
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.48
       },
       {
@@ -14622,7 +14622,7 @@
         "score": 0.09
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.07
       },
       {
@@ -14632,7 +14632,7 @@
     ],
     "65": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.72
       },
       {
@@ -14648,7 +14648,7 @@
         "score": 0.56
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.48
       },
       {
@@ -14660,7 +14660,7 @@
         "score": 0.09
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.07
       },
       {
@@ -14670,7 +14670,7 @@
     ],
     "66": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.72
       },
       {
@@ -14686,7 +14686,7 @@
         "score": 0.56
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.48
       },
       {
@@ -14698,7 +14698,7 @@
         "score": 0.09
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.07
       },
       {
@@ -14708,7 +14708,7 @@
     ],
     "67": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.72
       },
       {
@@ -14724,7 +14724,7 @@
         "score": 0.56
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.48
       },
       {
@@ -14736,7 +14736,7 @@
         "score": 0.09
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.07
       },
       {
@@ -14746,7 +14746,7 @@
     ],
     "68": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.84
       },
       {
@@ -14758,7 +14758,7 @@
         "score": 0.7
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.49
       },
       {
@@ -14774,7 +14774,7 @@
         "score": 0.23
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.08
       },
       {
@@ -14784,7 +14784,7 @@
     ],
     "69": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.72
       },
       {
@@ -14800,7 +14800,7 @@
         "score": 0.6
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.48
       },
       {
@@ -14812,7 +14812,7 @@
         "score": 0.09
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.08
       },
       {
@@ -14822,7 +14822,7 @@
     ],
     "70": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.74
       },
       {
@@ -14838,7 +14838,7 @@
         "score": 0.55
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.44
       },
       {
@@ -14850,7 +14850,7 @@
         "score": 0.21
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.08
       },
       {
@@ -14860,7 +14860,7 @@
     ],
     "71": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.74
       },
       {
@@ -14876,7 +14876,7 @@
         "score": 0.55
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.44
       },
       {
@@ -14888,7 +14888,7 @@
         "score": 0.21
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.08
       },
       {
@@ -14898,7 +14898,7 @@
     ],
     "72": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.09
       },
       {
@@ -14910,7 +14910,7 @@
         "score": 0.52
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.48
       },
       {
@@ -14922,7 +14922,7 @@
         "score": 0.35
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.09
       },
       {
@@ -14936,7 +14936,7 @@
     ],
     "73": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.47
       },
       {
@@ -14944,7 +14944,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.49
       },
       {
@@ -14960,7 +14960,7 @@
         "score": 0.32
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.07
       },
       {
@@ -14974,7 +14974,7 @@
     ],
     "74": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.09
       },
       {
@@ -14986,7 +14986,7 @@
         "score": 0.52
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.48
       },
       {
@@ -14998,7 +14998,7 @@
         "score": 0.35
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.09
       },
       {
@@ -15012,7 +15012,7 @@
     ],
     "75": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.21
       },
       {
@@ -15020,7 +15020,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.58
       },
       {
@@ -15036,7 +15036,7 @@
         "score": 0.34
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.08
       },
       {
@@ -15050,7 +15050,7 @@
     ],
     "76": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.9
       },
       {
@@ -15066,7 +15066,7 @@
         "score": 0.55
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.44
       },
       {
@@ -15078,7 +15078,7 @@
         "score": 0.21
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.06
       },
       {
@@ -15088,7 +15088,7 @@
     ],
     "77": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.7
       },
       {
@@ -15104,7 +15104,7 @@
         "score": 0.55
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.48
       },
       {
@@ -15116,7 +15116,7 @@
         "score": 0.18
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.07
       },
       {
@@ -15126,7 +15126,7 @@
     ],
     "78": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.7
       },
       {
@@ -15142,7 +15142,7 @@
         "score": 0.55
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.48
       },
       {
@@ -15154,7 +15154,7 @@
         "score": 0.18
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.07
       },
       {
@@ -15164,7 +15164,7 @@
     ],
     "79": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.68
       },
       {
@@ -15176,7 +15176,7 @@
         "score": 0.68
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.68
       },
       {
@@ -15188,7 +15188,7 @@
         "score": 0.35
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.08
       },
       {
@@ -15202,7 +15202,7 @@
     ],
     "80": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.92
       },
       {
@@ -15214,7 +15214,7 @@
         "score": 0.67
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.53
       },
       {
@@ -15230,7 +15230,7 @@
         "score": 0.12
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.08
       },
       {
@@ -15240,7 +15240,7 @@
     ],
     "81": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.81
       },
       {
@@ -15252,7 +15252,7 @@
         "score": 0.69
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.48
       },
       {
@@ -15268,7 +15268,7 @@
         "score": 0.14
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.08
       },
       {
@@ -15278,7 +15278,7 @@
     ],
     "82": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.81
       },
       {
@@ -15290,7 +15290,7 @@
         "score": 0.69
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.48
       },
       {
@@ -15306,7 +15306,7 @@
         "score": 0.14
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.08
       },
       {
@@ -15316,7 +15316,7 @@
     ],
     "83": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.81
       },
       {
@@ -15328,7 +15328,7 @@
         "score": 0.69
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.48
       },
       {
@@ -15344,7 +15344,7 @@
         "score": 0.14
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.08
       },
       {
@@ -15354,7 +15354,7 @@
     ],
     "84": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.81
       },
       {
@@ -15366,7 +15366,7 @@
         "score": 0.69
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.48
       },
       {
@@ -15382,7 +15382,7 @@
         "score": 0.14
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.08
       },
       {
@@ -15392,7 +15392,7 @@
     ],
     "85": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.79
       },
       {
@@ -15404,7 +15404,7 @@
         "score": 0.61
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.54
       },
       {
@@ -15420,7 +15420,7 @@
         "score": 0.16
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.08
       },
       {
@@ -15430,7 +15430,7 @@
     ],
     "86": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.83
       },
       {
@@ -15442,7 +15442,7 @@
         "score": 0.65
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.62
       },
       {
@@ -15458,7 +15458,7 @@
         "score": 0.17
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.08
       },
       {
@@ -15468,7 +15468,7 @@
     ],
     "87": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.84
       },
       {
@@ -15480,7 +15480,7 @@
         "score": 0.65
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.64
       },
       {
@@ -15492,7 +15492,7 @@
         "score": 0.32
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.07
       },
       {
@@ -15506,7 +15506,7 @@
     ],
     "88": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.85
       },
       {
@@ -15514,7 +15514,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.65
       },
       {
@@ -15530,7 +15530,7 @@
         "score": 0.22
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.08
       },
       {
@@ -15544,7 +15544,7 @@
     ],
     "89": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.74
       },
       {
@@ -15556,7 +15556,7 @@
         "score": 0.47
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.42
       },
       {
@@ -15572,7 +15572,7 @@
         "score": 0.08
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.07
       },
       {
@@ -15582,7 +15582,7 @@
     ],
     "90": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.01
       },
       {
@@ -15594,7 +15594,7 @@
         "score": 0.43
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.43
       },
       {
@@ -15610,7 +15610,7 @@
         "score": 0.08
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.06
       },
       {
@@ -15620,7 +15620,7 @@
     ],
     "91": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.45
       },
       {
@@ -15628,7 +15628,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.73
       },
       {
@@ -15644,7 +15644,7 @@
         "score": 0.32
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.09
       },
       {
@@ -15658,7 +15658,7 @@
     ],
     "92": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.45
       },
       {
@@ -15666,7 +15666,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.73
       },
       {
@@ -15682,7 +15682,7 @@
         "score": 0.32
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.09
       },
       {
@@ -15696,7 +15696,7 @@
     ],
     "93": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.22
       },
       {
@@ -15704,7 +15704,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.43
       },
       {
@@ -15728,13 +15728,13 @@
         "score": 0.06
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.05
       }
     ],
     "94": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.64
       },
       {
@@ -15742,7 +15742,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.57
       },
       {
@@ -15762,7 +15762,7 @@
         "score": 0.2
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.08
       },
       {
@@ -15772,7 +15772,7 @@
     ],
     "95": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.61
       },
       {
@@ -15780,7 +15780,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.59
       },
       {
@@ -15796,7 +15796,7 @@
         "score": 0.31
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.08
       },
       {
@@ -15810,7 +15810,7 @@
     ],
     "96": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.64
       },
       {
@@ -15818,7 +15818,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.57
       },
       {
@@ -15838,7 +15838,7 @@
         "score": 0.2
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.08
       },
       {
@@ -15848,7 +15848,7 @@
     ],
     "97": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.35
       },
       {
@@ -15860,7 +15860,7 @@
         "score": 0.44
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.36
       },
       {
@@ -15880,13 +15880,13 @@
         "score": 0.05
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.04
       }
     ],
     "98": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.32
       },
       {
@@ -15898,7 +15898,7 @@
         "score": 0.47
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.36
       },
       {
@@ -15918,13 +15918,13 @@
         "score": 0.07
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.05
       }
     ],
     "99": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.33
       },
       {
@@ -15936,7 +15936,7 @@
         "score": 0.63
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.45
       },
       {
@@ -15952,7 +15952,7 @@
         "score": 0.16
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.05
       },
       {
@@ -15962,7 +15962,7 @@
     ],
     "100": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.33
       },
       {
@@ -15974,7 +15974,7 @@
         "score": 0.63
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.45
       },
       {
@@ -15990,7 +15990,7 @@
         "score": 0.16
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.05
       },
       {
@@ -16000,7 +16000,7 @@
     ],
     "101": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.96
       },
       {
@@ -16012,7 +16012,7 @@
         "score": 0.71
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.55
       },
       {
@@ -16028,7 +16028,7 @@
         "score": 0.18
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.07
       },
       {
@@ -16038,7 +16038,7 @@
     ],
     "102": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.96
       },
       {
@@ -16050,7 +16050,7 @@
         "score": 0.71
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.55
       },
       {
@@ -16066,7 +16066,7 @@
         "score": 0.18
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.07
       },
       {
@@ -16076,7 +16076,7 @@
     ],
     "103": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.95
       },
       {
@@ -16088,7 +16088,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.5
       },
       {
@@ -16108,13 +16108,13 @@
         "score": 0.08
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.06
       }
     ],
     "104": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.95
       },
       {
@@ -16126,7 +16126,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.5
       },
       {
@@ -16146,13 +16146,13 @@
         "score": 0.08
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.06
       }
     ],
     "105": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.66
       },
       {
@@ -16164,7 +16164,7 @@
         "score": 0.91
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.68
       },
       {
@@ -16180,7 +16180,7 @@
         "score": 0.3
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.08
       },
       {
@@ -16190,7 +16190,7 @@
     ],
     "106": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.66
       },
       {
@@ -16202,7 +16202,7 @@
         "score": 0.91
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.68
       },
       {
@@ -16218,7 +16218,7 @@
         "score": 0.3
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.08
       },
       {
@@ -16228,7 +16228,7 @@
     ],
     "107": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.66
       },
       {
@@ -16240,7 +16240,7 @@
         "score": 0.91
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.68
       },
       {
@@ -16256,7 +16256,7 @@
         "score": 0.3
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.08
       },
       {
@@ -16266,7 +16266,7 @@
     ],
     "108": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.82
       },
       {
@@ -16278,7 +16278,7 @@
         "score": 0.83
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.63
       },
       {
@@ -16298,13 +16298,13 @@
         "score": 0.07
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.07
       }
     ],
     "109": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.68
       },
       {
@@ -16316,7 +16316,7 @@
         "score": 0.69
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.63
       },
       {
@@ -16332,7 +16332,7 @@
         "score": 0.28
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.08
       },
       {
@@ -16342,7 +16342,7 @@
     ],
     "110": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.72
       },
       {
@@ -16354,7 +16354,7 @@
         "score": 0.75
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.73
       },
       {
@@ -16370,7 +16370,7 @@
         "score": 0.32
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.08
       },
       {
@@ -16380,7 +16380,7 @@
     ],
     "111": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.82
       },
       {
@@ -16392,7 +16392,7 @@
         "score": 0.83
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.63
       },
       {
@@ -16412,13 +16412,13 @@
         "score": 0.07
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.07
       }
     ],
     "112": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.66
       },
       {
@@ -16430,7 +16430,7 @@
         "score": 0.91
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.68
       },
       {
@@ -16446,7 +16446,7 @@
         "score": 0.3
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.08
       },
       {
@@ -16456,7 +16456,7 @@
     ],
     "113": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.73
       },
       {
@@ -16468,7 +16468,7 @@
         "score": 0.89
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.7
       },
       {
@@ -16484,7 +16484,7 @@
         "score": 0.14
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.1
       },
       {
@@ -16494,7 +16494,7 @@
     ],
     "114": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.84
       },
       {
@@ -16506,7 +16506,7 @@
         "score": 0.82
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.62
       },
       {
@@ -16518,7 +16518,7 @@
         "score": 0.12
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.1
       },
       {
@@ -16532,7 +16532,7 @@
     ],
     "115": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.84
       },
       {
@@ -16544,7 +16544,7 @@
         "score": 0.82
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.62
       },
       {
@@ -16556,7 +16556,7 @@
         "score": 0.12
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.1
       },
       {
@@ -16570,7 +16570,7 @@
     ],
     "116": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.84
       },
       {
@@ -16582,7 +16582,7 @@
         "score": 0.82
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.62
       },
       {
@@ -16594,7 +16594,7 @@
         "score": 0.12
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.1
       },
       {
@@ -16608,7 +16608,7 @@
     ],
     "117": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.78
       },
       {
@@ -16620,7 +16620,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.57
       },
       {
@@ -16640,13 +16640,13 @@
         "score": 0.08
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.07
       }
     ],
     "118": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.78
       },
       {
@@ -16658,7 +16658,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.57
       },
       {
@@ -16678,13 +16678,13 @@
         "score": 0.08
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.07
       }
     ],
     "119": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.87
       },
       {
@@ -16696,7 +16696,7 @@
         "score": 0.91
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.48
       },
       {
@@ -16712,7 +16712,7 @@
         "score": 0.23
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.06
       },
       {
@@ -16722,7 +16722,7 @@
     ],
     "120": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.76
       },
       {
@@ -16734,7 +16734,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.6
       },
       {
@@ -16750,7 +16750,7 @@
         "score": 0.26
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.07
       },
       {
@@ -16760,7 +16760,7 @@
     ],
     "121": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.76
       },
       {
@@ -16772,7 +16772,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.6
       },
       {
@@ -16788,7 +16788,7 @@
         "score": 0.26
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.07
       },
       {
@@ -16798,7 +16798,7 @@
     ],
     "122": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.76
       },
       {
@@ -16810,7 +16810,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.6
       },
       {
@@ -16826,7 +16826,7 @@
         "score": 0.26
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.07
       },
       {
@@ -16836,7 +16836,7 @@
     ],
     "123": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.01
       },
       {
@@ -16844,7 +16844,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.68
       },
       {
@@ -16864,7 +16864,7 @@
         "score": 0.12
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.08
       },
       {
@@ -16874,7 +16874,7 @@
     ],
     "124": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.76
       },
       {
@@ -16886,7 +16886,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.6
       },
       {
@@ -16902,7 +16902,7 @@
         "score": 0.26
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.07
       },
       {
@@ -16912,7 +16912,7 @@
     ],
     "125": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.9
       },
       {
@@ -16924,7 +16924,7 @@
         "score": 0.85
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.49
       },
       {
@@ -16940,7 +16940,7 @@
         "score": 0.22
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.06
       },
       {
@@ -16950,7 +16950,7 @@
     ],
     "126": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.92
       },
       {
@@ -16962,7 +16962,7 @@
         "score": 0.69
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.49
       },
       {
@@ -16978,7 +16978,7 @@
         "score": 0.15
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.1
       },
       {
@@ -16988,7 +16988,7 @@
     ],
     "127": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.92
       },
       {
@@ -17000,7 +17000,7 @@
         "score": 0.69
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.49
       },
       {
@@ -17016,7 +17016,7 @@
         "score": 0.15
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.1
       },
       {
@@ -17026,7 +17026,7 @@
     ],
     "128": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.79
       },
       {
@@ -17038,7 +17038,7 @@
         "score": 0.62
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.49
       },
       {
@@ -17054,7 +17054,7 @@
         "score": 0.14
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.11
       },
       {
@@ -17064,7 +17064,7 @@
     ],
     "129": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.86
       },
       {
@@ -17076,7 +17076,7 @@
         "score": 0.65
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.59
       },
       {
@@ -17088,7 +17088,7 @@
         "score": 0.17
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.11
       },
       {
@@ -17102,7 +17102,7 @@
     ],
     "130": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.97
       },
       {
@@ -17110,7 +17110,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.66
       },
       {
@@ -17126,7 +17126,7 @@
         "score": 0.15
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.1
       },
       {
@@ -17140,7 +17140,7 @@
     ],
     "131": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.9
       },
       {
@@ -17152,7 +17152,7 @@
         "score": 0.62
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.56
       },
       {
@@ -17164,7 +17164,7 @@
         "score": 0.2
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.1
       },
       {
@@ -17178,7 +17178,7 @@
     ],
     "132": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.9
       },
       {
@@ -17190,7 +17190,7 @@
         "score": 0.62
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.56
       },
       {
@@ -17202,7 +17202,7 @@
         "score": 0.2
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.1
       },
       {
@@ -17216,7 +17216,7 @@
     ],
     "133": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.97
       },
       {
@@ -17228,7 +17228,7 @@
         "score": 0.66
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.49
       },
       {
@@ -17240,7 +17240,7 @@
         "score": 0.2
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.09
       },
       {
@@ -17254,7 +17254,7 @@
     ],
     "134": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.9
       },
       {
@@ -17266,7 +17266,7 @@
         "score": 0.62
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.56
       },
       {
@@ -17278,7 +17278,7 @@
         "score": 0.2
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.1
       },
       {
@@ -17292,7 +17292,7 @@
     ],
     "135": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.79
       },
       {
@@ -17304,7 +17304,7 @@
         "score": 0.65
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.61
       },
       {
@@ -17316,7 +17316,7 @@
         "score": 0.2
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.1
       },
       {
@@ -17330,7 +17330,7 @@
     ],
     "136": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.97
       },
       {
@@ -17342,7 +17342,7 @@
         "score": 0.66
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.49
       },
       {
@@ -17354,7 +17354,7 @@
         "score": 0.2
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.09
       },
       {
@@ -17368,7 +17368,7 @@
     ],
     "137": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.67
       },
       {
@@ -17380,7 +17380,7 @@
         "score": 0.64
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.55
       },
       {
@@ -17392,7 +17392,7 @@
         "score": 0.22
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.1
       },
       {
@@ -17406,7 +17406,7 @@
     ],
     "138": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.78
       },
       {
@@ -17418,7 +17418,7 @@
         "score": 0.62
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.49
       },
       {
@@ -17430,7 +17430,7 @@
         "score": 0.22
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.11
       },
       {
@@ -17444,7 +17444,7 @@
     ],
     "139": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.73
       },
       {
@@ -17456,7 +17456,7 @@
         "score": 0.64
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.56
       },
       {
@@ -17472,7 +17472,7 @@
         "score": 0.22
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.11
       },
       {
@@ -17482,7 +17482,7 @@
     ],
     "140": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.59
       },
       {
@@ -17506,11 +17506,11 @@
         "score": 0.52
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.49
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.07
       },
       {
@@ -17520,7 +17520,7 @@
     ],
     "141": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.73
       },
       {
@@ -17532,7 +17532,7 @@
         "score": 0.64
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.56
       },
       {
@@ -17548,7 +17548,7 @@
         "score": 0.22
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.11
       },
       {
@@ -17558,7 +17558,7 @@
     ],
     "142": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.06
       },
       {
@@ -17570,7 +17570,7 @@
         "score": 0.67
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.56
       },
       {
@@ -17586,7 +17586,7 @@
         "score": 0.16
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.09
       },
       {
@@ -17596,7 +17596,7 @@
     ],
     "143": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.9
       },
       {
@@ -17616,7 +17616,7 @@
         "score": 0.41
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.41
       },
       {
@@ -17624,7 +17624,7 @@
         "score": 0.38
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.07
       },
       {
@@ -17634,7 +17634,7 @@
     ],
     "144": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.89
       },
       {
@@ -17658,11 +17658,11 @@
         "score": 0.52
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.42
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.06
       },
       {
@@ -17672,7 +17672,7 @@
     ],
     "145": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.03
       },
       {
@@ -17692,7 +17692,7 @@
         "score": 0.48
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.42
       },
       {
@@ -17700,7 +17700,7 @@
         "score": 0.38
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.05
       },
       {
@@ -17710,7 +17710,7 @@
     ],
     "146": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.96
       },
       {
@@ -17734,11 +17734,11 @@
         "score": 0.5
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.37
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.05
       },
       {
@@ -17748,7 +17748,7 @@
     ],
     "147": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.93
       },
       {
@@ -17764,7 +17764,7 @@
         "score": 0.47
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.45
       },
       {
@@ -17776,7 +17776,7 @@
         "score": 0.34
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.06
       },
       {
@@ -17786,7 +17786,7 @@
     ],
     "148": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.99
       },
       {
@@ -17806,7 +17806,7 @@
         "score": 0.42
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.4
       },
       {
@@ -17814,7 +17814,7 @@
         "score": 0.33
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.06
       },
       {
@@ -17824,7 +17824,7 @@
     ],
     "149": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.06
       },
       {
@@ -17836,7 +17836,7 @@
         "score": 0.59
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.46
       },
       {
@@ -17852,7 +17852,7 @@
         "score": 0.21
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.08
       },
       {
@@ -17862,7 +17862,7 @@
     ],
     "150": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.08
       },
       {
@@ -17874,7 +17874,7 @@
         "score": 0.58
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.58
       },
       {
@@ -17890,7 +17890,7 @@
         "score": 0.17
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.09
       },
       {
@@ -17900,7 +17900,7 @@
     ],
     "151": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.01
       },
       {
@@ -17912,7 +17912,7 @@
         "score": 0.56
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.51
       },
       {
@@ -17928,7 +17928,7 @@
         "score": 0.21
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.09
       },
       {
@@ -17938,7 +17938,7 @@
     ],
     "152": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.15
       },
       {
@@ -17950,7 +17950,7 @@
         "score": 0.58
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.46
       },
       {
@@ -17966,7 +17966,7 @@
         "score": 0.21
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.08
       },
       {
@@ -17976,7 +17976,7 @@
     ],
     "153": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.15
       },
       {
@@ -17988,7 +17988,7 @@
         "score": 0.58
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.46
       },
       {
@@ -18004,7 +18004,7 @@
         "score": 0.21
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.08
       },
       {
@@ -18014,7 +18014,7 @@
     ],
     "154": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.01
       },
       {
@@ -18026,7 +18026,7 @@
         "score": 0.56
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.51
       },
       {
@@ -18042,7 +18042,7 @@
         "score": 0.21
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.09
       },
       {
@@ -18052,7 +18052,7 @@
     ],
     "155": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.08
       },
       {
@@ -18064,7 +18064,7 @@
         "score": 0.54
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.45
       },
       {
@@ -18076,7 +18076,7 @@
         "score": 0.22
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.08
       },
       {
@@ -18090,7 +18090,7 @@
     ],
     "156": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.08
       },
       {
@@ -18102,7 +18102,7 @@
         "score": 0.54
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.45
       },
       {
@@ -18114,7 +18114,7 @@
         "score": 0.22
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.08
       },
       {
@@ -18128,7 +18128,7 @@
     ],
     "157": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.96
       },
       {
@@ -18140,7 +18140,7 @@
         "score": 0.44
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.4
       },
       {
@@ -18156,7 +18156,7 @@
         "score": 0.12
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.09
       },
       {
@@ -18166,7 +18166,7 @@
     ],
     "158": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.91
       },
       {
@@ -18178,7 +18178,7 @@
         "score": 0.62
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.46
       },
       {
@@ -18194,7 +18194,7 @@
         "score": 0.21
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.06
       },
       {
@@ -18204,7 +18204,7 @@
     ],
     "159": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.91
       },
       {
@@ -18216,7 +18216,7 @@
         "score": 0.5
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.5
       },
       {
@@ -18232,7 +18232,7 @@
         "score": 0.19
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.06
       },
       {
@@ -18242,7 +18242,7 @@
     ],
     "160": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.76
       },
       {
@@ -18250,7 +18250,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.43
       },
       {
@@ -18270,7 +18270,7 @@
         "score": 0.18
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.06
       },
       {
@@ -18280,7 +18280,7 @@
     ],
     "161": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.7
       },
       {
@@ -18296,7 +18296,7 @@
         "score": 0.38
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.35
       },
       {
@@ -18308,7 +18308,7 @@
         "score": 0.21
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.05
       },
       {
@@ -18318,7 +18318,7 @@
     ],
     "162": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.7
       },
       {
@@ -18334,7 +18334,7 @@
         "score": 0.38
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.35
       },
       {
@@ -18346,7 +18346,7 @@
         "score": 0.21
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.05
       },
       {
@@ -18356,7 +18356,7 @@
     ],
     "163": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.71
       },
       {
@@ -18368,7 +18368,7 @@
         "score": 0.52
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.43
       },
       {
@@ -18388,13 +18388,13 @@
         "score": 0.07
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.05
       }
     ],
     "164": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.72
       },
       {
@@ -18406,7 +18406,7 @@
         "score": 0.54
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.49
       },
       {
@@ -18426,13 +18426,13 @@
         "score": 0.08
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.05
       }
     ],
     "165": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.63
       },
       {
@@ -18444,7 +18444,7 @@
         "score": 0.97
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.56
       },
       {
@@ -18460,7 +18460,7 @@
         "score": 0.23
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.08
       },
       {
@@ -18470,7 +18470,7 @@
     ],
     "166": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.88
       },
       {
@@ -18482,7 +18482,7 @@
         "score": 0.97
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.5
       },
       {
@@ -18498,7 +18498,7 @@
         "score": 0.23
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.07
       },
       {
@@ -18508,7 +18508,7 @@
     ],
     "167": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.63
       },
       {
@@ -18520,7 +18520,7 @@
         "score": 0.97
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.56
       },
       {
@@ -18536,7 +18536,7 @@
         "score": 0.23
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.08
       },
       {
@@ -18546,7 +18546,7 @@
     ],
     "168": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.15
       },
       {
@@ -18562,7 +18562,7 @@
         "score": 0.44
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.44
       },
       {
@@ -18578,13 +18578,13 @@
         "score": 0.13
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.08
       }
     ],
     "169": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.63
       },
       {
@@ -18596,7 +18596,7 @@
         "score": 0.59
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.52
       },
       {
@@ -18616,13 +18616,13 @@
         "score": 0.14
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.07
       }
     ],
     "170": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.66
       },
       {
@@ -18634,7 +18634,7 @@
         "score": 0.57
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.45
       },
       {
@@ -18654,13 +18654,13 @@
         "score": 0.15
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.07
       }
     ],
     "171": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.88
       },
       {
@@ -18668,7 +18668,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.57
       },
       {
@@ -18692,13 +18692,13 @@
         "score": 0.15
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.06
       }
     ],
     "172": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.15
       },
       {
@@ -18706,7 +18706,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.52
       },
       {
@@ -18730,13 +18730,13 @@
         "score": 0.15
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.05
       }
     ],
     "173": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.12
       },
       {
@@ -18748,7 +18748,7 @@
         "score": 0.51
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.51
       },
       {
@@ -18768,13 +18768,13 @@
         "score": 0.26
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.05
       }
     ],
     "174": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.22
       },
       {
@@ -18786,7 +18786,7 @@
         "score": 0.66
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.51
       },
       {
@@ -18802,7 +18802,7 @@
         "score": 0.29
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.05
       },
       {
@@ -18812,7 +18812,7 @@
     ],
     "175": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.09
       },
       {
@@ -18820,7 +18820,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.65
       },
       {
@@ -18844,13 +18844,13 @@
         "score": 0.12
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.08
       }
     ],
     "176": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.13
       },
       {
@@ -18862,7 +18862,7 @@
         "score": 0.7
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.68
       },
       {
@@ -18882,13 +18882,13 @@
         "score": 0.17
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.08
       }
     ],
     "177": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.31
       },
       {
@@ -18900,7 +18900,7 @@
         "score": 0.68
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.59
       },
       {
@@ -18920,13 +18920,13 @@
         "score": 0.17
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.07
       }
     ],
     "178": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.16
       },
       {
@@ -18938,7 +18938,7 @@
         "score": 0.71
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.61
       },
       {
@@ -18958,13 +18958,13 @@
         "score": 0.09
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.08
       }
     ],
     "179": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.18
       },
       {
@@ -18976,7 +18976,7 @@
         "score": 0.71
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.65
       },
       {
@@ -18996,13 +18996,13 @@
         "score": 0.09
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.07
       }
     ],
     "180": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.78
       },
       {
@@ -19014,7 +19014,7 @@
         "score": 0.91
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.69
       },
       {
@@ -19030,7 +19030,7 @@
         "score": 0.18
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.05
       },
       {
@@ -19040,7 +19040,7 @@
     ],
     "181": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.78
       },
       {
@@ -19052,7 +19052,7 @@
         "score": 0.91
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.69
       },
       {
@@ -19068,7 +19068,7 @@
         "score": 0.18
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.05
       },
       {
@@ -19078,7 +19078,7 @@
     ],
     "182": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.9
       },
       {
@@ -19090,7 +19090,7 @@
         "score": 0.95
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.65
       },
       {
@@ -19106,7 +19106,7 @@
         "score": 0.2
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.05
       },
       {
@@ -19116,7 +19116,7 @@
     ],
     "183": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.95
       },
       {
@@ -19124,7 +19124,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.78
       },
       {
@@ -19148,13 +19148,13 @@
         "score": 0.05
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.05
       }
     ],
     "184": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.95
       },
       {
@@ -19162,7 +19162,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.78
       },
       {
@@ -19186,13 +19186,13 @@
         "score": 0.05
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.05
       }
     ],
     "185": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.84
       },
       {
@@ -19200,7 +19200,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.73
       },
       {
@@ -19216,7 +19216,7 @@
         "score": 0.2
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.04
       },
       {
@@ -19230,7 +19230,7 @@
     ],
     "186": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.84
       },
       {
@@ -19238,7 +19238,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.73
       },
       {
@@ -19254,7 +19254,7 @@
         "score": 0.2
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.04
       },
       {
@@ -19268,7 +19268,7 @@
     ],
     "187": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.91
       },
       {
@@ -19276,7 +19276,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.78
       },
       {
@@ -19292,7 +19292,7 @@
         "score": 0.2
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.04
       },
       {
@@ -19306,7 +19306,7 @@
     ],
     "188": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.21
       },
       {
@@ -19318,7 +19318,7 @@
         "score": 0.73
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.65
       },
       {
@@ -19330,7 +19330,7 @@
         "score": 0.2
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.03
       },
       {
@@ -19344,7 +19344,7 @@
     ],
     "189": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.33
       },
       {
@@ -19352,7 +19352,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.78
       },
       {
@@ -19368,7 +19368,7 @@
         "score": 0.14
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.03
       },
       {
@@ -19382,7 +19382,7 @@
     ],
     "190": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.26
       },
       {
@@ -19390,7 +19390,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.77
       },
       {
@@ -19406,7 +19406,7 @@
         "score": 0.2
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.03
       },
       {
@@ -19420,7 +19420,7 @@
     ],
     "191": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.24
       },
       {
@@ -19432,7 +19432,7 @@
         "score": 0.73
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.72
       },
       {
@@ -19444,7 +19444,7 @@
         "score": 0.2
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.04
       },
       {
@@ -19458,7 +19458,7 @@
     ],
     "192": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.57
       },
       {
@@ -19474,7 +19474,7 @@
         "score": 0.83
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.67
       },
       {
@@ -19482,7 +19482,7 @@
         "score": 0.17
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.03
       },
       {
@@ -19496,7 +19496,7 @@
     ],
     "193": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.05
       },
       {
@@ -19512,7 +19512,7 @@
         "score": 0.83
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.5
       },
       {
@@ -19520,7 +19520,7 @@
         "score": 0.17
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.02
       },
       {
@@ -19534,7 +19534,7 @@
     ],
     "194": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.31
       },
       {
@@ -19546,7 +19546,7 @@
         "score": 0.67
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.59
       },
       {
@@ -19566,13 +19566,13 @@
         "score": 0.05
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.03
       }
     ],
     "195": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.77
       },
       {
@@ -19584,7 +19584,7 @@
         "score": 0.86
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.68
       },
       {
@@ -19604,13 +19604,13 @@
         "score": 0.05
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.03
       }
     ],
     "196": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.14
       },
       {
@@ -19618,7 +19618,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.75
       },
       {
@@ -19642,13 +19642,13 @@
         "score": 0.06
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.04
       }
     ],
     "197": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.75
       },
       {
@@ -19656,7 +19656,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.67
       },
       {
@@ -19680,13 +19680,13 @@
         "score": 0.06
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.05
       }
     ],
     "198": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.75
       },
       {
@@ -19694,7 +19694,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.67
       },
       {
@@ -19718,13 +19718,13 @@
         "score": 0.06
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.05
       }
     ],
     "199": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.75
       },
       {
@@ -19732,7 +19732,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.67
       },
       {
@@ -19756,13 +19756,13 @@
         "score": 0.06
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.05
       }
     ],
     "200": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.75
       },
       {
@@ -19770,7 +19770,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.67
       },
       {
@@ -19794,13 +19794,13 @@
         "score": 0.06
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.05
       }
     ],
     "201": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.91
       },
       {
@@ -19808,7 +19808,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.73
       },
       {
@@ -19828,7 +19828,7 @@
         "score": 0.2
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.05
       },
       {
@@ -19838,7 +19838,7 @@
     ],
     "202": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.78
       },
       {
@@ -19846,7 +19846,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.67
       },
       {
@@ -19858,7 +19858,7 @@
         "score": 0.1
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.09
       },
       {
@@ -19876,7 +19876,7 @@
     ],
     "203": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.78
       },
       {
@@ -19884,7 +19884,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.67
       },
       {
@@ -19896,7 +19896,7 @@
         "score": 0.1
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.09
       },
       {
@@ -19914,7 +19914,7 @@
     ],
     "204": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.78
       },
       {
@@ -19922,7 +19922,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.67
       },
       {
@@ -19934,7 +19934,7 @@
         "score": 0.1
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.09
       },
       {
@@ -19952,7 +19952,7 @@
     ],
     "205": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.85
       },
       {
@@ -19960,7 +19960,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.73
       },
       {
@@ -19976,7 +19976,7 @@
         "score": 0.09
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.08
       },
       {
@@ -19990,7 +19990,7 @@
     ],
     "206": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.85
       },
       {
@@ -19998,7 +19998,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.73
       },
       {
@@ -20014,7 +20014,7 @@
         "score": 0.09
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.08
       },
       {
@@ -20028,7 +20028,7 @@
     ],
     "207": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.25
       },
       {
@@ -20036,7 +20036,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.79
       },
       {
@@ -20044,7 +20044,7 @@
         "score": 0.33
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.08
       },
       {
@@ -20066,7 +20066,7 @@
     ],
     "208": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.25
       },
       {
@@ -20074,7 +20074,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.79
       },
       {
@@ -20082,7 +20082,7 @@
         "score": 0.33
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.08
       },
       {
@@ -20104,7 +20104,7 @@
     ],
     "209": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.36
       },
       {
@@ -20116,7 +20116,7 @@
         "score": 0.77
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.75
       },
       {
@@ -20128,7 +20128,7 @@
         "score": 0.05
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.05
       },
       {
@@ -20142,7 +20142,7 @@
     ],
     "210": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.41
       },
       {
@@ -20150,7 +20150,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.79
       },
       {
@@ -20170,7 +20170,7 @@
         "score": 0.12
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.05
       },
       {
@@ -20180,7 +20180,7 @@
     ],
     "211": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.36
       },
       {
@@ -20192,7 +20192,7 @@
         "score": 0.77
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.75
       },
       {
@@ -20204,7 +20204,7 @@
         "score": 0.05
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.05
       },
       {
@@ -20218,7 +20218,7 @@
     ],
     "212": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.36
       },
       {
@@ -20230,7 +20230,7 @@
         "score": 0.77
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.75
       },
       {
@@ -20242,7 +20242,7 @@
         "score": 0.05
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.05
       },
       {
@@ -20256,7 +20256,7 @@
     ],
     "213": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.39
       },
       {
@@ -20268,11 +20268,11 @@
         "score": 0.77
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.66
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.06
       },
       {
@@ -20294,7 +20294,7 @@
     ],
     "214": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.05
       },
       {
@@ -20306,7 +20306,7 @@
         "score": 0.77
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.5
       },
       {
@@ -20318,7 +20318,7 @@
         "score": 0.05
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.05
       },
       {
@@ -20332,7 +20332,7 @@
     ],
     "215": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.44
       },
       {
@@ -20340,7 +20340,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.64
       },
       {
@@ -20364,13 +20364,13 @@
         "score": 0.09
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.08
       }
     ],
     "216": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.63
       },
       {
@@ -20386,7 +20386,7 @@
         "score": 0.41
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.41
       },
       {
@@ -20398,7 +20398,7 @@
         "score": 0.09
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.08
       },
       {
@@ -20408,7 +20408,7 @@
     ],
     "217": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.55
       },
       {
@@ -20420,11 +20420,11 @@
         "score": 0.6
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.5
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.06
       },
       {
@@ -20446,7 +20446,7 @@
     ],
     "218": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.57
       },
       {
@@ -20458,7 +20458,7 @@
         "score": 0.83
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.75
       },
       {
@@ -20466,7 +20466,7 @@
         "score": 0.12
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.08
       },
       {
@@ -20484,7 +20484,7 @@
     ],
     "219": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.57
       },
       {
@@ -20496,7 +20496,7 @@
         "score": 0.83
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.75
       },
       {
@@ -20504,7 +20504,7 @@
         "score": 0.12
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.08
       },
       {
@@ -20522,7 +20522,7 @@
     ],
     "220": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 2.71
       },
       {
@@ -20534,7 +20534,7 @@
         "score": 0.89
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.67
       },
       {
@@ -20542,7 +20542,7 @@
         "score": 0.14
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.09
       },
       {
@@ -20560,7 +20560,7 @@
     ],
     "221": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.99
       },
       {
@@ -20572,7 +20572,7 @@
         "score": 0.82
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.67
       },
       {
@@ -20588,7 +20588,7 @@
         "score": 0.05
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.05
       },
       {
@@ -20598,7 +20598,7 @@
     ],
     "222": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.85
       },
       {
@@ -20610,7 +20610,7 @@
         "score": 0.88
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.71
       },
       {
@@ -20622,7 +20622,7 @@
         "score": 0.08
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.05
       },
       {
@@ -20636,7 +20636,7 @@
     ],
     "223": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.95
       },
       {
@@ -20648,7 +20648,7 @@
         "score": 0.88
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.82
       },
       {
@@ -20660,7 +20660,7 @@
         "score": 0.08
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.05
       },
       {
@@ -20674,7 +20674,7 @@
     ],
     "224": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.96
       },
       {
@@ -20682,7 +20682,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.72
       },
       {
@@ -20698,7 +20698,7 @@
         "score": 0.23
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.06
       },
       {
@@ -20712,7 +20712,7 @@
     ],
     "225": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.96
       },
       {
@@ -20720,7 +20720,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.72
       },
       {
@@ -20736,7 +20736,7 @@
         "score": 0.23
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.06
       },
       {
@@ -20750,7 +20750,7 @@
     ],
     "226": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.95
       },
       {
@@ -20758,7 +20758,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.68
       },
       {
@@ -20774,7 +20774,7 @@
         "score": 0.23
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.07
       },
       {
@@ -20788,7 +20788,7 @@
     ],
     "227": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.9
       },
       {
@@ -20796,7 +20796,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.74
       },
       {
@@ -20812,7 +20812,7 @@
         "score": 0.08
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.07
       },
       {
@@ -20826,7 +20826,7 @@
     ],
     "228": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.95
       },
       {
@@ -20834,7 +20834,7 @@
         "score": 1.0
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.68
       },
       {
@@ -20850,7 +20850,7 @@
         "score": 0.23
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.07
       },
       {
@@ -20864,7 +20864,7 @@
     ],
     "229": [
       {
-        "name": "Topic Clarity",
+        "name": "Topic_Clarity",
         "score": 1.94
       },
       {
@@ -20876,7 +20876,7 @@
         "score": 0.85
       },
       {
-        "name": "Optimism Index",
+        "name": "Optimism_Index",
         "score": 0.79
       },
       {
@@ -20888,7 +20888,7 @@
         "score": 0.08
       },
       {
-        "name": "Keyword Density",
+        "name": "Keyword_Density",
         "score": 0.06
       },
       {

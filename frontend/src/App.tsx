@@ -27,7 +27,6 @@ const App = () => {
   const fetchInitialData = async () => {
     try {
       setLoading(true);
-      // 1. Try to fetch from the local API first if available
       let weeksData, trendsData;
       try {
         const weeksRes = await axios.get(`${API_BASE_URL}/api/weeks`);
@@ -35,7 +34,6 @@ const App = () => {
         const trendsRes = await axios.get(`${API_BASE_URL}/api/trends`);
         trendsData = trendsRes.data;
       } catch (e) {
-        // 2. Fallback to static data.json (for Netlify/Static Hosting)
         console.log("Live API not found, falling back to static data.json");
         const staticRes = await axios.get('/data.json');
         setAllStaticData(staticRes.data);
@@ -48,9 +46,7 @@ const App = () => {
         setSelectedWeek(weeksData[0]);
       }
       
-      // Delay processing slightly to ensure layout is ready
       setTimeout(() => {
-        // Apply 5-period moving average smoothing
         const rawData = trendsData || [];
         const smoothed = rawData.map((entry, index, array) => {
           const start = Math.max(0, index - 2);
@@ -85,14 +81,13 @@ const App = () => {
 
   const fetchWeekData = async (weekId) => {
     try {
-      // 1. Try Live API
       try {
         const themesRes = await axios.get(`${API_BASE_URL}/api/week/${weekId}/themes`);
-        setThemes(themesRes.data);
+        // Normalize live keys
+        setThemes(themesRes.data.map(t => ({ ...t, name: t.name.replace(" ", "_") })));
         const songsRes = await axios.get(`${API_BASE_URL}/api/week/${weekId}/songs`);
         setSongs(songsRes.data);
       } catch (e) {
-        // 2. Fallback to cached static data
         if (allStaticData) {
           const sWeekId = String(weekId);
           setThemes(allStaticData.themes_by_week[sWeekId] || []);
@@ -152,7 +147,7 @@ const App = () => {
 
       {loading ? (
         <div style={{ height: '400px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: '20px' }}>
-          <Loader2 className="animate-spin" size={48} color="#1DB954" />
+          <Loader2 className="animate-spin text-green-500" size={48} />
           <p style={{ color: '#888' }}>Initializing Cultural Analysis Engine...</p>
         </div>
       ) : (
@@ -180,7 +175,7 @@ const App = () => {
                     <YAxis stroke="#888" />
                     <Tooltip contentStyle={{ backgroundColor: '#1e1e1e', border: '1px solid #333' }} />
                     <Legend />
-                    {themeKeys.filter(k => !['Optimism Index', 'Keyword Density', 'Topic Clarity'].includes(k)).map((key, index) => (
+                    {themeKeys.filter(k => !['Optimism_Index', 'Keyword_Density', 'Topic_Clarity'].includes(k)).map((key, index) => (
                       <Line key={key} type="basis" dataKey={key} stroke={COLORS[index % COLORS.length]} strokeWidth={2} dot={false} />
                     ))}
                   </LineChart>
@@ -188,56 +183,56 @@ const App = () => {
               </div>
             </section>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr)', gap: '20px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
               {/* Optimism Index */}
               <section style={{ backgroundColor: '#1e1e1e', padding: '20px', borderRadius: '12px' }}>
                 <h3 style={{ marginTop: 0, color: '#1DB954', fontSize: '1rem' }}>Optimism Index</h3>
-                <div style={{ height: '150px', width: '100%' }}>
+                <div style={{ height: '160px', width: '100%' }}>
                   <ResponsiveContainer width="100%" height="100%">
-                    <LineChart key={`opt-${trends.length}`} data={trends} margin={{ top: 5, right: 5, left: 5, bottom: 5 }}>
+                    <LineChart key={`opt-${trends.length}`} data={trends} margin={{ top: 5, right: 5, left: 0, bottom: 5 }}>
                       <CartesianGrid strokeDasharray="3 3" stroke="#333" vertical={false} />
                       <XAxis dataKey="date" hide />
-                      <YAxis hide domain={['auto', 'auto']} />
+                      <YAxis stroke="#444" tick={{ fontSize: 10 }} domain={['auto', 'auto']} />
                       <Tooltip contentStyle={{ backgroundColor: '#1e1e1e', border: '1px solid #333', fontSize: '0.8rem' }} />
-                      <Line type="monotone" dataKey="Optimism Index" stroke="#F1C40F" strokeWidth={2} dot={false} isAnimationActive={false} />
+                      <Line type="monotone" dataKey="Optimism_Index" stroke="#F1C40F" strokeWidth={3} dot={false} isAnimationActive={false} />
                     </LineChart>
                   </ResponsiveContainer>
                 </div>
-                <p style={{ fontSize: '0.8rem', color: '#888', marginTop: '10px' }}><strong>The "Mood" Score:</strong> Higher points mean songs were generally more positive and upbeat, while lower points suggest a more serious landscape.</p>
+                <p style={{ fontSize: '0.8rem', color: '#888', marginTop: '15px' }}><strong>The "Mood" Score:</strong> Higher points mean songs were generally more positive and upbeat, while lower points suggest a more serious landscape.</p>
               </section>
 
               {/* Keyword Density */}
               <section style={{ backgroundColor: '#1e1e1e', padding: '20px', borderRadius: '12px' }}>
                 <h3 style={{ marginTop: 0, color: '#1DB954', fontSize: '1rem' }}>Lyrical Focus</h3>
-                <div style={{ height: '150px', width: '100%' }}>
+                <div style={{ height: '160px', width: '100%' }}>
                   <ResponsiveContainer width="100%" height="100%">
-                    <LineChart key={`key-${trends.length}`} data={trends} margin={{ top: 5, right: 5, left: 5, bottom: 5 }}>
+                    <LineChart key={`key-${trends.length}`} data={trends} margin={{ top: 5, right: 5, left: 0, bottom: 5 }}>
                       <CartesianGrid strokeDasharray="3 3" stroke="#333" vertical={false} />
                       <XAxis dataKey="date" hide />
-                      <YAxis hide domain={['auto', 'auto']} />
+                      <YAxis stroke="#444" tick={{ fontSize: 10 }} domain={['auto', 'auto']} />
                       <Tooltip contentStyle={{ backgroundColor: '#1e1e1e', border: '1px solid #333', fontSize: '0.8rem' }} />
-                      <Line type="monotone" dataKey="Keyword Density" stroke="#E67E22" strokeWidth={2} dot={false} isAnimationActive={false} />
+                      <Line type="monotone" dataKey="Keyword_Density" stroke="#E67E22" strokeWidth={3} dot={false} isAnimationActive={false} />
                     </LineChart>
                   </ResponsiveContainer>
                 </div>
-                <p style={{ fontSize: '0.8rem', color: '#888', marginTop: '10px' }}><strong>The "Directness" Score:</strong> High scores mean songs used clear keywords about their themes. Low scores mean more abstract songwriting.</p>
+                <p style={{ fontSize: '0.8rem', color: '#888', marginTop: '15px' }}><strong>The "Directness" Score:</strong> High scores mean songs used clear keywords about their themes. Low scores mean more abstract songwriting.</p>
               </section>
 
               {/* Topic Clarity */}
               <section style={{ backgroundColor: '#1e1e1e', padding: '20px', borderRadius: '12px' }}>
                 <h3 style={{ marginTop: 0, color: '#1DB954', fontSize: '1rem' }}>Topic Consistency</h3>
-                <div style={{ height: '150px', width: '100%' }}>
+                <div style={{ height: '160px', width: '100%' }}>
                   <ResponsiveContainer width="100%" height="100%">
-                    <LineChart key={`top-${trends.length}`} data={trends} margin={{ top: 5, right: 5, left: 5, bottom: 5 }}>
+                    <LineChart key={`top-${trends.length}`} data={trends} margin={{ top: 5, right: 5, left: 0, bottom: 5 }}>
                       <CartesianGrid strokeDasharray="3 3" stroke="#333" vertical={false} />
                       <XAxis dataKey="date" hide />
-                      <YAxis hide domain={['auto', 'auto']} />
+                      <YAxis stroke="#444" tick={{ fontSize: 10 }} domain={['auto', 'auto']} />
                       <Tooltip contentStyle={{ backgroundColor: '#1e1e1e', border: '1px solid #333', fontSize: '0.8rem' }} />
-                      <Line type="monotone" dataKey="Topic Clarity" stroke="#3498DB" strokeWidth={2} dot={false} isAnimationActive={false} />
+                      <Line type="monotone" dataKey="Topic_Clarity" stroke="#3498DB" strokeWidth={3} dot={false} isAnimationActive={false} />
                     </LineChart>
                   </ResponsiveContainer>
                 </div>
-                <p style={{ fontSize: '0.8rem', color: '#888', marginTop: '10px' }}><strong>The "Unity" Score:</strong> High scores mean all hits were about the same subject. Low scores suggest a fragmented cultural moment.</p>
+                <p style={{ fontSize: '0.8rem', color: '#888', marginTop: '15px' }}><strong>The "Unity" Score:</strong> High scores mean all hits were about the same subject. Low scores suggest a fragmented cultural moment.</p>
               </section>
             </div>
           </div>
@@ -264,7 +259,7 @@ const App = () => {
                   <BarChart data={themes} layout="vertical">
                     <CartesianGrid strokeDasharray="3 3" stroke="#333" />
                     <XAxis type="number" stroke="#888" />
-                    <YAxis dataKey="name" type="category" stroke="#888" width={100} />
+                    <YAxis dataKey="name" type="category" stroke="#888" width={100} tick={{ fontSize: 10 }} />
                     <Tooltip contentStyle={{ backgroundColor: '#1e1e1e', border: '1px solid #333' }} />
                     <Bar dataKey="score">
                       {themes.map((entry, index) => (
