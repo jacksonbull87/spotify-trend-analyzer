@@ -17,23 +17,38 @@ const App = () => {
   const [themes, setThemes] = useState([]);
   const [trends, setTrends] = useState([]);
 
+  const [allStaticData, setAllStaticData] = useState(null);
+
   useEffect(() => {
     fetchInitialData();
   }, []);
 
   const fetchInitialData = async () => {
     try {
-      const weeksRes = await axios.get(`${API_BASE_URL}/api/weeks`);
-      setWeeks(weeksRes.data);
-      if (weeksRes.data.length > 0) {
-        setSelectedWeek(weeksRes.data[0]);
+      // 1. Try to fetch from the local API first if available
+      let weeksData, trendsData;
+      try {
+        const weeksRes = await axios.get(`${API_BASE_URL}/api/weeks`);
+        weeksData = weeksRes.data;
+        const trendsRes = await axios.get(`${API_BASE_URL}/api/trends`);
+        trendsData = trendsRes.data;
+      } catch (e) {
+        // 2. Fallback to static data.json (for Netlify/Static Hosting)
+        console.log("Live API not found, falling back to static data.json");
+        const staticRes = await axios.get('/data.json');
+        setAllStaticData(staticRes.data);
+        weeksData = staticRes.data.weeks;
+        trendsData = staticRes.data.trends;
       }
-      const trendsRes = await axios.get(`${API_BASE_URL}/api/trends`);
+
+      setWeeks(weeksData);
+      if (weeksData.length > 0) {
+        setSelectedWeek(weeksData[0]);
+      }
       
       // Apply 5-period moving average smoothing
-      const rawData = trendsRes.data;
+      const rawData = trendsData;
       const smoothed = rawData.map((entry, index, array) => {
-        const windowSize = 5;
         const start = Math.max(0, index - 2);
         const end = Math.min(array.length, index + 3);
         const window = array.slice(start, end);
@@ -62,10 +77,25 @@ const App = () => {
 
   const fetchWeekData = async (weekId) => {
     try {
-      const themesRes = await axios.get(`${API_BASE_URL}/api/week/${weekId}/themes`);
-      setThemes(themesRes.data);
-      const songsRes = await axios.get(`${API_BASE_URL}/api/week/${weekId}/songs`);
-      setSongs(songsRes.data);
+      // 1. Try Live API
+      try {
+        const themesRes = await axios.get(`${API_BASE_URL}/api/week/${weekId}/themes`);
+        setThemes(themesRes.data);
+        const songsRes = await axios.get(`${API_BASE_URL}/api/week/${weekId}/songs`);
+        setSongs(songsRes.data);
+      } catch (e) {
+        // 2. Fallback to cached static data
+        if (allStaticData) {
+          setThemes(allStaticData.themes_by_week[weekId] || []);
+          setSongs(allStaticData.songs_by_week[weekId] || []);
+        } else {
+          // If we haven't loaded static data yet, fetch it
+          const staticRes = await axios.get('/data.json');
+          setAllStaticData(staticRes.data);
+          setThemes(staticRes.data.themes_by_week[weekId] || []);
+          setSongs(staticRes.data.songs_by_week[weekId] || []);
+        }
+      }
     } catch (err) {
       console.error("Error fetching week data:", err);
     }
