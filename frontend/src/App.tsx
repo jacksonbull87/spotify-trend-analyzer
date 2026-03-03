@@ -29,7 +29,26 @@ const App = () => {
         setSelectedWeek(weeksRes.data[0]);
       }
       const trendsRes = await axios.get(`${API_BASE_URL}/api/trends`);
-      setTrends(trendsRes.data);
+      
+      // Apply 5-period moving average smoothing
+      const rawData = trendsRes.data;
+      const smoothed = rawData.map((entry, index, array) => {
+        const windowSize = 5;
+        const start = Math.max(0, index - 2);
+        const end = Math.min(array.length, index + 3);
+        const window = array.slice(start, end);
+        
+        const smoothedEntry = { ...entry };
+        Object.keys(entry).forEach(key => {
+          if (key !== 'date') {
+            const avg = window.reduce((acc, curr) => acc + (curr[key] || 0), 0) / window.length;
+            smoothedEntry[key] = parseFloat(avg.toFixed(3));
+          }
+        });
+        return smoothedEntry;
+      });
+      
+      setTrends(smoothed);
     } catch (err) {
       console.error("Error fetching data:", err);
     }
@@ -92,30 +111,83 @@ const App = () => {
         </div>
       </header>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '30px', marginBottom: '40px' }}>
-        {/* Trend Over Time */}
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '30px', marginBottom: '40px' }}>
+        {/* Main Theme Trends */}
         <section style={{ backgroundColor: '#1e1e1e', padding: '25px', borderRadius: '12px' }}>
           <h2 style={{ display: 'flex', alignItems: 'center', gap: '10px', marginTop: 0 }}>
-            <BarChart3 size={24} /> Historical Trends
+            <BarChart3 size={24} /> Cultural Theme Evolution
           </h2>
-          <div style={{ height: '300px', width: '100%' }}>
+          <p style={{ color: '#888', marginBottom: '20px', fontSize: '0.95rem' }}>
+            This chart tracks how the "mood" of the country has shifted. By following these lines, you can see when society leaned into Romance, sought Resilience during tough times, or embraced Melancholy. It visualizes the rise and fall of our collective emotional priorities.
+          </p>
+          <div style={{ height: '400px', width: '100%' }}>
             <ResponsiveContainer width="100%" height="100%">
               <LineChart data={trends}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#333" />
-                <XAxis dataKey="date" stroke="#888" />
-                <YAxis stroke="#888" />
-                <Tooltip 
-                  contentStyle={{ backgroundColor: '#1e1e1e', border: '1px solid #333', color: '#fff' }}
+                <XAxis 
+                  dataKey="date" 
+                  stroke="#888" 
+                  tick={{ fontSize: 12 }} 
+                  interval="preserveStartEnd"
+                  minTickGap={50}
                 />
+                <YAxis stroke="#888" />
+                <Tooltip contentStyle={{ backgroundColor: '#1e1e1e', border: '1px solid #333' }} />
                 <Legend />
-                {themeKeys.map((key, index) => (
-                  <Line key={key} type="monotone" dataKey={key} stroke={COLORS[index % COLORS.length]} strokeWidth={2} />
+                {themeKeys.filter(k => !['Optimism Index', 'Keyword Density', 'Topic Clarity'].includes(k)).map((key, index) => (
+                  <Line key={key} type="basis" dataKey={key} stroke={COLORS[index % COLORS.length]} strokeWidth={2} dot={false} />
                 ))}
               </LineChart>
             </ResponsiveContainer>
           </div>
         </section>
 
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '20px' }}>
+          {/* Optimism Index */}
+          <section style={{ backgroundColor: '#1e1e1e', padding: '20px', borderRadius: '12px' }}>
+            <h3 style={{ marginTop: 0, color: '#1DB954', fontSize: '1rem' }}>Optimism Index</h3>
+            <div style={{ height: '150px' }}>
+              <ResponsiveContainer width="100%" height="100%">
+                <LineChart data={trends}>
+                  <Line type="basis" dataKey="Optimism Index" stroke="#F1C40F" strokeWidth={2} dot={false} />
+                  <Tooltip contentStyle={{ display: 'none' }} />
+                </LineChart>
+              </ResponsiveContainer>
+            </div>
+            <p style={{ fontSize: '0.8rem', color: '#888' }}><strong>The "Mood" Score:</strong> Higher points mean songs were generally more positive and upbeat, while lower points suggest a more serious or somber musical landscape.</p>
+          </section>
+
+          {/* Keyword Density */}
+          <section style={{ backgroundColor: '#1e1e1e', padding: '20px', borderRadius: '12px' }}>
+            <h3 style={{ marginTop: 0, color: '#1DB954', fontSize: '1rem' }}>Lyrical Focus</h3>
+            <div style={{ height: '150px' }}>
+              <ResponsiveContainer width="100%" height="100%">
+                <LineChart data={trends}>
+                  <Line type="basis" dataKey="Keyword Density" stroke="#E67E22" strokeWidth={2} dot={false} />
+                  <Tooltip contentStyle={{ display: 'none' }} />
+                </LineChart>
+              </ResponsiveContainer>
+            </div>
+            <p style={{ fontSize: '0.8rem', color: '#888' }}><strong>The "Directness" Score:</strong> High scores mean songs used clear, repetitive keywords about their themes. Low scores mean more abstract or unique songwriting.</p>
+          </section>
+
+          {/* Topic Clarity */}
+          <section style={{ backgroundColor: '#1e1e1e', padding: '20px', borderRadius: '12px' }}>
+            <h3 style={{ marginTop: 0, color: '#1DB954', fontSize: '1rem' }}>Topic Consistency</h3>
+            <div style={{ height: '150px' }}>
+              <ResponsiveContainer width="100%" height="100%">
+                <LineChart data={trends}>
+                  <Line type="basis" dataKey="Topic Clarity" stroke="#3498DB" strokeWidth={2} dot={false} />
+                  <Tooltip contentStyle={{ display: 'none' }} />
+                </LineChart>
+              </ResponsiveContainer>
+            </div>
+            <p style={{ fontSize: '0.8rem', color: '#888' }}><strong>The "Unity" Score:</strong> High scores mean all top hits were singing about the same core subject. Low scores suggest a more fragmented cultural moment.</p>
+          </section>
+        </div>
+      </div>
+
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '30px', marginBottom: '40px' }}>
         {/* Weekly Themes Breakdown */}
         <section style={{ backgroundColor: '#1e1e1e', padding: '25px', borderRadius: '12px' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
@@ -129,6 +201,9 @@ const App = () => {
               {weeks.map(w => <option key={w.id} value={w.id}>{w.date}</option>)}
             </select>
           </div>
+          <p style={{ color: '#888', fontSize: '0.9rem', marginBottom: '15px' }}>
+            A deep-dive into the specific emotional makeup of the Top 10 songs for this week.
+          </p>
           <div style={{ height: '300px', width: '100%' }}>
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={themes} layout="vertical">

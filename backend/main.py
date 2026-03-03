@@ -33,6 +33,7 @@ def init_db():
                         rank INTEGER,
                         title TEXT,
                         artist TEXT,
+                        lyrics TEXT,
                         FOREIGN KEY (week_id) REFERENCES weeks (id))''')
     
     cursor.execute('''CREATE TABLE IF NOT EXISTS themes (
