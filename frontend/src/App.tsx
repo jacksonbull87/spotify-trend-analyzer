@@ -86,14 +86,16 @@ const App = () => {
       } catch (e) {
         // 2. Fallback to cached static data
         if (allStaticData) {
-          setThemes(allStaticData.themes_by_week[weekId] || []);
-          setSongs(allStaticData.songs_by_week[weekId] || []);
+          const sWeekId = String(weekId);
+          setThemes(allStaticData.themes_by_week[sWeekId] || []);
+          setSongs(allStaticData.songs_by_week[sWeekId] || []);
         } else {
           // If we haven't loaded static data yet, fetch it
           const staticRes = await axios.get('/data.json');
           setAllStaticData(staticRes.data);
-          setThemes(staticRes.data.themes_by_week[weekId] || []);
-          setSongs(staticRes.data.songs_by_week[weekId] || []);
+          const sWeekId = String(weekId);
+          setThemes(staticRes.data.themes_by_week[sWeekId] || []);
+          setSongs(staticRes.data.songs_by_week[sWeekId] || []);
         }
       }
     } catch (err) {
