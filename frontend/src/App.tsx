@@ -17,18 +17,21 @@ const App = () => {
   const [trends, setTrends] = useState([]);
   const [loading, setLoading] = useState(true);
   const [allStaticData, setAllStaticData] = useState(null);
+  const [useStatic, setUseStatic] = useState(false);
 
   useEffect(() => {
     const init = async () => {
       try {
         setLoading(true);
         let tRaw = [], wRaw = [], staticObj = null;
+        let forceStatic = false;
+        
         try {
           const resW = await axios.get(`${API_BASE_URL}/api/weeks`);
           const resT = await axios.get(`${API_BASE_URL}/api/trends`);
           if (!Array.isArray(resW.data)) throw new Error("Not an array");
           
-          // STALE API BYPASS: Render might be serving an old database without our new metrics.
+          // STALE API BYPASS
           if (resT.data.length > 0 && 
               resT.data[0]["Optimism_Index"] === undefined && 
               resT.data[0]["Optimism Index"] === undefined) {
@@ -43,9 +46,9 @@ const App = () => {
           staticObj = resS.data;
           wRaw = staticObj.weeks;
           tRaw = staticObj.trends;
+          forceStatic = true;
         }
 
-        // 1. MAPPING (Uses exact keys from data.json audit)
         const mapped = (tRaw || []).map(d => ({
           ...d,
           v_opt: Number(d.Optimism_Index || d["Optimism Index"] || 0),
@@ -53,7 +56,6 @@ const App = () => {
           v_con: Number(d.Topic_Clarity || d["Topic Clarity"] || 0)
         }));
 
-        // 2. SMOOTHING (Themes only)
         const smoothed = mapped.map((entry, index, array) => {
           const start = Math.max(0, index - 2);
           const end = Math.min(array.length, index + 3);
@@ -69,6 +71,7 @@ const App = () => {
         });
 
         setAllStaticData(staticObj);
+        setUseStatic(forceStatic);
         setWeeks(wRaw);
         setSelectedWeek(wRaw[0]);
         setTrends(smoothed);
@@ -81,6 +84,14 @@ const App = () => {
   useEffect(() => {
     if (selectedWeek) {
       const loadWeek = async () => {
+        // If we already know the API is stale/down, skip it entirely
+        if (useStatic && allStaticData) {
+          const id = String(selectedWeek.id);
+          setThemes(allStaticData.themes_by_week?.[id] || []);
+          setSongs(allStaticData.songs_by_week?.[id] || []);
+          return;
+        }
+
         try {
           const resT = await axios.get(`${API_BASE_URL}/api/week/${selectedWeek.id}/themes`);
           setThemes(resT.data);
@@ -96,7 +107,7 @@ const App = () => {
       };
       loadWeek();
     }
-  }, [selectedWeek, allStaticData]);
+  }, [selectedWeek, allStaticData, useStatic]);
 
   return (
     <div style={{ padding: '20px', maxWidth: '1200px', margin: '0 auto', color: '#fff', backgroundColor: '#121212', minHeight: '100vh', fontFamily: 'system-ui, sans-serif' }}>
@@ -106,7 +117,7 @@ const App = () => {
             <TrendingUp size={36} /> Spotify Cultural Trends
           </h1>
           <div style={{ display: 'flex', gap: '15px', alignItems: 'center' }}>
-            <span style={{ fontSize: '0.7rem', color: '#444' }}>Build: MARCH-03-V1</span>
+            <span style={{ fontSize: '0.7rem', color: '#444' }}>Build: MARCH-03-V2</span>
             <button onClick={() => window.location.reload()} style={{ backgroundColor: '#222', color: '#888', border: '1px solid #444', padding: '8px 16px', borderRadius: '20px', cursor: 'pointer', fontSize: '0.8rem' }}>
               <RefreshCw size={14} style={{marginRight: 8}}/> Refresh
             </button>
@@ -125,7 +136,7 @@ const App = () => {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '25px' }}>
             <div>
               <strong style={{ color: '#fff', display: 'block', marginBottom: '5px' }}>1. Data Sourcing</strong>
-              <span style={{ color: '#888', fontSize: '0.9rem' }}>Weekly Top 200 chart data is pulled directly from the provided dataset covering 2020 to 2026.</span>
+              <span style={{ color: '#888', fontSize: '0.9rem' }}>Weekly chart data is pulled directly from the provided dataset covering 2020 to 2026.</span>
             </div>
             <div>
               <strong style={{ color: '#fff', display: 'block', marginBottom: '5px' }}>2. Lyric Extraction</strong>
@@ -165,9 +176,9 @@ const App = () => {
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '20px', marginBottom: '40px' }}>
             {[
-              { label: 'Optimism Index', k: 'v_opt', color: '#F1C40F', desc: 'Positive vs Somber tone. (Raw)' },
-              { label: 'Lyrical Focus', k: 'v_foc', color: '#E67E22', desc: 'Theme keyword density. (Raw)' },
-              { label: 'Topic Consistency', k: 'v_con', color: '#3498DB', desc: 'Hit cohesion. (Raw)' }
+              { label: 'Optimism Index', k: 'v_opt', color: '#F1C40F', desc: 'Positive vs Somber tone.' },
+              { label: 'Lyrical Focus', k: 'v_foc', color: '#E67E22', desc: 'Theme keyword density.' },
+              { label: 'Topic Consistency', k: 'v_con', color: '#3498DB', desc: 'Hit cohesion.' }
             ].map(m => (
               <div key={m.k} style={{ backgroundColor: '#1e1e1e', padding: '20px', borderRadius: '12px', border: '1px solid #333' }}>
                 <h3 style={{ fontSize: '1.1rem', color: '#1DB954', marginBottom: '15px' }}>{m.label}</h3>
@@ -182,7 +193,7 @@ const App = () => {
                     </LineChart>
                   </ResponsiveContainer>
                 </div>
-                <p style={{ fontSize: '0.8rem', color: '#777', marginTop: '15px' }}>{m.desc}</p>
+                <p style={{ fontSize: '0.8rem', color: '#777', marginTop: '15px', lineHeight: '1.4' }}>{m.desc}</p>
               </div>
             ))}
           </div>
@@ -221,7 +232,7 @@ const App = () => {
                       <div style={{ color: '#777', fontSize: '0.85rem' }}>{s.artist}</div>
                     </div>
                   </div>
-                )) : <div style={{ color: '#444' }}>Select a week.</div>}
+                )) : <div style={{ color: '#444' }}>Select a week to load hits.</div>}
               </div>
             </section>
           </div>
