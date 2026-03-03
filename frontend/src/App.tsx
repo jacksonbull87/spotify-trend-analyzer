@@ -59,19 +59,26 @@ const App = () => {
         };
       });
 
-      // 2. SMOOTHING (Themes only)
+      // 2. SMOOTHING (Themes only - Metrics are RAW as requested)
       const smoothed = processed.map((entry, index, array) => {
         const start = Math.max(0, index - 2);
         const end = Math.min(array.length, index + 3);
         const window = array.slice(start, end);
         const res = { ...entry };
         
+        // ONLY smooth the 6 major themes
         ['Romance', 'Party/Celebration', 'Resilience/Success', 'Melancholy', 'Social/Identity', 'Nostalgia'].forEach(key => {
           if (entry[key] !== undefined) {
             const avg = window.reduce((acc, curr) => acc + (Number(curr[key]) || 0), 0) / window.length;
             res[key] = parseFloat(avg.toFixed(4));
           }
         });
+        
+        // KEEP metrics raw - DO NOT SMOOTH
+        res.v_opt = entry.v_opt;
+        res.v_foc = entry.v_foc;
+        res.v_con = entry.v_con;
+        
         return res;
       });
 
@@ -107,7 +114,7 @@ const App = () => {
 
   return (
     <div style={{ padding: '20px', maxWidth: '1200px', margin: '0 auto', color: '#fff', backgroundColor: '#121212', minHeight: '100vh', fontFamily: 'system-ui, sans-serif' }}>
-      {/* HEADER SECTION */}
+      {/* HEADER SECTION - THE MISSION & HOW IT WORKS */}
       <header style={{ borderBottom: '1px solid #333', paddingBottom: '25px', marginBottom: '30px' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <h1 style={{ display: 'flex', alignItems: 'center', gap: '15px', color: '#1DB954', fontSize: '2.4rem', margin: 0 }}>
@@ -150,10 +157,10 @@ const App = () => {
         </div>
       ) : (
         <>
-          {/* MAIN CHART */}
+          {/* MAIN THEME CHART */}
           <section style={{ backgroundColor: '#1e1e1e', padding: '25px', borderRadius: '12px', marginBottom: '30px', border: '1px solid #222' }}>
             <h2 style={{ fontSize: '1.3rem', margin: '0 0 10px 0', display: 'flex', alignItems: 'center', gap: '10px' }}><BarChart3 /> Theme Evolution</h2>
-            <p style={{ color: '#888', marginBottom: '25px', fontSize: '0.9rem' }}>Tracks societal emotional priorities (Romance, Resilience, etc.)</p>
+            <p style={{ color: '#888', marginBottom: '25px', fontSize: '0.9rem' }}>Tracks societal emotional priorities (Romance, Resilience, etc.) - Smoothed for clarity.</p>
             <div style={{ height: '380px' }}>
               <ResponsiveContainer width="100%" height="100%">
                 <LineChart data={trends}>
@@ -170,12 +177,12 @@ const App = () => {
             </div>
           </section>
 
-          {/* METRICS ROW (ZOOMED) */}
+          {/* METRICS ROW - NO SMOOTHING, ZOOMED SCALE */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '20px', marginBottom: '40px' }}>
             {[
-              { label: 'Optimism Index', k: 'v_opt', color: '#F1C40F', desc: 'Positive vs Somber tone.' },
-              { label: 'Lyrical Focus', k: 'v_foc', color: '#E67E22', desc: 'Thematic keyword density.' },
-              { label: 'Topic Consistency', k: 'v_con', color: '#3498DB', desc: 'Cohesion of weekly hits.' }
+              { label: 'Optimism Index', k: 'v_opt', color: '#F1C40F', desc: 'Positive vs Somber tone. (Raw Data)' },
+              { label: 'Lyrical Focus', k: 'v_foc', color: '#E67E22', desc: 'Thematic keyword density. (Raw Data)' },
+              { label: 'Topic Consistency', k: 'v_con', color: '#3498DB', desc: 'Cohesion of weekly hits. (Raw Data)' }
             ].map(m => (
               <div key={m.k} style={{ backgroundColor: '#1e1e1e', padding: '20px', borderRadius: '12px', border: '1px solid #333' }}>
                 <h3 style={{ fontSize: '1.1rem', color: '#1DB954', marginBottom: '15px' }}>{m.label}</h3>
@@ -183,10 +190,10 @@ const App = () => {
                   <ResponsiveContainer width="100%" height="100%">
                     <LineChart data={trends}>
                       <CartesianGrid strokeDasharray="3 3" stroke="#222" vertical={false} />
-                      <YAxis domain={['dataMin', 'dataMax']} stroke="#555" tick={{fontSize: 9}} width={35} />
+                      <YAxis domain={['dataMin', 'dataMax']} stroke="#555" tick={{fontSize: 9}} width={35} hide={false} />
                       <XAxis dataKey="date" hide />
                       <Tooltip contentStyle={{backgroundColor: '#1e1e1e', border: '1px solid #333', fontSize: '11px'}} />
-                      <Line type="monotone" dataKey={m.k} stroke={m.color} strokeWidth={3} dot={false} isAnimationActive={false} />
+                      <Line type="monotone" dataKey={m.k} stroke={m.color} strokeWidth={2} dot={{ r: 1 }} isAnimationActive={false} />
                     </LineChart>
                   </ResponsiveContainer>
                 </div>
@@ -195,7 +202,7 @@ const App = () => {
             ))}
           </div>
 
-          {/* WEEKLY DETAILS */}
+          {/* WEEKLY BREAKDOWN */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '30px', marginBottom: '40px' }}>
             <section style={{ backgroundColor: '#1e1e1e', padding: '25px', borderRadius: '12px', border: '1px solid #222' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
@@ -235,10 +242,9 @@ const App = () => {
             </section>
           </div>
 
-          {/* DEBUG FOOTER */}
           <div style={{ borderTop: '1px dashed #222', paddingTop: '20px', fontSize: '0.7rem', color: '#333' }}>
-            Data: {meta.source} • Points: {trends.length} • Current Week: {selectedWeek?.date}<br/>
-            Raw Detection: Opt({trends[0]?.v_opt}) / Foc({trends[0]?.v_foc}) / Con({trends[0]?.v_con})
+            Source: {meta.source} • Points: {trends.length} • Current Week: {selectedWeek?.date}<br/>
+            Raw Detection Check: Opt({trends[0]?.v_opt}) / Foc({trends[0]?.v_foc}) / Con({trends[0]?.v_con})
           </div>
         </>
       )}
