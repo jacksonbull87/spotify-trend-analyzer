@@ -36,33 +36,34 @@ const App = () => {
           tRaw = staticObj.trends;
         }
 
-        // 1. UNIVERSAL NORMALIZER
         const mapped = (tRaw || []).map(d => {
-          // Helper to find a value regardless of spaces or underscores
-          const find = (term) => {
-            const key = Object.keys(d).find(k => k.toLowerCase().replace(/_/g, ' ').includes(term.toLowerCase()));
-            return key ? Number(d[key]) : 0;
+          const getVal = (k1, k2) => {
+            const v = d[k1] !== undefined ? d[k1] : d[k2];
+            return v !== undefined ? Number(v) : 0;
           };
           return {
             ...d,
-            m_opt: find('optimism'),
-            m_foc: find('density') || find('focus'),
-            m_con: find('clarity') || find('consistency')
+            m_opt: getVal("Optimism Index", "Optimism_Index"),
+            m_foc: getVal("Keyword Density", "Keyword_Density"),
+            m_con: getVal("Topic Clarity", "Topic_Clarity"),
+            Romance: Number(d.Romance || 0),
+            "Party/Celebration": Number(d["Party/Celebration"] || 0),
+            "Resilience/Success": Number(d["Resilience/Success"] || 0),
+            Melancholy: Number(d.Melancholy || 0),
+            "Social/Identity": Number(d["Social/Identity"] || 0),
+            Nostalgia: Number(d.Nostalgia || 0),
           };
         });
 
-        // 2. SMOOTH THEMES ONLY
-        const mainKeys = ['Romance', 'Party/Celebration', 'Resilience/Success', 'Melancholy', 'Social/Identity', 'Nostalgia'];
         const smoothed = mapped.map((entry, index, array) => {
           const startIdx = Math.max(0, index - 2);
           const endIdx = Math.min(array.length, index + 3);
           const window = array.slice(startIdx, endIdx);
           const res = { ...entry };
-          mainKeys.forEach(k => {
-            if (entry[k] !== undefined) {
-              const avg = window.reduce((acc, curr) => acc + (Number(curr[k]) || 0), 0) / window.length;
-              res[k] = parseFloat(avg.toFixed(4));
-            }
+          
+          ['m_opt', 'm_foc', 'm_con', 'Romance', 'Party/Celebration', 'Resilience/Success', 'Melancholy', 'Social/Identity', 'Nostalgia'].forEach(k => {
+            const avg = window.reduce((acc, curr) => acc + (curr[k] || 0), 0) / window.length;
+            res[k] = parseFloat(avg.toFixed(4));
           });
           return res;
         });
@@ -109,9 +110,8 @@ const App = () => {
           </button>
         </div>
 
-        {/* FULL HEADER RESTORED */}
         <div style={{ backgroundColor: '#1e1e1e', padding: '25px', borderRadius: '12px', marginTop: '25px', border: '1px solid #333' }}>
-          <div style={{ marginBottom: '25px', borderBottom: '1px solid #333', paddingBottom: '20px' }}>
+          <div style={{ marginBottom: '20px', borderBottom: '1px solid #333', paddingBottom: '20px' }}>
             <h3 style={{ marginTop: 0, color: '#1DB954', fontSize: '1.3rem' }}>The Mission</h3>
             <p style={{ fontSize: '1.05rem', color: '#ccc', lineHeight: '1.6', margin: 0 }}>
               Music is the ultimate mirror of society. This tool aims to quantify the <strong>evolution of our collective consciousness</strong> by algorithmically dissecting the themes that dominate the airwaves. By tracking these shifts over years, we can visualize how our values, anxieties, and celebrations transform in real-time.
@@ -122,7 +122,7 @@ const App = () => {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '25px' }}>
             <div>
               <strong style={{ color: '#fff', display: 'block', marginBottom: '5px' }}>1. Data Sourcing</strong>
-              <span style={{ color: '#888', fontSize: '0.9rem' }}>Weekly chart data is pulled directly from the provided dataset covering 2020 to 2026.</span>
+              <span style={{ color: '#888', fontSize: '0.9rem' }}>Weekly Top 200 chart data is pulled directly from the provided dataset covering 2020 to 2026.</span>
             </div>
             <div>
               <strong style={{ color: '#fff', display: 'block', marginBottom: '5px' }}>2. Lyric Extraction</strong>
@@ -168,13 +168,12 @@ const App = () => {
                 <h3 style={{ fontSize: '1.1rem', color: '#1DB954', marginBottom: '15px' }}>{m.label}</h3>
                 <div style={{ height: '160px' }}>
                   <ResponsiveContainer width="100%" height="100%">
-                    <LineChart data={trends} key={trends.length}>
+                    <LineChart data={trends}>
                       <CartesianGrid strokeDasharray="3 3" stroke="#222" vertical={false} />
-                      {/* dataMin/dataMax forces the zoom effect */}
                       <YAxis domain={['dataMin', 'dataMax']} stroke="#555" tick={{fontSize: 9}} width={35} allowDecimals={true} />
                       <XAxis dataKey="date" hide />
                       <Tooltip contentStyle={{backgroundColor: '#1e1e1e', border: '1px solid #333', fontSize: '11px'}} />
-                      <Line type="monotone" dataKey={m.k} stroke={m.color} strokeWidth={2} dot={false} isAnimationActive={false} />
+                      <Line type="monotone" dataKey={m.k} stroke={m.color} strokeWidth={3} dot={false} isAnimationActive={false} />
                     </LineChart>
                   </ResponsiveContainer>
                 </div>
@@ -186,13 +185,14 @@ const App = () => {
             <section style={{ backgroundColor: '#1e1e1e', padding: '25px', borderRadius: '12px', border: '1px solid #222' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '15px' }}>
                 <h2 style={{ fontSize: '1.2rem', margin: 0 }}>Analysis: {selectedWeek?.date}</h2>
-                <select onChange={e => setSelectedWeek(weeks.find(w => String(w.id) === e.target.value))} style={{ backgroundColor: '#333', color: '#fff', border: 'none', borderRadius: '4px', padding: '6px 12px' }}>
+                <select onChange={e => setSelectedWeek(weeks.find(w => String(w.id) === e.target.value))} style={{ backgroundColor: '#333', color: '#fff', border: 'none', borderRadius: '4px', padding: '6px 12px', fontSize: '0.9rem' }}>
                   {weeks.map(w => <option key={w.id} value={w.id}>{w.date}</option>)}
                 </select>
               </div>
               <div style={{ height: '280px' }}>
                 <ResponsiveContainer width="100%" height="100%">
                   <BarChart data={themes} layout="vertical">
+                    <CartesianGrid strokeDasharray="3 3" stroke="#333" horizontal={false} />
                     <YAxis dataKey="name" type="category" width={110} tick={{fontSize: 10}} stroke="#888" />
                     <XAxis type="number" hide />
                     <Bar dataKey="score">
