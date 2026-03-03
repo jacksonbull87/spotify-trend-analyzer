@@ -41,13 +41,21 @@ const App = () => {
         tRaw = resS.data.trends;
       }
 
-      // 1. FORCED NUMERIC MAPPING (No dynamic detection to avoid errors)
-      const mapped = (tRaw || []).map(d => ({
-        ...d,
-        m_opt: Number(d.Optimism_Index) || 0,
-        m_foc: Number(d.Keyword_Density) || 0,
-        m_con: Number(d.Topic_Clarity) || 0
-      }));
+      // 1. FORCED NUMERIC MAPPING (Handles both API spaces and Static underscores)
+      const mapped = (tRaw || []).map(d => {
+        const getVal = (k1, k2) => {
+          if (d[k1] !== undefined && d[k1] !== null) return Number(d[k1]);
+          if (d[k2] !== undefined && d[k2] !== null) return Number(d[k2]);
+          return 0;
+        };
+
+        return {
+          ...d,
+          m_opt: getVal("Optimism Index", "Optimism_Index"),
+          m_foc: getVal("Keyword Density", "Keyword_Density"),
+          m_con: getVal("Topic Clarity", "Topic_Clarity")
+        };
+      });
 
       // 2. SELECTIVE SMOOTHING
       const smoothed = mapped.map((entry, index, array) => {
@@ -221,9 +229,9 @@ const App = () => {
               </div>
             </section>
           </div>
-
+          
           <div style={{ borderTop: '1px dashed #222', paddingTop: '20px', fontSize: '0.75rem', color: '#222', textAlign: 'center' }}>
-            VERIFICATION v1.0 • POINT 1: {trends[0]?.m_opt} / {trends[0]?.m_foc} / {trends[0]?.m_con}
+            Data Check • Opt: {trends[0]?.m_opt} / Foc: {trends[0]?.m_foc} / Con: {trends[0]?.m_con}
           </div>
         </>
       )}
