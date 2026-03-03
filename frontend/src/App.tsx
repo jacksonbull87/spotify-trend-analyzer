@@ -31,7 +31,6 @@ const App = () => {
           const resT = await axios.get(`${API_BASE_URL}/api/trends`);
           if (!Array.isArray(resW.data)) throw new Error("Not an array");
           
-          // STALE API BYPASS
           if (resT.data.length > 0 && 
               resT.data[0]["Optimism_Index"] === undefined && 
               resT.data[0]["Optimism Index"] === undefined) {
@@ -41,6 +40,7 @@ const App = () => {
           wRaw = resW.data;
           tRaw = resT.data;
         } catch (e) {
+          console.log("Fallback triggered:", e.message);
           const resS = await axios.get(`/data.json?t=${Date.now()}`);
           staticObj = resS.data;
           wRaw = staticObj.weeks;
@@ -62,7 +62,7 @@ const App = () => {
           const res = { ...entry };
           ['Romance', 'Party/Celebration', 'Resilience/Success', 'Melancholy', 'Social/Identity', 'Nostalgia'].forEach(k => {
             if (entry[k] !== undefined) {
-              const avg = window.reduce((acc, curr) => acc + (Number(curr[key] || curr[k]) || 0), 0) / window.length;
+              const avg = window.reduce((acc, curr) => acc + (Number(curr[k]) || 0), 0) / window.length;
               res[k] = parseFloat(avg.toFixed(4));
             }
           });
@@ -75,7 +75,10 @@ const App = () => {
         setSelectedWeek(wRaw[0]);
         setTrends(smoothed);
         setLoading(false);
-      } catch (err) { setLoading(false); }
+      } catch (err) { 
+        console.error("Init error:", err);
+        setLoading(false); 
+      }
     };
     init();
   }, []);
@@ -113,11 +116,9 @@ const App = () => {
           <h1 style={{ display: 'flex', alignItems: 'center', gap: '15px', color: '#1DB954', fontSize: '2.4rem', margin: 0 }}>
             <TrendingUp size={36} /> US Spotify Cultural Trends
           </h1>
-          <div style={{ display: 'flex', gap: '15px', alignItems: 'center' }}>
-            <button onClick={() => window.location.reload()} style={{ backgroundColor: '#222', color: '#888', border: '1px solid #444', padding: '8px 16px', borderRadius: '20px', cursor: 'pointer', fontSize: '0.8rem' }}>
-              <RefreshCw size={14} style={{marginRight: 8}}/> Refresh
-            </button>
-          </div>
+          <button onClick={() => window.location.reload()} style={{ backgroundColor: '#222', color: '#888', border: '1px solid #444', padding: '8px 16px', borderRadius: '20px', cursor: 'pointer', fontSize: '0.8rem' }}>
+            <RefreshCw size={14} style={{marginRight: 8}}/> Refresh
+          </button>
         </div>
 
         <div style={{ backgroundColor: '#1e1e1e', padding: '25px', borderRadius: '12px', marginTop: '25px', border: '1px solid #333' }}>
