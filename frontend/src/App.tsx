@@ -38,28 +38,22 @@ const App = () => {
         tData = resS.data.trends;
       }
 
-      // 1. Aggressive Fuzzy Mapping
-      const mapped = (tData || []).map(d => {
-        const getV = (terms) => {
-          const key = Object.keys(d).find(k => terms.some(t => k.toLowerCase().includes(t)));
-          return key ? Number(d[key]) : 0;
-        };
-        return {
-          ...d,
-          opt: getV(['optimism']),
-          foc: getV(['density', 'focus']),
-          con: getV(['clarity', 'consistency'])
-        };
-      });
+      // Map keys DIRECTLY to the data.json audit results
+      const mapped = (tData || []).map(d => ({
+        ...d,
+        opt: d.Optimism_Index || d["Optimism Index"] || 0,
+        foc: d.Keyword_Density || d["Keyword Density"] || 0,
+        con: d.Topic_Clarity || d["Topic Clarity"] || 0
+      }));
 
-      // 2. Smoothing
-      const smoothed = mapped.map((entry, index, array) => {
+      // Only smooth the main categories, leave metrics raw to avoid flattening
+      const finalData = mapped.map((entry, index, array) => {
         const start = Math.max(0, index - 2);
         const end = Math.min(array.length, index + 3);
         const window = array.slice(start, end);
         const smoothedEntry = { ...entry };
         
-        ['opt', 'foc', 'con', 'Romance', 'Party/Celebration', 'Resilience/Success', 'Melancholy', 'Social/Identity', 'Nostalgia'].forEach(key => {
+        ['Romance', 'Party/Celebration', 'Resilience/Success', 'Melancholy', 'Social/Identity', 'Nostalgia'].forEach(key => {
           if (entry[key] !== undefined) {
             const avg = window.reduce((acc, curr) => acc + (Number(curr[key]) || 0), 0) / window.length;
             smoothedEntry[key] = parseFloat(avg.toFixed(4));
@@ -70,7 +64,7 @@ const App = () => {
 
       setWeeks(wData);
       setSelectedWeek(wData[0]);
-      setTrends(smoothed);
+      setTrends(finalData);
       setLoading(false);
     } catch (err) {
       setLoading(false);
@@ -105,7 +99,7 @@ const App = () => {
       ) : (
         <>
           <section style={{ backgroundColor: '#1e1e1e', padding: '20px', borderRadius: '12px', marginBottom: '30px', border: '1px solid #222' }}>
-            <h2 style={{ fontSize: '1.1rem', margin: '0 0 20px 0' }}>Thematic Evolution</h2>
+            <h2 style={{ fontSize: '1.1rem', margin: '0 0 20px 0' }}>Theme Evolution</h2>
             <div style={{ height: '350px' }}>
               <ResponsiveContainer width="100%" height="100%">
                 <LineChart data={trends}>
@@ -134,10 +128,10 @@ const App = () => {
                   <ResponsiveContainer width="100%" height="100%">
                     <LineChart data={trends}>
                       <CartesianGrid strokeDasharray="3 3" stroke="#222" vertical={false} />
-                      <YAxis domain={['dataMin - 0.05', 'dataMax + 0.05']} stroke="#444" tick={{fontSize: 8}} width={30} />
+                      <YAxis domain={['auto', 'auto']} stroke="#444" tick={{fontSize: 8}} width={35} />
                       <XAxis dataKey="date" hide />
                       <Tooltip contentStyle={{backgroundColor: '#1e1e1e', fontSize: '10px'}} />
-                      <Line type="monotone" dataKey={m.k} stroke={m.color} strokeWidth={3} dot={{r: 1}} isAnimationActive={false} />
+                      <Line type="monotone" dataKey={m.k} stroke={m.color} strokeWidth={2} dot={{r: 1}} isAnimationActive={false} />
                     </LineChart>
                   </ResponsiveContainer>
                 </div>
@@ -177,6 +171,10 @@ const App = () => {
                 ))}
               </div>
             </section>
+          </div>
+
+          <div style={{ marginTop: '40px', padding: '10px', fontSize: '0.7rem', color: '#333', borderTop: '1px solid #222' }}>
+            Data Sample: {trends[0]?.date} - {trends[0]?.opt} / {trends[0]?.foc} / {trends[0]?.con}
           </div>
         </>
       )}
