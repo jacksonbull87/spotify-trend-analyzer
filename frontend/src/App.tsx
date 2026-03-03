@@ -180,11 +180,12 @@ const App = () => {
             <h3 style={{ marginTop: 0, color: '#1DB954', fontSize: '1rem' }}>Optimism Index</h3>
             <div style={{ height: '150px' }}>
               <ResponsiveContainer width="100%" height="100%">
-                <LineChart data={trends}>
+                <LineChart data={trends} margin={{ top: 5, right: 5, left: -20, bottom: 5 }}>
+                  <CartesianGrid strokeDasharray="3 3" stroke="#333" vertical={false} />
                   <XAxis dataKey="date" hide />
                   <YAxis hide domain={['auto', 'auto']} />
+                  <Tooltip contentStyle={{ backgroundColor: '#1e1e1e', border: '1px solid #333', fontSize: '0.8rem' }} />
                   <Line type="basis" dataKey="Optimism Index" stroke="#F1C40F" strokeWidth={2} dot={false} />
-                  <Tooltip contentStyle={{ display: 'none' }} />
                 </LineChart>
               </ResponsiveContainer>
             </div>
@@ -196,11 +197,12 @@ const App = () => {
             <h3 style={{ marginTop: 0, color: '#1DB954', fontSize: '1rem' }}>Lyrical Focus</h3>
             <div style={{ height: '150px' }}>
               <ResponsiveContainer width="100%" height="100%">
-                <LineChart data={trends}>
+                <LineChart data={trends} margin={{ top: 5, right: 5, left: -20, bottom: 5 }}>
+                  <CartesianGrid strokeDasharray="3 3" stroke="#333" vertical={false} />
                   <XAxis dataKey="date" hide />
                   <YAxis hide domain={['auto', 'auto']} />
+                  <Tooltip contentStyle={{ backgroundColor: '#1e1e1e', border: '1px solid #333', fontSize: '0.8rem' }} />
                   <Line type="basis" dataKey="Keyword Density" stroke="#E67E22" strokeWidth={2} dot={false} />
-                  <Tooltip contentStyle={{ display: 'none' }} />
                 </LineChart>
               </ResponsiveContainer>
             </div>
@@ -212,11 +214,12 @@ const App = () => {
             <h3 style={{ marginTop: 0, color: '#1DB954', fontSize: '1rem' }}>Topic Consistency</h3>
             <div style={{ height: '150px' }}>
               <ResponsiveContainer width="100%" height="100%">
-                <LineChart data={trends}>
+                <LineChart data={trends} margin={{ top: 5, right: 5, left: -20, bottom: 5 }}>
+                  <CartesianGrid strokeDasharray="3 3" stroke="#333" vertical={false} />
                   <XAxis dataKey="date" hide />
                   <YAxis hide domain={['auto', 'auto']} />
+                  <Tooltip contentStyle={{ backgroundColor: '#1e1e1e', border: '1px solid #333', fontSize: '0.8rem' }} />
                   <Line type="basis" dataKey="Topic Clarity" stroke="#3498DB" strokeWidth={2} dot={false} />
-                  <Tooltip contentStyle={{ display: 'none' }} />
                 </LineChart>
               </ResponsiveContainer>
             </div>
