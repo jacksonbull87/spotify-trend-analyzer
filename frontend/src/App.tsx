@@ -17,77 +17,74 @@ const App = () => {
   const [trends, setTrends] = useState([]);
   const [loading, setLoading] = useState(true);
   const [allStaticData, setAllStaticData] = useState(null);
+  const [bounds, setBounds] = useState({ opt: [0,1], foc: [0,1], con: [0,1] });
 
   useEffect(() => {
-    loadData();
-  }, []);
-
-  const loadData = async () => {
-    try {
-      setLoading(true);
-      let tRaw = [];
-      let wRaw = [];
-      
+    const start = async () => {
       try {
-        const resW = await axios.get(`${API_BASE_URL}/api/weeks`);
-        const resT = await axios.get(`${API_BASE_URL}/api/trends`);
-        if (!Array.isArray(resW.data)) throw new Error();
-        wRaw = resW.data;
-        tRaw = resT.data;
-      } catch (e) {
-        const resS = await axios.get(`/data.json?t=${Date.now()}`);
-        setAllStaticData(resS.data);
-        wRaw = resS.data.weeks;
-        tRaw = resS.data.trends;
-      }
+        setLoading(true);
+        let tData, wData, staticObj;
+        try {
+          const resW = await axios.get(`${API_BASE_URL}/api/weeks`);
+          const resT = await axios.get(`${API_BASE_URL}/api/trends`);
+          if (!Array.isArray(resW.data)) throw new Error();
+          wData = resW.data;
+          tData = resT.data;
+        } catch (e) {
+          const resS = await axios.get(`/data.json?t=${Date.now()}`);
+          staticObj = resS.data;
+          wData = staticObj.weeks;
+          tData = staticObj.trends;
+        }
 
-      // 1. FORCED NUMERIC MAPPING (Handles both API spaces and Static underscores)
-      const mapped = (tRaw || []).map(d => {
-        const getVal = (k1, k2) => {
-          if (d[k1] !== undefined && d[k1] !== null) return Number(d[k1]);
-          if (d[k2] !== undefined && d[k2] !== null) return Number(d[k2]);
-          return 0;
-        };
-
-        return {
+        const mapped = (tData || []).map(d => ({
           ...d,
-          m_opt: getVal("Optimism Index", "Optimism_Index"),
-          m_foc: getVal("Keyword Density", "Keyword_Density"),
-          m_con: getVal("Topic Clarity", "Topic_Clarity")
+          m_opt: Number(d.Optimism_Index || d["Optimism Index"] || 0),
+          m_foc: Number(d.Keyword_Density || d["Keyword Density"] || 0),
+          m_con: Number(d.Topic_Clarity || d["Topic Clarity"] || 0)
+        }));
+
+        // Calculate Manual Bounds to Force Scaling
+        const getB = (k, pad) => {
+          const vs = mapped.map(d => d[k]).filter(v => v > 0);
+          return vs.length ? [Math.min(...vs) - pad, Math.max(...vs) + pad] : [0, 1];
         };
-      });
 
-      // 2. SELECTIVE SMOOTHING
-      const smoothed = mapped.map((entry, index, array) => {
-        const start = Math.max(0, index - 2);
-        const end = Math.min(array.length, index + 3);
-        const window = array.slice(start, end);
-        const res = { ...entry };
-        
-        // Smooth only major themes
-        ['Romance', 'Party/Celebration', 'Resilience/Success', 'Melancholy', 'Social/Identity', 'Nostalgia'].forEach(key => {
-          if (entry[key] !== undefined) {
-            const avg = window.reduce((acc, curr) => acc + (Number(curr[key]) || 0), 0) / window.length;
-            res[key] = parseFloat(avg.toFixed(4));
-          }
+        setBounds({
+          opt: getB('m_opt', 0.05),
+          foc: getB('m_foc', 0.02),
+          con: getB('m_con', 0.2)
         });
-        
-        // Metrics remain 100% raw to prevent flattening
-        return res;
-      });
 
-      setWeeks(wRaw);
-      setSelectedWeek(wRaw[0]);
-      setTrends(smoothed);
-      setLoading(false);
-    } catch (err) {
-      setLoading(false);
-    }
-  };
+        // Smooth main themes
+        const mainKeys = ['Romance', 'Party/Celebration', 'Resilience/Success', 'Melancholy', 'Social/Identity', 'Nostalgia'];
+        const smoothed = mapped.map((entry, index, array) => {
+          const startIdx = Math.max(0, index - 2);
+          const endIdx = Math.min(array.length, index + 3);
+          const window = array.slice(startIdx, endIdx);
+          const res = { ...entry };
+          mainKeys.forEach(k => {
+            if (entry[k] !== undefined) {
+              const avg = window.reduce((acc, curr) => acc + (Number(curr[k]) || 0), 0) / window.length;
+              res[k] = parseFloat(avg.toFixed(4));
+            }
+          });
+          return res;
+        });
+
+        setAllStaticData(staticObj);
+        setWeeks(wData);
+        setSelectedWeek(wData[0]);
+        setTrends(smoothed);
+        setLoading(false);
+      } catch (err) { setLoading(false); }
+    };
+    start();
+  }, []);
 
   useEffect(() => {
     if (selectedWeek) {
-      const fetchDetails = async () => {
+      const loadWeek = async () => {
         try {
           const resT = await axios.get(`${API_BASE_URL}/api/week/${selectedWeek.id}/themes`);
           setThemes(resT.data);
@@ -101,7 +98,7 @@ const App = () => {
           }
         }
       };
-      fetchDetails();
+      loadWeek();
     }
   }, [selectedWeek, allStaticData]);
 
@@ -117,6 +114,7 @@ const App = () => {
           </button>
         </div>
 
+        {/* RESTORED MISSION AND OVERVIEW */}
         <div style={{ backgroundColor: '#1e1e1e', padding: '25px', borderRadius: '12px', marginTop: '25px', border: '1px solid #333' }}>
           <div style={{ marginBottom: '25px', borderBottom: '1px solid #333', paddingBottom: '20px' }}>
             <h3 style={{ marginTop: 0, color: '#1DB954', fontSize: '1.3rem' }}>The Mission</h3>
@@ -129,7 +127,7 @@ const App = () => {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '25px' }}>
             <div>
               <strong style={{ color: '#fff', display: 'block', marginBottom: '5px' }}>1. Data Sourcing</strong>
-              <span style={{ color: '#888', fontSize: '0.9rem' }}>Weekly chart data is pulled directly from the provided dataset covering 2020 to 2026.</span>
+              <span style={{ color: '#888', fontSize: '0.9rem' }}>Weekly Top 200 chart data is pulled directly from the provided dataset covering 2020 to 2026.</span>
             </div>
             <div>
               <strong style={{ color: '#fff', display: 'block', marginBottom: '5px' }}>2. Lyric Extraction</strong>
@@ -144,11 +142,10 @@ const App = () => {
       </header>
 
       {loading ? (
-        <div style={{ height: '400px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-          <Loader2 className="animate-spin" size={50} color="#1DB954" />
-        </div>
+        <div style={{ height: '400px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}><Loader2 className="animate-spin" size={50} color="#1DB954" /></div>
       ) : (
         <>
+          {/* Main Chart */}
           <section style={{ backgroundColor: '#1e1e1e', padding: '25px', borderRadius: '12px', marginBottom: '30px', border: '1px solid #222' }}>
             <h2 style={{ fontSize: '1.3rem', margin: '0 0 10px 0', display: 'flex', alignItems: 'center', gap: '10px' }}><BarChart3 /> Cultural Theme Evolution</h2>
             <div style={{ height: '380px' }}>
@@ -167,11 +164,12 @@ const App = () => {
             </div>
           </section>
 
+          {/* Metrics row - FORCED SCALING */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '20px', marginBottom: '40px' }}>
             {[
-              { label: 'Optimism Index', k: 'm_opt', color: '#F1C40F', desc: 'Positive vs Somber tone. (Raw)' },
-              { label: 'Lyrical Focus', k: 'm_foc', color: '#E67E22', desc: 'Thematic keyword density. (Raw)' },
-              { label: 'Topic Consistency', k: 'm_con', color: '#3498DB', desc: 'Cohesion of weekly hits. (Raw)' }
+              { label: 'Optimism Index', k: 'm_opt', color: '#F1C40F', domain: bounds.opt },
+              { label: 'Lyrical Focus', k: 'm_foc', color: '#E67E22', domain: bounds.foc },
+              { label: 'Topic Consistency', k: 'm_con', color: '#3498DB', domain: bounds.con }
             ].map(m => (
               <div key={m.k} style={{ backgroundColor: '#1e1e1e', padding: '20px', borderRadius: '12px', border: '1px solid #333' }}>
                 <h3 style={{ fontSize: '1.1rem', color: '#1DB954', marginBottom: '15px' }}>{m.label}</h3>
@@ -179,14 +177,13 @@ const App = () => {
                   <ResponsiveContainer width="100%" height="100%">
                     <LineChart data={trends}>
                       <CartesianGrid strokeDasharray="3 3" stroke="#222" vertical={false} />
-                      <YAxis domain={['dataMin', 'dataMax']} stroke="#555" tick={{fontSize: 9}} width={35} allowDecimals={true} />
+                      <YAxis domain={m.domain} stroke="#555" tick={{fontSize: 9}} width={35} allowDecimals={true} />
                       <XAxis dataKey="date" hide />
                       <Tooltip contentStyle={{backgroundColor: '#1e1e1e', border: '1px solid #333', fontSize: '11px'}} />
-                      <Line type="monotone" dataKey={m.k} stroke={m.color} strokeWidth={2} dot={{ r: 1 }} isAnimationActive={false} />
+                      <Line type="monotone" dataKey={m.k} stroke={m.color} strokeWidth={3} dot={false} isAnimationActive={false} />
                     </LineChart>
                   </ResponsiveContainer>
                 </div>
-                <p style={{ fontSize: '0.8rem', color: '#777', marginTop: '15px' }}>{m.desc}</p>
               </div>
             ))}
           </div>
@@ -195,14 +192,13 @@ const App = () => {
             <section style={{ backgroundColor: '#1e1e1e', padding: '25px', borderRadius: '12px', border: '1px solid #222' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
                 <h2 style={{ fontSize: '1.2rem', margin: 0 }}>Analysis: {selectedWeek?.date}</h2>
-                <select onChange={e => setSelectedWeek(weeks.find(w => String(w.id) === e.target.value))} style={{ backgroundColor: '#333', color: '#fff', border: 'none', borderRadius: '4px', padding: '6px 12px', fontSize: '0.9rem' }}>
+                <select onChange={e => setSelectedWeek(weeks.find(w => String(w.id) === e.target.value))} style={{ backgroundColor: '#333', color: '#fff', border: 'none', borderRadius: '4px', padding: '6px 12px' }}>
                   {weeks.map(w => <option key={w.id} value={w.id}>{w.date}</option>)}
                 </select>
               </div>
               <div style={{ height: '280px' }}>
                 <ResponsiveContainer width="100%" height="100%">
                   <BarChart data={themes} layout="vertical">
-                    <CartesianGrid strokeDasharray="3 3" stroke="#333" horizontal={false} />
                     <YAxis dataKey="name" type="category" width={110} tick={{fontSize: 10}} stroke="#888" />
                     <XAxis type="number" hide />
                     <Tooltip contentStyle={{ backgroundColor: '#1e1e1e', border: '1px solid #333' }} />
@@ -215,7 +211,7 @@ const App = () => {
             </section>
 
             <section style={{ backgroundColor: '#1e1e1e', padding: '25px', borderRadius: '12px', border: '1px solid #222' }}>
-              <h2 style={{ fontSize: '1.2rem', margin: '0 0 20px 0', display: 'flex', alignItems: 'center', gap: '10px' }}><Music size={22}/> Top Hits</h2>
+              <h2 style={{ fontSize: '1.2rem', margin: '0 0 20px 0', display: 'flex', alignItems: 'center', gap: '10px' }}><Music /> Top hits</h2>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
                 {songs.length > 0 ? songs.slice(0, 8).map(s => (
                   <div key={`${s.rank}-${s.title}`} style={{ backgroundColor: '#252525', padding: '12px', borderRadius: '8px', display: 'flex', alignItems: 'center', gap: '15px' }}>
@@ -225,13 +221,9 @@ const App = () => {
                       <div style={{ color: '#777', fontSize: '0.85rem' }}>{s.artist}</div>
                     </div>
                   </div>
-                )) : <div style={{ color: '#444' }}>Select a week to load hits.</div>}
+                )) : <div style={{ color: '#444' }}>Select a week.</div>}
               </div>
             </section>
-          </div>
-          
-          <div style={{ borderTop: '1px dashed #222', paddingTop: '20px', fontSize: '0.75rem', color: '#222', textAlign: 'center' }}>
-            Data Check • Opt: {trends[0]?.m_opt} / Foc: {trends[0]?.m_foc} / Con: {trends[0]?.m_con}
           </div>
         </>
       )}
